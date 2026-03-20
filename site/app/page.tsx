@@ -75,6 +75,59 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Hero Right Column - Physician Credential Card */}
+            <div className="hidden lg:flex items-center justify-center">
+              <div className="p-8 w-full max-w-sm" style={{
+                backgroundColor: "rgba(22,22,22,0.78)",
+                border: `1px solid rgba(222,203,164,0.35)`,
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
+              }}>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative w-16 h-16 flex-shrink-0 overflow-hidden rounded-full" style={{ border: `2px solid ${GOLD}` }}>
+                    <Image
+                      src="/assets/team/dr-milton-chavez.jpg"
+                      alt="Dr. Milton Chavez MD, FAAFP"
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-lg leading-tight" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>Dr. Milton Chavez</p>
+                    <p className="text-sm" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>MD, FAAFP</p>
+                    <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Founder and Medical Director</p>
+                  </div>
+                </div>
+                <div className="w-full h-px mb-5" style={{ backgroundColor: "rgba(222,203,164,0.2)" }} />
+                <div className="space-y-2.5 mb-5">
+                  {[
+                    "Meharry Medical College",
+                    "Residency: Rush University, Chicago",
+                    "Fellowship: UCLA",
+                    "Illinois Licensed Since 1997",
+                    "28+ Years in Medicine",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: GOLD }} />
+                      <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{item}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="w-full h-px mb-5" style={{ backgroundColor: "rgba(222,203,164,0.2)" }} />
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>Membership Plans</p>
+                <div className="flex gap-4">
+                  <div className="flex-1 text-center py-3" style={{ border: `1px solid rgba(222,203,164,0.2)` }}>
+                    <p className="text-xl" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>$150</p>
+                    <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>DPC / mo</p>
+                  </div>
+                  <div className="flex-1 text-center py-3" style={{ border: `1px solid ${GOLD}`, backgroundColor: "rgba(222,203,164,0.08)" }}>
+                    <p className="text-xl" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>$300</p>
+                    <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Concierge / mo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
