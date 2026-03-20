@@ -59,6 +59,16 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link href="/about" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 

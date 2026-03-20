@@ -75,10 +75,12 @@ const localBusinessJsonLd = {
   employee: [
     {
       "@type": "Physician",
+      "@id": "https://illarihealth.com/about#dr-chavez",
       name: "Dr. Milton Chavez",
       honorificPrefix: "Dr.",
       honorificSuffix: "MD, FAAFP",
       jobTitle: "Founder and Medical Director",
+      url: "https://illarihealth.com/about",
       alumniOf: [
         { "@type": "CollegeOrUniversity", name: "Meharry Medical College" },
         { "@type": "CollegeOrUniversity", name: "Rush University" },
@@ -87,17 +89,21 @@ const localBusinessJsonLd = {
     },
     {
       "@type": "Person",
+      "@id": "https://illarihealth.com/about#karen-corona",
       name: "Karen Corona",
       honorificSuffix: "MSN, APRN, FNP-C",
       jobTitle: "Family Nurse Practitioner",
+      url: "https://illarihealth.com/about",
     },
   ],
   founder: {
     "@type": "Physician",
+    "@id": "https://illarihealth.com/about#dr-chavez",
     name: "Dr. Milton Chavez",
     honorificPrefix: "Dr.",
     honorificSuffix: "MD, FAAFP",
     jobTitle: "Founder and Medical Director",
+    url: "https://illarihealth.com/about",
     alumniOf: [
       { "@type": "CollegeOrUniversity", name: "Meharry Medical College" },
       { "@type": "CollegeOrUniversity", name: "Rush University" },
@@ -630,7 +636,10 @@ export default function Home() {
                 <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                   Your Physicians
                 </h2>
-                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+                <div className="w-12 h-px mx-auto mb-4" style={{ backgroundColor: GOLD }} />
+                <Link href="/about" className="text-xs tracking-widest uppercase hover:opacity-80 transition-opacity" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  Meet the Full Team &rarr;
+                </Link>
               </div>
             </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
