@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
+import AnimateOnScroll from "./components/AnimateOnScroll";
 
 const GOLD = "#DECBA4";
 const CHARCOAL = "#161616";
@@ -79,34 +80,38 @@ export default function Home() {
 
         {/* Trust Banner */}
         <section style={{ backgroundColor: CHARCOAL, borderBottom: `1px solid #2a2a2a` }} className="py-5">
-          <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-4 text-center">
-            {[
-              "Relationship-Based Primary Care Since 2010",
-              "Appointments Start On Time. Every Time.",
-              "No Co-Pays. No Deductibles. No Surprise Bills.",
-            ].map((text) => (
-              <p key={text} className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}>
-                {text}
-              </p>
-            ))}
-          </div>
+          <AnimateOnScroll>
+            <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-4 text-center">
+              {[
+                "Relationship-Based Primary Care Since 2010",
+                "Appointments Start On Time. Every Time.",
+                "No Co-Pays. No Deductibles. No Surprise Bills.",
+              ].map((text) => (
+                <p key={text} className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}>
+                  {text}
+                </p>
+              ))}
+            </div>
+          </AnimateOnScroll>
         </section>
 
         {/* Membership Plans */}
         <section id="membership" style={{ backgroundColor: OFF_WHITE }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                Membership Plans
-              </p>
-              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                Choose Your Level of Care
-              </h2>
-              <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
-              <p className="text-lg max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                Both plans eliminate insurance friction and give you direct access to Dr. Chavez. A $200 non-refundable enrollment fee applies. 10% off when paid annually or when your entire family joins.
-              </p>
-            </div>
+            <AnimateOnScroll>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Membership Plans
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                  Choose Your Level of Care
+                </h2>
+                <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
+                <p className="text-lg max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                  Both plans eliminate insurance friction and give you direct access to Dr. Chavez. A $200 non-refundable enrollment fee applies. 10% off when paid annually or when your entire family joins.
+                </p>
+              </div>
+            </AnimateOnScroll>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
               {/* Concierge - Featured */}
@@ -238,29 +243,33 @@ export default function Home() {
         {/* How It Works */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                How It Works
-              </p>
-              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
-                Your Path to Better Care
-              </h2>
-              <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
-            </div>
+            <AnimateOnScroll>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  How It Works
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                  Your Path to Better Care
+                </h2>
+                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+              </div>
+            </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Choose Your Plan", desc: "Select Concierge Medicine ($300/mo) or Direct Primary Care ($150/mo) based on your care needs." },
-                { step: "02", title: "Enroll", desc: "Pay the $200 non-refundable enrollment fee and commit to a 3-month minimum membership." },
-                { step: "03", title: "First Visit", desc: "Schedule your comprehensive physical, up to 90 minutes for Concierge or 45 minutes for DPC, with Dr. Chavez." },
-                { step: "04", title: "Ongoing Care", desc: "Access your physician directly, schedule visits without insurance friction, and receive unhurried appointments." },
-                { step: "05", title: "Specialist Referrals", desc: "When needed, Dr. Chavez coordinates specialist access through RubiconMD or your insurance network." },
-                { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, membership continues month-to-month and may be canceled in writing." },
-              ].map(({ step, title, desc }) => (
-                <div key={step} style={{ borderTop: `2px solid ${GOLD}` }} className="pt-6">
-                  <p className="text-4xl mb-3" style={{ color: "#2a2a2a", fontFamily: "'Abril Fatface', serif" }}>{step}</p>
-                  <h3 className="text-xl mb-3" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{desc}</p>
-                </div>
+                { step: "01", title: "Choose Your Plan", desc: "Select Concierge Medicine ($300/mo) or Direct Primary Care ($150/mo) based on your care needs.", delay: 0 },
+                { step: "02", title: "Enroll", desc: "Pay the $200 non-refundable enrollment fee and commit to a 3-month minimum membership.", delay: 80 },
+                { step: "03", title: "First Visit", desc: "Schedule your comprehensive physical, up to 90 minutes for Concierge or 45 minutes for DPC, with Dr. Chavez.", delay: 160 },
+                { step: "04", title: "Ongoing Care", desc: "Access your physician directly, schedule visits without insurance friction, and receive unhurried appointments.", delay: 0 },
+                { step: "05", title: "Specialist Referrals", desc: "When needed, Dr. Chavez coordinates specialist access through RubiconMD or your insurance network.", delay: 80 },
+                { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, membership continues month-to-month and may be canceled in writing.", delay: 160 },
+              ].map(({ step, title, desc, delay }) => (
+                <AnimateOnScroll key={step} delay={delay}>
+                  <div style={{ borderTop: `2px solid ${GOLD}` }} className="pt-6">
+                    <p className="text-4xl mb-3" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.35 }}>{step}</p>
+                    <h3 className="text-xl mb-3" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{desc}</p>
+                  </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
@@ -270,6 +279,7 @@ export default function Home() {
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <AnimateOnScroll>
               <div>
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                   Why Illari Health
@@ -297,6 +307,8 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={150}>
               <div className="relative">
                 <Image
                   src="/assets/team/dr-milton-chavez.jpg"
@@ -315,6 +327,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>
@@ -322,17 +335,20 @@ export default function Home() {
         {/* Team Section */}
         <section style={{ backgroundColor: CREAM }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                Our Team
-              </p>
-              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                Your Physicians
-              </h2>
-              <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
-            </div>
+            <AnimateOnScroll>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Our Team
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                  Your Physicians
+                </h2>
+                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+              </div>
+            </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
               {/* Dr. Chavez */}
+              <AnimateOnScroll>
               <div className="text-center">
                 <div className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full" style={{ border: `3px solid ${BORDER_GOLD}` }}>
                   <Image
@@ -355,8 +371,10 @@ export default function Home() {
                   <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>28+ Years in Medicine</p>
                 </div>
               </div>
+              </AnimateOnScroll>
 
               {/* Karen Corona */}
+              <AnimateOnScroll delay={150}>
               <div className="text-center">
                 <div className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full" style={{ border: `3px solid ${BORDER_GOLD}` }}>
                   <Image
@@ -379,6 +397,7 @@ export default function Home() {
                   <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Inpatient and Family Medicine</p>
                 </div>
               </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>
@@ -386,39 +405,43 @@ export default function Home() {
         {/* Testimonials */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                Patient Reviews
-              </p>
-              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
-                What Patients Say
-              </h2>
-              <div className="w-12 h-px mx-auto mb-4" style={{ backgroundColor: GOLD }} />
-              <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                4.78 out of 5 on Tebra &mdash; 23 verified reviews
-              </p>
-            </div>
+            <AnimateOnScroll>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Patient Reviews
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                  What Patients Say
+                </h2>
+                <div className="w-12 h-px mx-auto mb-4" style={{ backgroundColor: GOLD }} />
+                <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  4.78 out of 5 on Tebra, 23 verified reviews
+                </p>
+              </div>
+            </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { name: "Albert T.", quote: "My visit with Dr. Chavez is always pleasant. I love that the Doctors take your appointment on time, very attentive and professional and knowledgeable of my medical history." },
-                { name: "Chad M.", quote: "Dr. Chavez has my highest recommendation. He is knowledgeable, intelligent, empathic, consistent, thorough and soft-spoken. Basically, he delivers what most people want and deserve from their MD." },
-                { name: "Janneth H.", quote: "My initial visit was very great. The receptionist was very helpful and cordial. Beautiful, clean waiting area and offices. My overall experience was wonderful." },
-                { name: "David H.", quote: "My experience was relaxing and thorough." },
-              ].map(({ name, quote }) => (
-                <div key={name} className="p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
-                  <div className="flex gap-1 mb-4">
-                    {[1,2,3,4,5].map((s) => (
-                      <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}>
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
+                { name: "Albert T.", quote: "My visit with Dr. Chavez is always pleasant. I love that the Doctors take your appointment on time, very attentive and professional and knowledgeable of my medical history.", delay: 0 },
+                { name: "Chad M.", quote: "Dr. Chavez has my highest recommendation. He is knowledgeable, intelligent, empathic, consistent, thorough and soft-spoken. Basically, he delivers what most people want and deserve from their MD.", delay: 100 },
+                { name: "Janneth H.", quote: "My initial visit was very great. The receptionist was very helpful and cordial. Beautiful, clean waiting area and offices. My overall experience was wonderful.", delay: 0 },
+                { name: "David H.", quote: "My experience was relaxing and thorough.", delay: 100 },
+              ].map(({ name, quote, delay }) => (
+                <AnimateOnScroll key={name} delay={delay}>
+                  <div className="p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                    <div className="flex gap-1 mb-4">
+                      {[1,2,3,4,5].map((s) => (
+                        <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}>
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="text-base italic leading-relaxed mb-4" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                      &ldquo;{quote}&rdquo;
+                    </p>
+                    <p className="text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>{name}</p>
+                    <p className="text-xs" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>Verified Patient</p>
                   </div>
-                  <p className="text-base italic leading-relaxed mb-4" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
-                    &ldquo;{quote}&rdquo;
-                  </p>
-                  <p className="text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>{name}</p>
-                  <p className="text-xs" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>Verified Patient</p>
-                </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
@@ -427,15 +450,17 @@ export default function Home() {
         {/* Case Studies */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                Patient Stories
-              </p>
-              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                Real Results
-              </h2>
-              <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
-            </div>
+            <AnimateOnScroll>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Patient Stories
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                  Real Results
+                </h2>
+                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+              </div>
+            </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -443,31 +468,36 @@ export default function Home() {
                   challenge: "No primary care access, high cost barriers",
                   result: "Joined DPC at $150/mo with no co-pays and all labs included",
                   note: "Cash-pay model with specialist referral list",
+                  delay: 0,
                 },
                 {
                   audience: "Executive",
                   challenge: "7-minute insurance visits, no real physician relationship",
                   result: "Concierge membership with unlimited visits and direct Dr. Chavez line",
                   note: "30 to 60-minute appointments and priority scheduling",
+                  delay: 100,
                 },
                 {
                   audience: "Family",
                   challenge: "Multiple doctors, fragmented records, wasted time",
                   result: "Entire family joined DPC with 10% family discount",
                   note: "One trusted physician who knows the full family history",
+                  delay: 200,
                 },
-              ].map(({ audience, challenge, result, note }) => (
-                <div key={audience} className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                  <div className="inline-block px-3 py-1 text-xs tracking-wider uppercase mb-4" style={{ backgroundColor: CREAM, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                    {audience}
+              ].map(({ audience, challenge, result, note, delay }) => (
+                <AnimateOnScroll key={audience} delay={delay}>
+                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                    <div className="inline-block px-3 py-1 text-xs tracking-wider uppercase mb-4" style={{ backgroundColor: CREAM, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                      {audience}
+                    </div>
+                    <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>The Challenge</h3>
+                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{challenge}</p>
+                    <div className="w-full h-px mb-4" style={{ backgroundColor: BORDER_GOLD }} />
+                    <h3 className="text-lg mb-3" style={{ color: "#C9A96E", fontFamily: "'Abril Fatface', serif" }}>The Result</h3>
+                    <p className="text-sm leading-relaxed mb-2" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{result}</p>
+                    <p className="text-xs italic" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{note}</p>
                   </div>
-                  <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>The Challenge</h3>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{challenge}</p>
-                  <div className="w-full h-px mb-4" style={{ backgroundColor: BORDER_GOLD }} />
-                  <h3 className="text-lg mb-3" style={{ color: "#C9A96E", fontFamily: "'Abril Fatface', serif" }}>The Result</h3>
-                  <p className="text-sm leading-relaxed mb-2" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{result}</p>
-                  <p className="text-xs italic" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{note}</p>
-                </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
@@ -478,6 +508,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Left: Info */}
+              <AnimateOnScroll>
               <div>
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                   Get in Touch
@@ -529,8 +560,10 @@ export default function Home() {
                   Free private parking available immediately south of the building at Western and LeMoyne.
                 </p>
               </div>
+              </AnimateOnScroll>
 
               {/* Right: Form */}
+              <AnimateOnScroll delay={150}>
               <div className="p-8" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
                 <h3 className="text-2xl mb-2" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Request a Callback</h3>
                 <p className="text-sm mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
@@ -538,6 +571,7 @@ export default function Home() {
                 </p>
                 <ContactForm />
               </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>
