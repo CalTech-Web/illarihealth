@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "FAQ | Illari Health",
@@ -76,18 +77,7 @@ export default function FAQPage() {
         {/* FAQ List */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
           <div className="max-w-3xl mx-auto px-6">
-            <div className="space-y-0">
-              {faqs.map(({ q, a }, i) => (
-                <div key={i} style={{ borderBottom: `1px solid ${BORDER_GOLD}` }} className="py-8">
-                  <h2 className="text-xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                    {q}
-                  </h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                    {a}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <FaqAccordion faqs={faqs} />
           </div>
         </section>
 
