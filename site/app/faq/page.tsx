@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "Will I still need health insurance?",
-    a: "Yes. Your membership covers primary care, labs, and in-office services, but you will still need health insurance for hospitalizations, specialist care, and emergency services. DPC is not a replacement for insurance; it is a better way to access primary care.",
+    a: "Yes. Your membership covers primary care, labs, and in-office services, but you will still need health insurance for hospitalizations, specialist care, and emergency services. Think of DPC as a better way to access primary care, not a substitute for insurance.",
   },
   {
     q: "Is there an option for a one-time visit without joining?",
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: "What if I need to see a specialist?",
-    a: "Dr. Chavez leverages RubiconMD, a platform connecting members to 200+ specialists for consultation at no extra cost. For PPO members, he refers to vetted in-network specialists. Uninsured patients have access to a curated list of specialists offering cash pricing. Dr. Chavez's training in internal medicine means he works hard to resolve complex cases before a referral is ever needed.",
+    a: "Dr. Chavez uses RubiconMD, a platform connecting members to 200+ specialists for consultation at no extra cost. For PPO patients, he refers to vetted in-network specialists. Uninsured patients get a curated list of cash-price options. His training in internal medicine means he often works through complex cases before a referral is even necessary.",
   },
   {
     q: "Is there parking?",
@@ -69,7 +69,7 @@ export default function FAQPage() {
             </h1>
             <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
             <p className="text-lg" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-              Everything you need to know about Direct Primary Care, Concierge Medicine, and what to expect at Illari Health.
+              Straight answers about how this practice works, what it costs, and what you can expect.
             </p>
           </div>
         </section>

@@ -40,7 +40,7 @@ export default function Home() {
               </h1>
               <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
               <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
-                Chicago&apos;s premier Direct Primary Care and Concierge Medicine practice. Led by Dr. Milton Chavez MD, FAAFP, with 28+ years of experience. Flat-rate pricing, unhurried appointments, direct physician access.
+                Most doctors give you 7 minutes. Dr. Milton Chavez gives you 30 to 60. He has practiced in Wicker Park since 2010, with flat pricing, no co-pays, and a direct line to your physician.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -161,7 +161,7 @@ export default function Home() {
                 </h2>
                 <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
                 <p className="text-lg max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Both plans eliminate insurance friction and give you direct access to Dr. Chavez. A $200 non-refundable enrollment fee applies. 10% off when paid annually or when your entire family joins.
+                  No co-pays, no billing surprises. Both plans give you direct access to Dr. Chavez at a flat monthly rate. Pay annually or bring the whole family and save 10%. A $200 enrollment fee applies to either plan.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -365,9 +365,9 @@ export default function Home() {
                 { step: "01", title: "Choose Your Plan", desc: "Select Concierge Medicine ($300/mo) or Direct Primary Care ($150/mo) based on your care needs.", delay: 0 },
                 { step: "02", title: "Enroll", desc: "Pay the $200 non-refundable enrollment fee and commit to a 3-month minimum membership.", delay: 80 },
                 { step: "03", title: "First Visit", desc: "Schedule your comprehensive physical, up to 90 minutes for Concierge or 45 minutes for DPC, with Dr. Chavez.", delay: 160 },
-                { step: "04", title: "Ongoing Care", desc: "Access your physician directly, schedule visits without insurance friction, and receive unhurried appointments.", delay: 0 },
+                { step: "04", title: "Ongoing Care", desc: "Reach Dr. Chavez directly. Schedule without insurance friction. Appointments start on time, every time.", delay: 0 },
                 { step: "05", title: "Specialist Referrals", desc: "When needed, Dr. Chavez coordinates specialist access through RubiconMD or your insurance network.", delay: 80 },
-                { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, membership continues month-to-month and may be canceled in writing.", delay: 160 },
+                { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, your membership continues month-to-month. Cancel in writing, anytime.", delay: 160 },
               ].map(({ step, title, desc, delay }) => (
                 <AnimateOnScroll key={step} delay={delay}>
                   <div style={{ borderTop: `2px solid ${GOLD}` }} className="pt-6">
@@ -396,11 +396,11 @@ export default function Home() {
                 <div className="w-12 h-px mb-8" style={{ backgroundColor: GOLD }} />
                 <div className="space-y-6">
                   {[
-                    { title: "No 7-Minute Appointments", desc: "Concierge members get 30 to 60-minute appointments. DPC members get 25 to 30 minutes. Your doctor has time to listen." },
+                    { title: "No 7-Minute Appointments", desc: "Concierge members get 30 to 60-minute appointments. DPC members get 25 to 30. Not a rounding error. That is the difference between being heard and being processed." },
                     { title: "Flat, Transparent Pricing", desc: "No co-pays, no deductibles, no surprise bills. You know exactly what you pay before you walk in the door." },
                     { title: "200+ Specialists at No Extra Cost", desc: "RubiconMD connects members to 200+ specialists for same-day consultations, included in your membership." },
                     { title: "28+ Years of Broad Expertise", desc: "Dr. Chavez trained at Meharry, Rush, and UCLA. His expertise spans family medicine, orthopedics, dermatology, and surgery." },
-                    { title: "Priority Scheduling for Members", desc: "DPC and Concierge members get priority booking. You get seen faster than standard patients." },
+                    { title: "Priority Scheduling for Members", desc: "DPC and Concierge members get priority booking. Same day or next day, most of the time. No weeks-long wait for a routine visit." },
                     { title: "10% Family Discount", desc: "When your entire family joins together, everyone saves 10% on their monthly membership fee." },
                   ].map(({ title, desc }) => (
                     <div key={title} className="flex gap-4">
@@ -571,21 +571,21 @@ export default function Home() {
               {[
                 {
                   audience: "Uninsured Individual",
-                  challenge: "No primary care access, high cost barriers",
+                  challenge: "No insurance, no primary care access, and no affordable path to routine care",
                   result: "Joined DPC at $150/mo with no co-pays and all labs included",
                   note: "Cash-pay model with specialist referral list",
                   delay: 0,
                 },
                 {
                   audience: "Executive",
-                  challenge: "7-minute insurance visits, no real physician relationship",
+                  challenge: "Seven-minute insurance visits, a different doctor every time, no continuity",
                   result: "Concierge membership with unlimited visits and direct Dr. Chavez line",
                   note: "30 to 60-minute appointments and priority scheduling",
                   delay: 100,
                 },
                 {
                   audience: "Family",
-                  challenge: "Multiple doctors, fragmented records, wasted time",
+                  challenge: "Multiple providers, fragmented records, no single physician who knew the whole story",
                   result: "Entire family joined DPC with 10% family discount",
                   note: "One trusted physician who knows the full family history",
                   delay: 200,
@@ -624,7 +624,7 @@ export default function Home() {
                 </h2>
                 <div className="w-12 h-px mb-8" style={{ backgroundColor: GOLD }} />
                 <p className="text-base leading-relaxed mb-8" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Call for priority booking or fill out the form and we will contact you. DPC and Concierge members receive priority scheduling. One-time visits are available without a membership.
+                  Call for priority booking or fill out the form below. DPC and Concierge members get priority scheduling, same day or next day most of the time. One-time visits are available for $175 with no commitment.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center gap-4">
