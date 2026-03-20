@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MobileCtaBar from "./components/MobileCtaBar";
 
 export const metadata: Metadata = {
   title: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
@@ -14,8 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-<body className="min-h-full flex flex-col" style={{ fontFamily: "'Lora', Georgia, 'Times New Roman', serif" }}>
+<body className="min-h-full flex flex-col pb-16 md:pb-0" style={{ fontFamily: "'Lora', Georgia, 'Times New Roman', serif" }}>
         {children}
+        <MobileCtaBar />
       </body>
     </html>
   );
