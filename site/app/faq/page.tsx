@@ -4,8 +4,16 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "FAQ | Illari Health",
+  title: "FAQ",
   description: "Answers to common questions about Direct Primary Care, Concierge Medicine, pricing, specialist access, and what to expect at Illari Health in Wicker Park, Chicago.",
+  alternates: {
+    canonical: "https://illarihealth.com/faq",
+  },
+  openGraph: {
+    url: "https://illarihealth.com/faq",
+    title: "FAQ | Illari Health",
+    description: "Common questions about Direct Primary Care, Concierge Medicine, pricing, and specialist access at Illari Health in Wicker Park, Chicago.",
+  },
 };
 
 const GOLD = "#DECBA4";
@@ -53,9 +61,26 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: a,
+    },
+  })),
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Header />
       <main>
         {/* Hero */}

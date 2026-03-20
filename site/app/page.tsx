@@ -1,8 +1,116 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import AnimateOnScroll from "./components/AnimateOnScroll";
+
+export const metadata: Metadata = {
+  title: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
+  description: "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park. Dr. Milton Chavez MD, FAAFP offers flat-rate memberships from $150/mo with no co-pays, no surprise bills, and direct physician access.",
+  alternates: {
+    canonical: "https://illarihealth.com",
+  },
+  openGraph: {
+    url: "https://illarihealth.com",
+    title: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
+    description: "Dr. Milton Chavez MD, FAAFP offers Direct Primary Care at $150/mo and Concierge Medicine at $300/mo in Wicker Park. No co-pays, no insurance friction, 30-60 minute appointments.",
+    images: [
+      {
+        url: "/assets/gallery/hero-background.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Illari Health - Care That Feels Personal Again",
+      },
+    ],
+  },
+};
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalClinic", "LocalBusiness"],
+  name: "Illari Health",
+  description:
+    "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP. Flat-rate pricing, unlimited visits, no insurance friction.",
+  url: "https://illarihealth.com",
+  telephone: "+17732273303",
+  email: "info@illarihealth.com",
+  image: "https://illarihealth.com/assets/logos/illari-health-logo-full.png",
+  logo: "https://illarihealth.com/assets/logos/illari-health-logo-full.png",
+  priceRange: "$150-$300/month",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1509 North Western Avenue",
+    addressLocality: "Chicago",
+    addressRegion: "IL",
+    postalCode: "60622",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 41.9093,
+    longitude: -87.6885,
+  },
+  areaServed: [
+    "Wicker Park, Chicago",
+    "Bucktown, Chicago",
+    "Logan Square, Chicago",
+    "Ukrainian Village, Chicago",
+    "Lincoln Park, Chicago",
+  ],
+  sameAs: ["https://www.instagram.com/illarihealth"],
+  medicalSpecialty: [
+    "Family Medicine",
+    "Direct Primary Care",
+    "Concierge Medicine",
+    "Sports Medicine",
+    "Dermatology",
+    "Orthopedics",
+  ],
+  hasMap: "https://maps.google.com/?q=1509+North+Western+Avenue+Chicago+IL+60622",
+  founder: {
+    "@type": "Physician",
+    name: "Dr. Milton Chavez",
+    honorificPrefix: "Dr.",
+    honorificSuffix: "MD, FAAFP",
+    jobTitle: "Founder and Medical Director",
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "Meharry Medical College" },
+      { "@type": "CollegeOrUniversity", name: "Rush University" },
+      { "@type": "CollegeOrUniversity", name: "UCLA" },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.78",
+    reviewCount: "23",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Albert T." },
+      reviewBody:
+        "My visit with Dr. Chavez is always pleasant. I love that the Doctors take your appointment on time, very attentive and professional and knowledgeable of my medical history.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Chad M." },
+      reviewBody:
+        "Dr. Chavez has my highest recommendation. He is knowledgeable, intelligent, empathic, consistent, thorough and soft-spoken. Basically, he delivers what most people want and deserve from their MD.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Janneth H." },
+      reviewBody:
+        "My initial visit was very great. The receptionist was very helpful and cordial. Beautiful, clean waiting area and offices. My overall experience was wonderful.",
+    },
+  ],
+};
 
 const GOLD = "#DECBA4";
 const CHARCOAL = "#161616";
@@ -13,6 +121,10 @@ const BORDER_GOLD = "#DECBA3";
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       <Header />
       <main>
 
