@@ -33,15 +33,15 @@ const faqs = [
   },
   {
     q: "Will I still need health insurance?",
-    a: "Yes. Your membership covers primary care, labs, and in-office services, but you will still need health insurance for hospitalizations, specialist care, and emergency services. Think of DPC as a better way to access primary care, not a substitute for insurance.",
+    a: "Yes. Your membership covers primary care, labs, and in-office services. For hospitalizations, specialist care, and emergency services, you will still need health insurance. DPC is a better way to access primary care, not a substitute for it.",
   },
   {
     q: "Is there an option for a one-time visit without joining?",
-    a: "Yes. A single visit is $175, no membership required. Come once, no strings. It is a solid way to meet Dr. Chavez and get a sense of the practice before deciding on a plan.",
+    a: "Yes. A single visit is $175, no membership required. Come once, no strings. If you like what you find, plans start at $150 a month.",
   },
   {
     q: "What medical conditions do you treat?",
-    a: "Illari Health offers general primary care for adults and children, sports medicine, clinical and surgical dermatology, and non-operative orthopedics and biologics. Dr. Chavez's 28+ years of training allow the practice to handle a wide range of conditions that typically require a specialist referral elsewhere.",
+    a: "Illari Health offers general primary care for adults and children, sports medicine, clinical and surgical dermatology, and non-operative orthopedics and biologics. Dr. Chavez trained in family medicine, orthopedics, dermatology, and surgery. Most of what other primary care offices refer out, he handles in-house.",
   },
   {
     q: "What if I need to see a specialist?",
@@ -123,7 +123,7 @@ export default function FAQPage() {
                 </h2>
                 <div className="w-12 h-px mb-6" style={{ backgroundColor: GOLD }} />
                 <p className="text-base leading-relaxed mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  Members get access to RubiconMD, connecting them to over 200 specialists, including psychiatry, dermatology, cardiology, and more, at no extra cost.
+                  Members connect to 200+ specialists through RubiconMD at no added cost. Psychiatry, cardiology, dermatology, neurology. When something goes beyond primary care, members reach a specialist same day.
                 </p>
                 <p className="text-base leading-relaxed" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   PPO patients are referred to vetted in-network specialists. Uninsured patients receive a curated list of cash-price options.

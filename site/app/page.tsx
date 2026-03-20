@@ -272,7 +272,7 @@ export default function Home() {
                       "Clinical and surgical dermatology",
                       "Non-operative orthopedics",
                       "No commitment required",
-                      "Great way to meet Dr. Chavez",
+                      "Try the practice before committing",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span style={{ color: "#C9A96E", marginTop: "2px" }}>&#10003;</span>
@@ -365,7 +365,7 @@ export default function Home() {
                 { step: "01", title: "Choose Your Plan", desc: "Select Concierge Medicine ($300/mo) or Direct Primary Care ($150/mo) based on your care needs.", delay: 0 },
                 { step: "02", title: "Enroll", desc: "Pay the $200 non-refundable enrollment fee and commit to a 3-month minimum membership.", delay: 80 },
                 { step: "03", title: "First Visit", desc: "Schedule your comprehensive physical, up to 90 minutes for Concierge or 45 minutes for DPC, with Dr. Chavez.", delay: 160 },
-                { step: "04", title: "Ongoing Care", desc: "Reach Dr. Chavez directly. Schedule without insurance friction. Appointments start on time, every time.", delay: 0 },
+                { step: "04", title: "Ongoing Care", desc: "Call or text Dr. Chavez directly. No hold music, no co-pay at the door. Appointments start on time, every time.", delay: 0 },
                 { step: "05", title: "Specialist Referrals", desc: "When you need one, Dr. Chavez connects you to 200+ specialists through RubiconMD at no extra cost. PPO patients get referrals to vetted in-network doctors.", delay: 80 },
                 { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, your membership continues month-to-month. Cancel in writing, anytime.", delay: 160 },
               ].map(({ step, title, desc, delay }) => (
@@ -396,12 +396,12 @@ export default function Home() {
                 <div className="w-12 h-px mb-8" style={{ backgroundColor: GOLD }} />
                 <div className="space-y-6">
                   {[
-                    { title: "No 7-Minute Appointments", desc: "Concierge members get 30 to 60-minute appointments. DPC members get 25 to 30. Not a rounding error. That is the difference between being heard and being processed." },
-                    { title: "Flat, Transparent Pricing", desc: "No co-pays, no deductibles, no surprise bills. You know exactly what you pay before you walk in the door." },
-                    { title: "200+ Specialists at No Extra Cost", desc: "Through RubiconMD, members reach psychiatrists, cardiologists, dermatologists, and 197 other specialties at no added cost. Same-day consultations. No referral runaround." },
+                    { title: "No 7-Minute Appointments", desc: "Concierge members get 30 to 60-minute appointments. DPC members get 25 to 30. Seven minutes is enough time to note a symptom. It is not enough time to understand a patient." },
+                    { title: "Flat, Transparent Pricing", desc: "No co-pays, no deductibles, no surprise bills. You see the price before the appointment, not after the claim." },
+                    { title: "200+ Specialists at No Extra Cost", desc: "Through RubiconMD, members reach over 200 specialties at no added cost. Psychiatrists, cardiologists, dermatologists, and more. Same-day consultations. No referral runaround." },
                     { title: "28+ Years of Broad Expertise", desc: "Dr. Chavez trained at Meharry, Rush, and UCLA. His expertise spans family medicine, orthopedics, dermatology, and surgery." },
                     { title: "Priority Scheduling for Members", desc: "DPC and Concierge members get priority booking. Same day or next day, most of the time. No weeks-long wait for a routine visit." },
-                    { title: "10% Family Discount", desc: "When your entire family joins together, everyone saves 10% on their monthly membership fee." },
+                    { title: "10% Family Discount", desc: "Bring your family onto the same plan and everyone pays 10% less per month. One physician who knows your kids as well as he knows you." },
                   ].map(({ title, desc }) => (
                     <div key={title} className="flex gap-4">
                       <div className="w-1 flex-shrink-0 mt-1" style={{ backgroundColor: GOLD }} />
@@ -624,7 +624,7 @@ export default function Home() {
                 </h2>
                 <div className="w-12 h-px mb-8" style={{ backgroundColor: GOLD }} />
                 <p className="text-base leading-relaxed mb-8" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Call for priority booking or fill out the form below. DPC and Concierge members get priority scheduling, same day or next day most of the time. One-time visits are available for $175 with no commitment.
+                  Call us or fill out the form. Members get same-day or next-day scheduling most of the time. Not ready to commit? The $175 one-time visit gets you a full appointment with Dr. Chavez, no strings.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center gap-4">
