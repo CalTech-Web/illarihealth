@@ -50,6 +50,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/one-time-visit" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  One-Time Visit
+                </Link>
+              </li>
+              <li>
                 <Link href="/faq" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   FAQ
                 </Link>

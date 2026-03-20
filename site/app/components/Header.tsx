@@ -30,6 +30,20 @@ export default function Header() {
             Home
           </Link>
           <Link
+            href="/concierge-medicine"
+            className="text-sm tracking-widest uppercase transition-colors"
+            style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
+          >
+            Concierge Medicine
+          </Link>
+          <Link
+            href="/direct-primary-care"
+            className="text-sm tracking-widest uppercase transition-colors"
+            style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
+          >
+            Direct Primary Care
+          </Link>
+          <Link
             href="/faq"
             className="text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
@@ -84,6 +98,22 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           >
             Home
+          </Link>
+          <Link
+            href="/concierge-medicine"
+            className="text-sm tracking-widest uppercase py-2"
+            style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Concierge Medicine
+          </Link>
+          <Link
+            href="/direct-primary-care"
+            className="text-sm tracking-widest uppercase py-2"
+            style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Direct Primary Care
           </Link>
           <Link
             href="/faq"
