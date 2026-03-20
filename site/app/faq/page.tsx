@@ -17,11 +17,11 @@ const BORDER_GOLD = "#DECBA3";
 const faqs = [
   {
     q: "What is Direct Primary Care?",
-    a: "Illari Health's Direct Primary Care (DPC) model gives you direct access to your physician through a simple flat monthly membership fee of $150, with no insurance involvement. You pay a transparent monthly fee that covers visits, labs, and a comprehensive physical, without co-pays, deductibles, or surprise bills.",
+    a: "Direct Primary Care at Illari Health is a flat $150 a month for direct access to your physician. No insurance involved. No co-pays, no deductibles. Your fee covers visits, labs, and a comprehensive physical.",
   },
   {
     q: "What is the difference between Direct Primary Care and Concierge Medicine?",
-    a: "Both plans eliminate insurance friction and give you direct physician access. The Concierge Medicine plan ($300/mo) is our premium tier: it includes unlimited visits, an executive-level 90-minute wellness program, an advanced blood panel, modern body composition analysis, direct communication with Dr. Chavez, and 30% off additional labs. The DPC plan ($150/mo) includes up to three visits per month, recommended labs, and a 45-minute comprehensive physical.",
+    a: "Both plans skip the co-pays, the deductibles, and the insurance back-and-forth. You get direct access to your physician at a flat monthly rate. The Concierge Medicine plan ($300/mo) is the premium tier. It includes unlimited visits, an executive-level 90-minute wellness program, an advanced blood panel, modern body composition analysis, direct communication with Dr. Chavez, and 30% off additional labs. The DPC plan ($150/mo) includes up to three visits per month, recommended labs, and a 45-minute comprehensive physical.",
   },
   {
     q: "Can I save money if my entire family joins?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "Is there an option for a one-time visit without joining?",
-    a: "Yes. A single visit without a membership is available for $175. This is a great way to meet Dr. Chavez and experience the practice before committing to a plan.",
+    a: "Yes. A single visit is $175, no membership required. Come once, no strings. It is a solid way to meet Dr. Chavez and get a sense of the practice before deciding on a plan.",
   },
   {
     q: "What medical conditions do you treat?",

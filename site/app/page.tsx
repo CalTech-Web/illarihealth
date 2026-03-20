@@ -161,7 +161,7 @@ export default function Home() {
                 </h2>
                 <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
                 <p className="text-lg max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  No co-pays, no billing surprises. Both plans give you direct access to Dr. Chavez at a flat monthly rate. Pay annually or bring the whole family and save 10%. A $200 enrollment fee applies to either plan.
+                  No co-pays, no billing surprises. Both plans give you a direct line to Dr. Chavez at a flat monthly rate. Bring the whole family and everyone saves 10%. Pay annually and save another 10%. A $200 enrollment fee applies to either plan.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -366,7 +366,7 @@ export default function Home() {
                 { step: "02", title: "Enroll", desc: "Pay the $200 non-refundable enrollment fee and commit to a 3-month minimum membership.", delay: 80 },
                 { step: "03", title: "First Visit", desc: "Schedule your comprehensive physical, up to 90 minutes for Concierge or 45 minutes for DPC, with Dr. Chavez.", delay: 160 },
                 { step: "04", title: "Ongoing Care", desc: "Reach Dr. Chavez directly. Schedule without insurance friction. Appointments start on time, every time.", delay: 0 },
-                { step: "05", title: "Specialist Referrals", desc: "When needed, Dr. Chavez coordinates specialist access through RubiconMD or your insurance network.", delay: 80 },
+                { step: "05", title: "Specialist Referrals", desc: "When you need one, Dr. Chavez connects you to 200+ specialists through RubiconMD at no extra cost. PPO patients get referrals to vetted in-network doctors.", delay: 80 },
                 { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, your membership continues month-to-month. Cancel in writing, anytime.", delay: 160 },
               ].map(({ step, title, desc, delay }) => (
                 <AnimateOnScroll key={step} delay={delay}>
@@ -398,7 +398,7 @@ export default function Home() {
                   {[
                     { title: "No 7-Minute Appointments", desc: "Concierge members get 30 to 60-minute appointments. DPC members get 25 to 30. Not a rounding error. That is the difference between being heard and being processed." },
                     { title: "Flat, Transparent Pricing", desc: "No co-pays, no deductibles, no surprise bills. You know exactly what you pay before you walk in the door." },
-                    { title: "200+ Specialists at No Extra Cost", desc: "RubiconMD connects members to 200+ specialists for same-day consultations, included in your membership." },
+                    { title: "200+ Specialists at No Extra Cost", desc: "Through RubiconMD, members reach psychiatrists, cardiologists, dermatologists, and 197 other specialties at no added cost. Same-day consultations. No referral runaround." },
                     { title: "28+ Years of Broad Expertise", desc: "Dr. Chavez trained at Meharry, Rush, and UCLA. His expertise spans family medicine, orthopedics, dermatology, and surgery." },
                     { title: "Priority Scheduling for Members", desc: "DPC and Concierge members get priority booking. Same day or next day, most of the time. No weeks-long wait for a routine visit." },
                     { title: "10% Family Discount", desc: "When your entire family joins together, everyone saves 10% on their monthly membership fee." },
