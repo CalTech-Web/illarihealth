@@ -58,7 +58,10 @@ const localBusinessJsonLd = {
     "Ukrainian Village, Chicago",
     "Lincoln Park, Chicago",
   ],
-  sameAs: ["https://www.instagram.com/illarihealth"],
+  sameAs: [
+    "https://www.instagram.com/illarihealth",
+    "https://maps.google.com/?q=1509+North+Western+Avenue+Chicago+IL+60622",
+  ],
   medicalSpecialty: [
     "Family Medicine",
     "Direct Primary Care",
@@ -68,6 +71,26 @@ const localBusinessJsonLd = {
     "Orthopedics",
   ],
   hasMap: "https://maps.google.com/?q=1509+North+Western+Avenue+Chicago+IL+60622",
+  employee: [
+    {
+      "@type": "Physician",
+      name: "Dr. Milton Chavez",
+      honorificPrefix: "Dr.",
+      honorificSuffix: "MD, FAAFP",
+      jobTitle: "Founder and Medical Director",
+      alumniOf: [
+        { "@type": "CollegeOrUniversity", name: "Meharry Medical College" },
+        { "@type": "CollegeOrUniversity", name: "Rush University" },
+        { "@type": "CollegeOrUniversity", name: "UCLA" },
+      ],
+    },
+    {
+      "@type": "Person",
+      name: "Karen Corona",
+      honorificSuffix: "MSN, APRN, FNP-C",
+      jobTitle: "Family Nurse Practitioner",
+    },
+  ],
   founder: {
     "@type": "Physician",
     name: "Dr. Milton Chavez",
@@ -78,6 +101,51 @@ const localBusinessJsonLd = {
       { "@type": "CollegeOrUniversity", name: "Meharry Medical College" },
       { "@type": "CollegeOrUniversity", name: "Rush University" },
       { "@type": "CollegeOrUniversity", name: "UCLA" },
+    ],
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Membership Plans",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Concierge Medicine",
+        description:
+          "Executive-level concierge medicine with unlimited monthly visits, 90-minute executive wellness program, advanced blood panel, body composition analysis, direct physician communication, and 30% off additional labs.",
+        price: "300",
+        priceCurrency: "USD",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "300",
+          priceCurrency: "USD",
+          unitText: "month",
+        },
+        url: "https://illarihealth.com#membership",
+      },
+      {
+        "@type": "Offer",
+        name: "Direct Primary Care",
+        description:
+          "Direct Primary Care membership with up to three medical visits per month, all recommended labs, comprehensive physical, and 15% off point-of-care services.",
+        price: "150",
+        priceCurrency: "USD",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "150",
+          priceCurrency: "USD",
+          unitText: "month",
+        },
+        url: "https://illarihealth.com#membership",
+      },
+      {
+        "@type": "Offer",
+        name: "One-Time Visit",
+        description:
+          "Single visit with no membership required. Adult and pediatric primary care, sports medicine, clinical and surgical dermatology, and non-operative orthopedics.",
+        price: "175",
+        priceCurrency: "USD",
+        url: "https://illarihealth.com",
+      },
     ],
   },
   aggregateRating: {

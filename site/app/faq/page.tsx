@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     url: "https://illarihealth.com/faq",
     title: "FAQ | Illari Health",
     description: "Common questions about Direct Primary Care, Concierge Medicine, pricing, and specialist access at Illari Health in Wicker Park, Chicago.",
+    images: [
+      {
+        url: "/assets/gallery/hero-background.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Illari Health - Direct Primary Care & Concierge Medicine in Wicker Park, Chicago",
+      },
+    ],
   },
 };
 
@@ -61,6 +69,25 @@ const faqs = [
   },
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://illarihealth.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "FAQ",
+      item: "https://illarihealth.com/faq",
+    },
+  ],
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -77,6 +104,10 @@ const faqJsonLd = {
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
