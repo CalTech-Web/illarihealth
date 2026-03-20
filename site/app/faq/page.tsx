@@ -17,7 +17,7 @@ const BORDER_GOLD = "#DECBA3";
 const faqs = [
   {
     q: "What is Direct Primary Care?",
-    a: "Direct Primary Care at Illari Health is a flat $150 a month for direct access to your physician. No insurance involved. No co-pays, no deductibles. Your fee covers visits, labs, and a comprehensive physical.",
+    a: "Direct Primary Care at Illari Health is a flat $150 a month. No insurance involved. No co-pays, no deductibles. Your fee covers visits, labs, and a comprehensive physical with Dr. Chavez.",
   },
   {
     q: "What is the difference between Direct Primary Care and Concierge Medicine?",

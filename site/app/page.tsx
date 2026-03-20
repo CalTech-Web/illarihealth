@@ -40,7 +40,7 @@ export default function Home() {
               </h1>
               <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
               <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
-                Most doctors give you 7 minutes. Dr. Milton Chavez gives you 30 to 60. He has practiced in Wicker Park since 2010, with flat pricing, no co-pays, and a direct line to your physician.
+                Most doctors give you 7 minutes. Dr. Milton Chavez gives you 30 to 60. No co-pays, no surprise bills, and a direct line to him. In Wicker Park since 2010.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -362,9 +362,9 @@ export default function Home() {
             </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Choose Your Plan", desc: "Select Concierge Medicine ($300/mo) or Direct Primary Care ($150/mo) based on your care needs.", delay: 0 },
-                { step: "02", title: "Enroll", desc: "Pay the $200 non-refundable enrollment fee and commit to a 3-month minimum membership.", delay: 80 },
-                { step: "03", title: "First Visit", desc: "Schedule your comprehensive physical, up to 90 minutes for Concierge or 45 minutes for DPC, with Dr. Chavez.", delay: 160 },
+                { step: "01", title: "Choose Your Plan", desc: "Concierge at $300 a month is the full tier. DPC at $150 covers the essentials. Both cut out co-pays and insurance back-and-forth.", delay: 0 },
+                { step: "02", title: "Enroll", desc: "A $200 enrollment fee starts your membership. The first three months are committed. After that, it goes month-to-month.", delay: 80 },
+                { step: "03", title: "First Visit", desc: "Your first appointment is a comprehensive physical with Dr. Chavez. Ninety minutes for Concierge members, 45 for DPC. Not a rushed intake.", delay: 160 },
                 { step: "04", title: "Ongoing Care", desc: "Call or text Dr. Chavez directly. No hold music, no co-pay at the door. Appointments start on time, every time.", delay: 0 },
                 { step: "05", title: "Specialist Referrals", desc: "When you need one, Dr. Chavez connects you to 200+ specialists through RubiconMD at no extra cost. PPO patients get referrals to vetted in-network doctors.", delay: 80 },
                 { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, your membership continues month-to-month. Cancel in writing, anytime.", delay: 160 },
@@ -476,6 +476,9 @@ export default function Home() {
                   <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Illinois Licensed Since 1997</p>
                   <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>28+ Years in Medicine</p>
                 </div>
+                <p className="mt-4 text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                  Trained at Meharry Medical College, residency at Rush, fellowship at UCLA. Most practices refer out dermatology, orthopedics, and minor surgery. Dr. Chavez handles all of it.
+                </p>
               </div>
               </AnimateOnScroll>
 
@@ -502,6 +505,9 @@ export default function Home() {
                   <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Medical Weight Loss</p>
                   <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Inpatient and Family Medicine</p>
                 </div>
+                <p className="mt-4 text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                  Five-plus years of clinical experience across inpatient care, women&apos;s health, and medical weight loss. Board-certified. The same unhurried approach.
+                </p>
               </div>
               </AnimateOnScroll>
             </div>
