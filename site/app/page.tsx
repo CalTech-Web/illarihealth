@@ -290,6 +290,59 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+          {/* Comparison Table */}
+          <AnimateOnScroll delay={100}>
+            <div className="mt-16 overflow-x-auto">
+              <p className="text-xs tracking-widest uppercase mb-8 text-center" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                How We Compare
+              </p>
+              <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
+                <thead>
+                  <tr>
+                    <th className="text-left py-4 px-6 text-xs tracking-wider uppercase" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid ${BORDER_GOLD}`, width: "34%" }}></th>
+                    <th className="py-4 px-6 text-center text-xs tracking-wider uppercase" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid ${BORDER_GOLD}`, width: "22%" }}>
+                      Traditional Insurance
+                    </th>
+                    <th className="py-4 px-6 text-center text-xs tracking-wider uppercase" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid ${BORDER_GOLD}`, width: "22%" }}>
+                      DPC<br /><span style={{ color: GOLD }}>$150/mo</span>
+                    </th>
+                    <th className="py-4 px-6 text-center text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", borderBottom: `2px solid ${GOLD}`, backgroundColor: "rgba(222,203,164,0.07)", width: "22%" }}>
+                      Concierge<br /><span style={{ fontSize: "1.1em" }}>$300/mo</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { label: "Appointment Length", traditional: "7 minutes", dpc: "25–30 min", concierge: "30–60 min" },
+                    { label: "Wait to Book", traditional: "Days to weeks", dpc: "Same / next day", concierge: "Priority, same day" },
+                    { label: "Labs Included", traditional: "Extra cost", dpc: "✓ Included", concierge: "✓ Included" },
+                    { label: "Direct Doctor Access", traditional: "✕ No", dpc: "✓ Yes", concierge: "✓ Yes" },
+                    { label: "Co-Pays or Deductibles", traditional: "Yes", dpc: "✕ None", concierge: "✕ None" },
+                    { label: "Surprise Bills", traditional: "Common", dpc: "✕ Never", concierge: "✕ Never" },
+                    { label: "Specialist Coordination", traditional: "Self-managed", dpc: "✓ RubiconMD", concierge: "✓ RubiconMD" },
+                    { label: "Executive Wellness Program", traditional: "✕ No", dpc: "✕ No", concierge: "✓ Included" },
+                    { label: "Advanced Blood Panel", traditional: "Extra cost", dpc: "✕ No", concierge: "✓ Included" },
+                  ].map(({ label, traditional, dpc, concierge }, i) => (
+                    <tr key={label} style={{ backgroundColor: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.03)" }}>
+                      <td className="py-4 px-6 text-left" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid rgba(222,203,163,0.15)` }}>
+                        {label}
+                      </td>
+                      <td className="py-4 px-6 text-center" style={{ color: "#888", fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid rgba(222,203,163,0.15)` }}>
+                        {traditional}
+                      </td>
+                      <td className="py-4 px-6 text-center" style={{ color: traditional === dpc ? "#888" : "#4a4a4a", fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid rgba(222,203,163,0.15)` }}>
+                        {dpc}
+                      </td>
+                      <td className="py-4 px-6 text-center" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid rgba(222,203,163,0.15)`, backgroundColor: "rgba(222,203,164,0.07)" }}>
+                        {concierge}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </AnimateOnScroll>
           </div>
         </section>
 
