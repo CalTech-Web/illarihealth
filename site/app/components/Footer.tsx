@@ -36,12 +36,17 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <h4 className="text-xs tracking-widest uppercase mb-4" style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}>
-              Company
+              Services
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  Home
+                <Link href="/concierge-medicine" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  Concierge Medicine
+                </Link>
+              </li>
+              <li>
+                <Link href="/direct-primary-care" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  Direct Primary Care
                 </Link>
               </li>
               <li>
