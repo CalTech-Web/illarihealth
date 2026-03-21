@@ -740,6 +740,115 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Specialties */}
+        <section style={{ backgroundColor: OFF_WHITE }} className="ih-dots-light py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <AnimateOnScroll>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Areas of Expertise
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                  One Physician. Exceptional Range.
+                </h2>
+                <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
+                <p className="text-lg max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                  Most practices refer out dermatology, orthopedics, and surgery. Dr. Chavez handles all of it, in the same office, at the same flat rate.
+                </p>
+              </div>
+            </AnimateOnScroll>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Family Medicine",
+                  desc: "Comprehensive primary care for adults and children, from annual physicals to chronic disease management.",
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+                    </svg>
+                  ),
+                  delay: 0,
+                },
+                {
+                  title: "Preventive & Wellness",
+                  desc: "Executive wellness programs, advanced blood panels, body composition analysis, and proactive longevity care.",
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                    </svg>
+                  ),
+                  delay: 80,
+                },
+                {
+                  title: "Sports Medicine",
+                  desc: "Musculoskeletal injury treatment, return-to-sport care, and performance-focused health for active adults and athletes.",
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                    </svg>
+                  ),
+                  delay: 160,
+                },
+                {
+                  title: "Surgical Dermatology",
+                  desc: "Clinical and surgical skin care handled in-office. No dermatologist referral needed for most conditions.",
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  ),
+                  delay: 0,
+                },
+                {
+                  title: "Orthopedics & Biologics",
+                  desc: "Non-operative orthopedic care and regenerative medicine for joint and soft-tissue conditions, all under one roof.",
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                    </svg>
+                  ),
+                  delay: 80,
+                },
+                {
+                  title: "Medical Weight Loss",
+                  desc: "Physician-supervised weight management with nurse practitioner support, focused on sustainable, medically sound outcomes.",
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                  ),
+                  delay: 160,
+                },
+              ].map(({ title, desc, icon, delay }) => (
+                <AnimateOnScroll key={title} delay={delay}>
+                  <div className="ih-card p-8 h-full flex flex-col" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+                    <div className="w-12 h-12 flex items-center justify-center mb-5 flex-shrink-0" style={{ backgroundColor: CREAM, borderRadius: "10px" }}>
+                      {icon}
+                    </div>
+                    <h3 className="text-xl mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{title}</h3>
+                    <div className="w-8 h-px mb-4" style={{ backgroundColor: GOLD }} />
+                    <p className="text-sm leading-relaxed flex-1" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{desc}</p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+            <AnimateOnScroll delay={100}>
+              <div className="mt-12 text-center">
+                <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                  Questions about a specific condition? A one-time visit is available for $175 with no membership required.
+                </p>
+                <a
+                  href="tel:7732273303"
+                  className="ih-btn ih-btn-gold inline-block mt-5 px-8 py-4 text-sm font-medium tracking-wider uppercase"
+                  style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                >
+                  Call 773.227.3303
+                </a>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
         {/* Testimonials */}
         <section style={{ backgroundColor: CHARCOAL }} className="ih-dots-dark py-24">
           <div className="max-w-6xl mx-auto px-6">
