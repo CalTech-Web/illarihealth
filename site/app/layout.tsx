@@ -1,22 +1,6 @@
 import type { Metadata } from "next";
-import { Abril_Fatface, Lora } from "next/font/google";
 import "./globals.css";
 import MobileCtaBar from "./components/MobileCtaBar";
-
-const abrilFatface = Abril_Fatface({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-abril",
-});
-
-const lora = Lora({
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-lora",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://illarihealth.com"),
@@ -88,8 +72,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full ${abrilFatface.variable} ${lora.variable}`}>
-      <body className="min-h-full flex flex-col pb-16 md:pb-0" style={{ fontFamily: "var(--font-lora), Georgia, 'Times New Roman', serif" }}>
+    <html lang="en" className="h-full">
+<body className="min-h-full flex flex-col pb-16 md:pb-0" style={{ fontFamily: "'Lora', Georgia, 'Times New Roman', serif" }}>
         {children}
         <MobileCtaBar />
       </body>
