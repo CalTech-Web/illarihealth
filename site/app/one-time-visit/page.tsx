@@ -124,14 +124,14 @@ export default function OneTimeVisitPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call to Book
                 </a>
                 <a
                   href="/#contact"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback
@@ -160,7 +160,7 @@ export default function OneTimeVisitPage() {
             </AnimateOnScroll>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <AnimateOnScroll>
-                <div style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }} className="p-8">
+                <div style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }} className="ih-card p-8">
                   <div className="mb-6">
                     <p className="text-5xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>$175</p>
                     <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>per visit, no enrollment fee</p>
@@ -184,7 +184,7 @@ export default function OneTimeVisitPage() {
                   </ul>
                   <a
                     href="tel:7732273303"
-                    className="block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                    className="ih-btn ih-btn-dark block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                     style={{ backgroundColor: CHARCOAL, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
                     Call 773.227.3303
@@ -263,7 +263,7 @@ export default function OneTimeVisitPage() {
                 },
               ].map(({ category, items, delay }) => (
                 <AnimateOnScroll key={category} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                  <div className="ih-card-dark p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
                     <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>{category}</p>
                     <ul className="space-y-2">
                       {items.map((item) => (
@@ -318,7 +318,7 @@ export default function OneTimeVisitPage() {
                 },
               ].map(({ label, body, delay }) => (
                 <AnimateOnScroll key={label} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>{label}</p>
                     <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
                   </div>
@@ -347,7 +347,7 @@ export default function OneTimeVisitPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 <a
                   href="/direct-primary-care"
-                  className="p-6 text-center transition-opacity hover:opacity-90"
+                  className="ih-card p-6 text-center transition-opacity hover:opacity-90"
                   style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}
                 >
                   <p className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>$150/mo</p>
@@ -356,7 +356,7 @@ export default function OneTimeVisitPage() {
                 </a>
                 <a
                   href="/concierge-medicine"
-                  className="p-6 text-center transition-opacity hover:opacity-90"
+                  className="ih-card-dark ih-gold-glow p-6 text-center transition-opacity hover:opacity-90"
                   style={{ border: `2px solid ${GOLD}`, backgroundColor: CHARCOAL }}
                 >
                   <p className="text-2xl mb-1" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>$300/mo</p>
@@ -382,14 +382,14 @@ export default function OneTimeVisitPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call 773.227.3303
                 </a>
                 <a
                   href="/#contact"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback

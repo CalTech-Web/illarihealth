@@ -7,7 +7,14 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header style={{ backgroundColor: "#161616" }} className="sticky top-0 z-50 w-full">
+    <header
+      className="sticky top-0 z-50 w-full"
+      style={{
+        backgroundColor: "rgba(22,22,22,0.92)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+      }}
+    >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" prefetch={false} className="flex items-center gap-3">
           <Image
@@ -25,7 +32,7 @@ export default function Header() {
           <Link
             href="/"
             prefetch={false}
-            className="text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Home
@@ -33,7 +40,7 @@ export default function Header() {
           <Link
             href="/concierge-medicine"
             prefetch={false}
-            className="text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Concierge Medicine
@@ -41,7 +48,7 @@ export default function Header() {
           <Link
             href="/direct-primary-care"
             prefetch={false}
-            className="text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Direct Primary Care
@@ -49,7 +56,7 @@ export default function Header() {
           <Link
             href="/faq"
             prefetch={false}
-            className="text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             FAQ
@@ -57,7 +64,7 @@ export default function Header() {
           <Link
             href="/about"
             prefetch={false}
-            className="text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             About
@@ -65,14 +72,14 @@ export default function Header() {
           <Link
             href="/contact"
             prefetch={false}
-            className="text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Contact
           </Link>
           <a
             href="tel:7732273303"
-            className="px-6 py-2.5 text-sm font-medium tracking-wider uppercase border transition-colors"
+            className="ih-btn ih-btn-gold px-6 py-2.5 text-sm font-medium tracking-wider uppercase border transition-colors"
             style={{
               backgroundColor: "#DECBA4",
               color: "#161616",
@@ -108,9 +115,12 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div style={{ backgroundColor: "#1a1a1a", borderTop: "1px solid #DECBA3" }} className="md:hidden px-6 py-4 flex flex-col gap-4">
+      {/* Mobile menu with smooth transition */}
+      <div
+        className={`ih-mobile-menu md:hidden ${menuOpen ? "open" : ""}`}
+        style={{ backgroundColor: "#1a1a1a", borderTop: "1px solid #DECBA3" }}
+      >
+        <div className="px-6 py-4 flex flex-col gap-4">
           <Link
             href="/"
             prefetch={false}
@@ -167,13 +177,13 @@ export default function Header() {
           </Link>
           <a
             href="tel:7732273303"
-            className="px-6 py-3 text-sm font-medium tracking-wider uppercase text-center"
+            className="ih-btn ih-btn-gold px-6 py-3 text-sm font-medium tracking-wider uppercase text-center"
             style={{ backgroundColor: "#DECBA4", color: "#161616", fontFamily: "'Lora', Georgia, serif" }}
           >
             Call 773.227.3303
           </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }

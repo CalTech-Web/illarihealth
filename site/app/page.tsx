@@ -232,14 +232,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call for Priority Booking
                 </a>
                 <a
                   href="#membership"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   View Membership Plans
@@ -265,7 +265,7 @@ export default function Home() {
 
             {/* Hero Right Column - Physician Credential Card */}
             <div className="hidden lg:flex items-center justify-center overflow-hidden">
-              <div className="p-8 w-full max-w-sm min-w-0" style={{
+              <div className="ih-card-dark p-8 w-full max-w-sm min-w-0" style={{
                 backgroundColor: "rgba(22,22,22,0.78)",
                 border: `1px solid rgba(222,203,164,0.35)`,
                 backdropFilter: "blur(14px)",
@@ -336,7 +336,7 @@ export default function Home() {
         </section>
 
         {/* Membership Plans */}
-        <section id="membership" style={{ backgroundColor: OFF_WHITE }} className="py-24">
+        <section id="membership" style={{ backgroundColor: OFF_WHITE }} className="ih-dots-light py-24">
           <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
@@ -355,8 +355,8 @@ export default function Home() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
               {/* Concierge - Featured */}
-              <div className="lg:col-span-1 relative" style={{ backgroundColor: CHARCOAL, border: `2px solid ${GOLD}` }}>
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-xs tracking-widest uppercase" style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="ih-card-dark ih-gold-glow lg:col-span-1 relative" style={{ backgroundColor: CHARCOAL, border: `2px solid ${GOLD}` }}>
+                <div className="ih-pill absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-xs tracking-widest uppercase" style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>
                   Premier Plan
                 </div>
                 <div className="p-8">
@@ -391,7 +391,7 @@ export default function Home() {
                   </ul>
                   <a
                     href="tel:7732273303"
-                    className="block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                    className="ih-btn ih-btn-gold block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                     style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
                     Call for Priority Booking
@@ -400,7 +400,7 @@ export default function Home() {
               </div>
 
               {/* DPC */}
-              <div className="lg:col-span-1" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+              <div className="ih-card lg:col-span-1" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
                 <div className="p-8">
                   <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                     <Link href="/direct-primary-care" prefetch={false} className="hover:opacity-80 transition-opacity">Direct Primary Care</Link>
@@ -431,7 +431,7 @@ export default function Home() {
                   </ul>
                   <a
                     href="tel:7732273303"
-                    className="block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                    className="ih-btn ih-btn-outline block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                     style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
                     Call for Priority Booking
@@ -440,7 +440,7 @@ export default function Home() {
               </div>
 
               {/* One-Time Visit */}
-              <div className="lg:col-span-1" style={{ backgroundColor: CREAM, border: `1px solid ${BORDER_GOLD}` }}>
+              <div className="ih-card lg:col-span-1" style={{ backgroundColor: CREAM, border: `1px solid ${BORDER_GOLD}` }}>
                 <div className="p-8">
                   <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                     <Link href="/one-time-visit" prefetch={false} className="hover:opacity-80 transition-opacity">One-Time Visit</Link>
@@ -469,7 +469,7 @@ export default function Home() {
                   </ul>
                   <a
                     href="tel:7732273303"
-                    className="block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                    className="ih-btn ih-btn-outline block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                     style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
                     Call 773.227.3303
@@ -480,7 +480,7 @@ export default function Home() {
 
           {/* Comparison Table */}
           <AnimateOnScroll delay={100}>
-            <div className="mt-16 overflow-x-auto">
+            <div className="ih-table-wrap mt-16 overflow-x-auto">
               <p className="text-xs tracking-widest uppercase mb-8 text-center" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 How We Compare
               </p>
@@ -534,7 +534,7 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
+        <section style={{ backgroundColor: CHARCOAL }} className="ih-dots-dark py-24">
           <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
@@ -557,7 +557,7 @@ export default function Home() {
                 { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, your membership continues month-to-month. Cancel in writing, anytime.", delay: 160 },
               ].map(({ step, title, desc, delay }) => (
                 <AnimateOnScroll key={step} delay={delay}>
-                  <div style={{ borderTop: `2px solid ${GOLD}` }} className="pt-6">
+                  <div style={{ borderTop: `2px solid ${GOLD}` }} className="ih-card-dark pt-6">
                     <p className="text-4xl mb-3" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.35 }}>{step}</p>
                     <h3 className="text-xl mb-3" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{title}</h3>
                     <p className="text-sm leading-relaxed" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{desc}</p>
@@ -608,10 +608,10 @@ export default function Home() {
                   alt="Dr. Milton Chavez MD, FAAFP"
                   width={500}
                   height={600}
-                  className="w-full object-cover"
+                  className="ih-img w-full object-cover"
                   style={{ border: `4px solid ${BORDER_GOLD}` }}
                 />
-                <div className="absolute -bottom-6 -left-6 p-6 max-w-xs" style={{ backgroundColor: CHARCOAL, border: `1px solid ${GOLD}` }}>
+                <div className="ih-card-dark absolute -bottom-6 -left-6 p-6 max-w-xs" style={{ backgroundColor: CHARCOAL, border: `1px solid ${GOLD}` }}>
                   <p className="text-sm italic mb-2" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                     &ldquo;We strive to inspire and aid those seeking their optimal health, wellness and healing through efficient service, quality consultations and our core values: integrity and respect.&rdquo;
                   </p>
@@ -705,7 +705,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
+        <section style={{ backgroundColor: CHARCOAL }} className="ih-dots-dark py-24">
           <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
@@ -729,7 +729,7 @@ export default function Home() {
                 { name: "David H.", quote: "My experience was relaxing and thorough.", delay: 100 },
               ].map(({ name, quote, delay }) => (
                 <AnimateOnScroll key={name} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                  <div className="ih-card-dark p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
                     <div className="flex gap-1 mb-4">
                       {[1,2,3,4,5].map((s) => (
                         <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}>
@@ -750,7 +750,7 @@ export default function Home() {
         </section>
 
         {/* Case Studies */}
-        <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
+        <section style={{ backgroundColor: OFF_WHITE }} className="ih-dots-light py-24">
           <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
@@ -788,7 +788,7 @@ export default function Home() {
                 },
               ].map(({ audience, challenge, result, note, delay }) => (
                 <AnimateOnScroll key={audience} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <div className="inline-block px-3 py-1 text-xs tracking-wider uppercase mb-4" style={{ backgroundColor: CREAM, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                       {audience}
                     </div>
@@ -866,7 +866,7 @@ export default function Home() {
 
               {/* Right: Form */}
               <AnimateOnScroll delay={150}>
-              <div className="p-8" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+              <div className="ih-card p-8" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
                 <h3 className="text-2xl mb-2" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Request a Callback</h3>
                 <p className="text-sm mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   Fill out the form and we will reach out within one business day.

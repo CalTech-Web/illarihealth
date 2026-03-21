@@ -24,6 +24,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Illari Health on Instagram"
+                className="transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(222,203,164,0.4)]"
                 style={{ color: "#DECBA4" }}
               >
                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -103,9 +104,9 @@ export default function Footer() {
             &copy; 2026 Illari Health. All Rights Reserved.
           </p>
           <p className="text-xs" style={{ color: "#7a6a5a", fontFamily: "'Lora', Georgia, serif" }}>
-            Powered by{" "}
-            <a href="https://caltechweb.com" className="hover:opacity-80 transition-colors underline" style={{ color: "#b0a080" }}>
-              Caltechweb
+            Built by{" "}
+            <a href="https://caltechweb.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-colors underline" style={{ color: "#b0a080" }}>
+              CalTech Web
             </a>
           </p>
         </div>

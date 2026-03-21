@@ -150,14 +150,14 @@ export default function FAQPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:7732273303"
-                className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                className="ih-btn ih-btn-dark px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                 style={{ backgroundColor: CHARCOAL, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
               >
                 Call 773.227.3303
               </a>
               <a
                 href="mailto:info@illarihealth.com"
-                className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
+                className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
                 style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
               >
                 Email Us
@@ -187,11 +187,11 @@ export default function FAQPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {["Psychiatry", "Dermatology", "Cardiology", "Orthopedics", "Neurology", "Endocrinology"].map((specialty) => (
-                  <div key={specialty} className="p-4 text-center" style={{ border: `1px solid #4a4030`, backgroundColor: "#252218" }}>
+                  <div key={specialty} className="ih-card-dark p-4 text-center" style={{ border: `1px solid #4a4030`, backgroundColor: "#252218" }}>
                     <p className="text-sm" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>{specialty}</p>
                   </div>
                 ))}
-                <div className="col-span-2 p-4 text-center" style={{ border: `1px solid ${GOLD}`, backgroundColor: "#1a1a1a" }}>
+                <div className="ih-card-dark col-span-2 p-4 text-center" style={{ border: `1px solid ${GOLD}`, backgroundColor: "#1a1a1a" }}>
                   <p className="text-sm" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>200+ Specialties Available</p>
                 </div>
               </div>

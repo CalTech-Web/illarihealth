@@ -246,10 +246,10 @@ export default function AboutPage() {
                     alt="Dr. Milton Chavez MD, FAAFP, Founder and Medical Director, Illari Health Chicago"
                     width={480}
                     height={580}
-                    className="w-full object-cover"
+                    className="w-full object-cover ih-img"
                     style={{ border: `2px solid rgba(222,203,164,0.4)`, display: "block" }}
                   />
-                  <div className="mt-4 p-6" style={{ backgroundColor: "#1a1a1a", border: `1px solid #2a2a2a` }}>
+                  <div className="mt-4 p-6 ih-card-dark" style={{ backgroundColor: "#1a1a1a", border: `1px solid #2a2a2a` }}>
                     <p className="text-sm italic leading-relaxed mb-3" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                       &ldquo;We strive to inspire and aid those seeking their optimal health, wellness and healing through efficient service, quality consultations and our core values: integrity and respect.&rdquo;
                     </p>
@@ -305,7 +305,7 @@ export default function AboutPage() {
                         "Pediatric Care",
                         "Minor Outpatient Surgery",
                       ].map((tag) => (
-                        <span key={tag} className="px-3 py-1 text-xs tracking-wider" style={{ border: `1px solid #2a2a2a`, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                        <span key={tag} className="px-3 py-1 text-xs tracking-wider ih-tag" style={{ border: `1px solid #2a2a2a`, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                           {tag}
                         </span>
                       ))}
@@ -360,7 +360,7 @@ export default function AboutPage() {
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Specialties</p>
                     <div className="flex flex-wrap gap-2">
                       {["Women's Health", "Family Medicine", "Inpatient Care", "Medical Weight Loss"].map((tag) => (
-                        <span key={tag} className="px-3 py-1 text-xs tracking-wider" style={{ border: `1px solid ${BORDER_GOLD}`, color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                        <span key={tag} className="px-3 py-1 text-xs tracking-wider ih-tag" style={{ border: `1px solid ${BORDER_GOLD}`, color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                           {tag}
                         </span>
                       ))}
@@ -374,7 +374,7 @@ export default function AboutPage() {
                   alt="Karen Corona MSN, APRN, FNP-C, Family Nurse Practitioner at Illari Health Chicago"
                   width={480}
                   height={560}
-                  className="w-full object-cover"
+                  className="w-full object-cover ih-img"
                   style={{ border: `1px solid ${BORDER_GOLD}` }}
                 />
               </AnimateOnScroll>
@@ -383,7 +383,7 @@ export default function AboutPage() {
         </section>
 
         {/* Philosophy */}
-        <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
+        <section style={{ backgroundColor: OFF_WHITE }} className="py-24 ih-dots-light">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <AnimateOnScroll>
               <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -420,14 +420,14 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90 ih-btn ih-btn-gold"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call 773.227.3303
                 </a>
                 <a
                   href="/#contact"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
+                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80 ih-btn ih-btn-outline"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback

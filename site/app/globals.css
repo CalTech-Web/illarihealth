@@ -23,6 +23,10 @@
   --color-border-gold: var(--border-gold);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--off-white);
   color: var(--charcoal);
@@ -41,6 +45,83 @@ h1, h2, h3 {
   font-family: 'Lora', Georgia, serif;
 }
 
+/* ── Card Styles ── */
+.ih-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease;
+}
+.ih-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.ih-card-dark {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease;
+}
+.ih-card-dark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(222,203,164,0.08);
+}
+
+/* ── Button Styles ── */
+.ih-btn {
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+  position: relative;
+}
+.ih-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(222,203,164,0.25);
+}
+.ih-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(222,203,164,0.15);
+}
+
+.ih-btn-gold {
+  border-radius: 10px;
+  background: linear-gradient(135deg, #DECBA4 0%, #d4be94 100%);
+  transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.ih-btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(222,203,164,0.35);
+  background: linear-gradient(135deg, #E8D5A3 0%, #DECBA4 100%);
+}
+
+.ih-btn-outline {
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.ih-btn-outline:hover {
+  transform: translateY(-2px);
+  background-color: rgba(222,203,164,0.08);
+}
+
+.ih-btn-dark {
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.ih-btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* ── Image Styles ── */
+.ih-img {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ih-img-round {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+/* ── Gold Border Utilities ── */
 .gold-border {
   border-color: var(--border-gold);
 }
@@ -61,14 +142,55 @@ h1, h2, h3 {
   background-color: var(--cream);
 }
 
+/* ── Gold Divider ── */
+.ih-gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ── Form Input Focus ── */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(222,203,164,0.2) !important;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input,
+textarea,
+select {
+  border-radius: 10px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ── Comparison Table ── */
+.ih-table-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+/* ── Tag / Pill ── */
+.ih-pill {
+  border-radius: 9999px;
+  padding: 4px 14px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* ── Reveal Animation ── */
 @keyframes revealFadeUp {
   from {
     opacity: 0.01;
-    transform: translateY(28px);
+    transform: translateY(28px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -81,5 +203,64 @@ h1, h2, h3 {
 }
 
 .reveal-visible {
-  animation: revealFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: revealFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Section background patterns ── */
+.ih-dots-light {
+  background-image: radial-gradient(circle, rgba(222,203,164,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.ih-dots-dark {
+  background-image: radial-gradient(circle, rgba(222,203,164,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Smooth mobile menu ── */
+.ih-mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;
+}
+.ih-mobile-menu.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* ── Nav link hover underline ── */
+.ih-nav-link {
+  position: relative;
+}
+.ih-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.ih-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Gold glow for featured cards ── */
+.ih-gold-glow {
+  box-shadow: 0 0 30px rgba(222,203,164,0.12), 0 4px 20px rgba(0,0,0,0.2);
+}
+.ih-gold-glow:hover {
+  box-shadow: 0 0 40px rgba(222,203,164,0.18), 0 16px 40px rgba(0,0,0,0.25);
+}
+
+/* ── Specialty tag hover ── */
+.ih-tag {
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+.ih-tag:hover {
+  background-color: rgba(222,203,164,0.08);
+  border-color: var(--gold) !important;
 }

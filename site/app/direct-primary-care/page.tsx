@@ -130,14 +130,14 @@ export default function DirectPrimaryCarePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call for Priority Booking
                 </a>
                 <a
                   href="/#contact"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback
@@ -186,7 +186,7 @@ export default function DirectPrimaryCarePage() {
                 },
               ].map(({ heading, body, delay }) => (
                 <AnimateOnScroll key={heading} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <div className="w-8 h-px mb-4" style={{ backgroundColor: GOLD }} />
                     <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{heading}</h3>
                     <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
@@ -213,7 +213,7 @@ export default function DirectPrimaryCarePage() {
             </AnimateOnScroll>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <AnimateOnScroll>
-                <div style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#1a1a1a" }} className="p-8">
+                <div style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#1a1a1a" }} className="ih-card-dark p-8">
                   <div className="mb-6">
                     <p className="text-5xl mb-1" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>$150</p>
                     <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>/month + $200 enrollment fee</p>
@@ -239,7 +239,7 @@ export default function DirectPrimaryCarePage() {
                   </ul>
                   <a
                     href="tel:7732273303"
-                    className="block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                    className="ih-btn ih-btn-gold block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                     style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
                     Call for Priority Booking
@@ -318,7 +318,7 @@ export default function DirectPrimaryCarePage() {
                 },
               ].map(({ label, body, delay }) => (
                 <AnimateOnScroll key={label} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>{label}</p>
                     <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
                   </div>
@@ -361,7 +361,7 @@ export default function DirectPrimaryCarePage() {
                 },
               ].map(({ q, a, delay }) => (
                 <AnimateOnScroll key={q} delay={delay}>
-                  <div className="p-6" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-6" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <h3 className="text-base mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{q}</h3>
                     <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{a}</p>
                   </div>
@@ -396,14 +396,14 @@ export default function DirectPrimaryCarePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call 773.227.3303
                 </a>
                 <a
                   href="/#contact"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback

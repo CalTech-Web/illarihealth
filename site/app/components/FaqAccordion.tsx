@@ -35,7 +35,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
                 {q}
               </h2>
               <span
-                className="flex-shrink-0 w-8 h-8 flex items-center justify-center transition-transform"
+                className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full transition-transform"
                 style={{
                   border: `1px solid ${isOpen ? GOLD : BORDER_GOLD}`,
                   color: isOpen ? GOLD : "#9a8a72",

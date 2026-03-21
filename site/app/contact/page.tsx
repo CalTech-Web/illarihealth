@@ -221,14 +221,14 @@ export default function ContactPage() {
                   <div className="mt-10 flex flex-col sm:flex-row gap-4">
                     <a
                       href="tel:7732273303"
-                      className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90 whitespace-nowrap"
+                      className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90 whitespace-nowrap"
                       style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                     >
                       Call for Priority Booking
                     </a>
                     <a
                       href="/#contact"
-                      className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                      className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                       style={{ border: `1px solid ${BORDER_GOLD}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                     >
                       Request a Callback
@@ -240,7 +240,7 @@ export default function ContactPage() {
               {/* Location Details */}
               <AnimateOnScroll delay={150}>
                 <div className="space-y-8">
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                       Location
                     </p>
@@ -249,7 +249,7 @@ export default function ContactPage() {
                       Our office is located at 1509 North Western Avenue in the heart of Wicker Park. We serve patients from Wicker Park, Bucktown, Logan Square, Ukrainian Village, Lincoln Park, and surrounding Chicago neighborhoods.
                     </p>
                   </div>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                       Parking
                     </p>
@@ -258,7 +258,7 @@ export default function ContactPage() {
                       Free private parking is available immediately south of the building at Western and LeMoyne. No meters, no garages, no stress.
                     </p>
                   </div>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                       New Patients
                     </p>
@@ -307,7 +307,7 @@ export default function ContactPage() {
                 "West Town",
               ].map((neighborhood, i) => (
                 <AnimateOnScroll key={neighborhood} delay={i * 50}>
-                  <div className="p-6 text-center" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-6 text-center" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <p className="text-sm tracking-wider" style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>{neighborhood}</p>
                     <p className="text-xs mt-1" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Chicago, IL</p>
                   </div>
@@ -349,7 +349,7 @@ export default function ContactPage() {
                 },
               ].map(({ name, unit, description, url, delay }) => (
                 <AnimateOnScroll key={name} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                  <div className="ih-card-dark p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
                     <p className="text-xs tracking-widest uppercase mb-1" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>{unit}</p>
                     <h3 className="text-lg mb-2" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{name}</h3>
                     <p className="text-sm leading-relaxed mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{description}</p>

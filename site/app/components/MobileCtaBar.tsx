@@ -17,11 +17,12 @@ export default function MobileCtaBar() {
 
   return (
     <div
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 rounded-t-2xl"
       style={{
         transform: visible ? "translateY(0)" : "translateY(100%)",
         backgroundColor: GOLD,
         borderTop: `2px solid #C9A96E`,
+        boxShadow: "0 -4px 20px rgba(0,0,0,0.1)",
       }}
     >
       <a

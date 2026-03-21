@@ -130,14 +130,14 @@ export default function ConciergeMedicinePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call for Priority Booking
                 </a>
                 <a
                   href="/#contact"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback
@@ -186,7 +186,7 @@ export default function ConciergeMedicinePage() {
                 },
               ].map(({ heading, body, delay }) => (
                 <AnimateOnScroll key={heading} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <div className="w-8 h-px mb-4" style={{ backgroundColor: GOLD }} />
                     <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{heading}</h3>
                     <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
@@ -213,7 +213,7 @@ export default function ConciergeMedicinePage() {
             </AnimateOnScroll>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <AnimateOnScroll>
-                <div style={{ border: `2px solid ${GOLD}`, backgroundColor: "#1a1a1a" }} className="p-8">
+                <div style={{ border: `2px solid ${GOLD}`, backgroundColor: "#1a1a1a" }} className="ih-card-dark ih-gold-glow p-8">
                   <div className="mb-6">
                     <p className="text-5xl mb-1" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>$300</p>
                     <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>/month + $200 enrollment fee</p>
@@ -241,7 +241,7 @@ export default function ConciergeMedicinePage() {
                   </ul>
                   <a
                     href="tel:7732273303"
-                    className="block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                    className="ih-btn ih-btn-gold block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                     style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
                     Call for Priority Booking
@@ -320,7 +320,7 @@ export default function ConciergeMedicinePage() {
                 },
               ].map(({ label, body, delay }) => (
                 <AnimateOnScroll key={label} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>{label}</p>
                     <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
                   </div>
@@ -367,7 +367,7 @@ export default function ConciergeMedicinePage() {
                 </div>
               </AnimateOnScroll>
               <AnimateOnScroll delay={150}>
-                <div className="p-6" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                <div className="ih-card p-6" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                   <p className="text-sm italic leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                     &ldquo;We strive to inspire and aid those seeking their optimal health, wellness and healing through efficient service, quality consultations and our core values: integrity and respect.&rdquo;
                   </p>
@@ -405,7 +405,7 @@ export default function ConciergeMedicinePage() {
                 { name: "Albert T.", quote: "My visit with Dr. Chavez is always pleasant. I love that the Doctors take your appointment on time, very attentive and professional and knowledgeable of my medical history.", delay: 100 },
               ].map(({ name, quote, delay }) => (
                 <AnimateOnScroll key={name} delay={delay}>
-                  <div className="p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                  <div className="ih-card-dark p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
                     <div className="flex gap-1 mb-4">
                       {[1, 2, 3, 4, 5].map((s) => (
                         <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}>
@@ -439,14 +439,14 @@ export default function ConciergeMedicinePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:7732273303"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-dark px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                   style={{ backgroundColor: CHARCOAL, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call 773.227.3303
                 </a>
                 <a
                   href="/#contact"
-                  className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
                   style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback
