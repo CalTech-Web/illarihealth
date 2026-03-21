@@ -1003,6 +1003,56 @@ export default function Home() {
           </div>
         </section>
 
+        {/* The Promise Section */}
+        <section style={{ backgroundColor: CHARCOAL }} className="relative overflow-hidden py-28">
+          <div className="ih-gold-line absolute top-0 left-0 right-0" />
+          <div className="max-w-5xl mx-auto px-6 text-center">
+            <AnimateOnScroll>
+              <p className="text-xs tracking-widest uppercase mb-10" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                Our Commitment to Every Patient
+              </p>
+            </AnimateOnScroll>
+            <div className="space-y-0">
+              {[
+                { text: "Appointments start on time. Every time.", delay: 0 },
+                { text: "Thirty to sixty minutes. Not seven.", delay: 80 },
+                { text: "One flat rate. No surprise bills.", delay: 160 },
+                { text: "Your physician. Direct. Always.", delay: 240 },
+              ].map(({ text, delay }, i) => (
+                <AnimateOnScroll key={text} delay={delay}>
+                  <div
+                    className="relative py-8"
+                    style={{
+                      borderBottom: i < 3 ? `1px solid rgba(222,203,164,0.1)` : "none",
+                    }}
+                  >
+                    <p
+                      className="text-3xl md:text-4xl lg:text-5xl leading-snug"
+                      style={{ color: i % 2 === 0 ? "#FAF7F2" : GOLD, fontFamily: "'Abril Fatface', serif" }}
+                    >
+                      {text}
+                    </p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+            <AnimateOnScroll delay={300}>
+              <div className="mt-14">
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ih-btn ih-btn-gold inline-block px-10 py-5 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                >
+                  Book Now
+                </a>
+              </div>
+            </AnimateOnScroll>
+          </div>
+          <div className="ih-gold-line absolute bottom-0 left-0 right-0" />
+        </section>
+
         {/* Instagram Section */}
         <section style={{ backgroundColor: CREAM, borderTop: `1px solid ${BORDER_GOLD}` }} className="py-20">
           <div className="max-w-6xl mx-auto px-6">
