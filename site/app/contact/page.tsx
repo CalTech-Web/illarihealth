@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "/assets/gallery/hero-background.jpg",
         width: 1200,
         height: 630,
-        alt: "Illari Health — 1509 North Western Avenue, Wicker Park, Chicago",
+        alt: "Illari Health, 1509 North Western Avenue, Wicker Park, Chicago",
       },
     ],
   },

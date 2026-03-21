@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/assets/team/dr-milton-chavez.jpg",
         width: 1200,
         height: 630,
-        alt: "Dr. Milton Chavez MD, FAAFP — Illari Health Chicago",
+        alt: "Dr. Milton Chavez MD, FAAFP, Illari Health Chicago",
       },
     ],
   },
@@ -91,7 +91,7 @@ const drChavezJsonLd = {
   ],
   hasCredential: [
     { "@type": "EducationalOccupationalCredential", credentialCategory: "MD" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "FAAFP — Fellow, American Academy of Family Physicians" },
+    { "@type": "EducationalOccupationalCredential", credentialCategory: "FAAFP, Fellow, American Academy of Family Physicians" },
     { "@type": "EducationalOccupationalCredential", credentialCategory: "Board-Certified Family Physician" },
   ],
   medicalSpecialty: [
@@ -164,7 +164,7 @@ export default function AboutPage() {
                 <span style={{ color: GOLD }}>About</span>
               </nav>
               <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                Wicker Park, Chicago — Since 2010
+                Wicker Park, Chicago, Since 2010
               </p>
               <h1 className="text-5xl md:text-6xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 About Illari Health
@@ -243,7 +243,7 @@ export default function AboutPage() {
                 <div className="relative">
                   <Image
                     src="/assets/team/dr-milton-chavez.jpg"
-                    alt="Dr. Milton Chavez MD, FAAFP — Founder and Medical Director, Illari Health Chicago"
+                    alt="Dr. Milton Chavez MD, FAAFP, Founder and Medical Director, Illari Health Chicago"
                     width={480}
                     height={580}
                     className="w-full object-cover"
@@ -274,11 +274,11 @@ export default function AboutPage() {
                     <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Credentials</p>
                     <ul className="space-y-2">
                       {[
-                        "MD — Meharry Medical College, Nashville, TN",
-                        "Family Medicine Residency — Rush University, Chicago",
-                        "Surgical Residency and Pediatric Surgical Fellowship — UCLA",
-                        "Mini-Epilepsy Fellowship — Bowman Grey School of Medicine",
-                        "FAAFP — Fellow, American Academy of Family Physicians",
+                        "MD, Meharry Medical College, Nashville, TN",
+                        "Family Medicine Residency, Rush University, Chicago",
+                        "Surgical Residency and Pediatric Surgical Fellowship, UCLA",
+                        "Mini-Epilepsy Fellowship, Bowman Grey School of Medicine",
+                        "FAAFP, Fellow, American Academy of Family Physicians",
                         "Board-Certified Family Physician",
                         "Illinois Licensed Since 1997",
                         "28+ Years in Medicine",
@@ -344,9 +344,9 @@ export default function AboutPage() {
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Credentials</p>
                     <ul className="space-y-2">
                       {[
-                        "MSN — Master of Science in Nursing",
-                        "APRN — Advanced Practice Registered Nurse",
-                        "FNP-C — Board-Certified Family Nurse Practitioner",
+                        "MSN, Master of Science in Nursing",
+                        "APRN, Advanced Practice Registered Nurse",
+                        "FNP-C, Board-Certified Family Nurse Practitioner",
                         "5+ Years Diverse Clinical Experience",
                       ].map((item) => (
                         <li key={item} className="flex items-start gap-3 text-sm" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
@@ -371,7 +371,7 @@ export default function AboutPage() {
               <AnimateOnScroll>
                 <Image
                   src="/assets/team/karen-corona.jpg"
-                  alt="Karen Corona MSN, APRN, FNP-C — Family Nurse Practitioner at Illari Health Chicago"
+                  alt="Karen Corona MSN, APRN, FNP-C, Family Nurse Practitioner at Illari Health Chicago"
                   width={480}
                   height={560}
                   className="w-full object-cover"
