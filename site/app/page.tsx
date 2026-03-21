@@ -361,7 +361,7 @@ export default function Home() {
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl mb-1" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>
-                    <Link href="/concierge-medicine" className="hover:opacity-80 transition-opacity">Concierge Medicine</Link>
+                    <Link href="/concierge-medicine" prefetch={false} className="hover:opacity-80 transition-opacity">Concierge Medicine</Link>
                   </h3>
                   <p className="text-xs uppercase tracking-wider mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                     Executive-Level Care
@@ -403,7 +403,7 @@ export default function Home() {
               <div className="lg:col-span-1" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
                 <div className="p-8">
                   <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                    <Link href="/direct-primary-care" className="hover:opacity-80 transition-opacity">Direct Primary Care</Link>
+                    <Link href="/direct-primary-care" prefetch={false} className="hover:opacity-80 transition-opacity">Direct Primary Care</Link>
                   </h3>
                   <p className="text-xs uppercase tracking-wider mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                     Comprehensive Coverage
@@ -443,7 +443,7 @@ export default function Home() {
               <div className="lg:col-span-1" style={{ backgroundColor: CREAM, border: `1px solid ${BORDER_GOLD}` }}>
                 <div className="p-8">
                   <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                    <Link href="/one-time-visit" className="hover:opacity-80 transition-opacity">One-Time Visit</Link>
+                    <Link href="/one-time-visit" prefetch={false} className="hover:opacity-80 transition-opacity">One-Time Visit</Link>
                   </h3>
                   <p className="text-xs uppercase tracking-wider mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                     No Membership Required
@@ -637,7 +637,7 @@ export default function Home() {
                   Your Physicians
                 </h2>
                 <div className="w-12 h-px mx-auto mb-4" style={{ backgroundColor: GOLD }} />
-                <Link href="/about" className="text-xs tracking-widest uppercase hover:opacity-80 transition-opacity" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <Link href="/about" prefetch={false} className="text-xs tracking-widest uppercase hover:opacity-80 transition-opacity" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   Meet the Full Team &rarr;
                 </Link>
               </div>

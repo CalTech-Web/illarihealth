@@ -40,32 +40,32 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/concierge-medicine" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <Link href="/concierge-medicine" prefetch={false} className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   Concierge Medicine
                 </Link>
               </li>
               <li>
-                <Link href="/direct-primary-care" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <Link href="/direct-primary-care" prefetch={false} className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   Direct Primary Care
                 </Link>
               </li>
               <li>
-                <Link href="/one-time-visit" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <Link href="/one-time-visit" prefetch={false} className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   One-Time Visit
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <Link href="/faq" prefetch={false} className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <Link href="/about" prefetch={false} className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <Link href="/contact" prefetch={false} className="text-sm transition-colors hover:opacity-80" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                   Contact
                 </Link>
               </li>

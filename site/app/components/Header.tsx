@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header style={{ backgroundColor: "#161616" }} className="sticky top-0 z-50 w-full">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" prefetch={false} className="flex items-center gap-3">
           <Image
             src="/assets/logos/illari-health-logo.png"
             alt="Illari Health"
@@ -24,6 +24,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-8">
           <Link
             href="/"
+            prefetch={false}
             className="text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
@@ -31,6 +32,7 @@ export default function Header() {
           </Link>
           <Link
             href="/concierge-medicine"
+            prefetch={false}
             className="text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
@@ -38,6 +40,7 @@ export default function Header() {
           </Link>
           <Link
             href="/direct-primary-care"
+            prefetch={false}
             className="text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
@@ -45,6 +48,7 @@ export default function Header() {
           </Link>
           <Link
             href="/faq"
+            prefetch={false}
             className="text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
@@ -52,6 +56,7 @@ export default function Header() {
           </Link>
           <Link
             href="/about"
+            prefetch={false}
             className="text-sm tracking-widest uppercase transition-colors"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
@@ -100,6 +105,7 @@ export default function Header() {
         <div style={{ backgroundColor: "#1a1a1a", borderTop: "1px solid #DECBA3" }} className="md:hidden px-6 py-4 flex flex-col gap-4">
           <Link
             href="/"
+            prefetch={false}
             className="text-sm tracking-widest uppercase py-2"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
             onClick={() => setMenuOpen(false)}
@@ -108,6 +114,7 @@ export default function Header() {
           </Link>
           <Link
             href="/concierge-medicine"
+            prefetch={false}
             className="text-sm tracking-widest uppercase py-2"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
             onClick={() => setMenuOpen(false)}
@@ -116,6 +123,7 @@ export default function Header() {
           </Link>
           <Link
             href="/direct-primary-care"
+            prefetch={false}
             className="text-sm tracking-widest uppercase py-2"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
             onClick={() => setMenuOpen(false)}
@@ -124,6 +132,7 @@ export default function Header() {
           </Link>
           <Link
             href="/faq"
+            prefetch={false}
             className="text-sm tracking-widest uppercase py-2"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
             onClick={() => setMenuOpen(false)}
@@ -132,6 +141,7 @@ export default function Header() {
           </Link>
           <Link
             href="/about"
+            prefetch={false}
             className="text-sm tracking-widest uppercase py-2"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
             onClick={() => setMenuOpen(false)}
