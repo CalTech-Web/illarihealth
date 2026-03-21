@@ -625,6 +625,35 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Physician Credentials Strip */}
+        <section style={{ backgroundColor: CHARCOAL }} className="relative overflow-hidden py-16">
+          <div className="ih-gold-line absolute top-0 left-0 right-0" />
+          <div className="ih-gold-line absolute bottom-0 left-0 right-0" />
+          <AnimateOnScroll>
+            <div className="max-w-6xl mx-auto px-6">
+              <p className="text-xs tracking-widest uppercase text-center mb-10" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                Physician Credentials
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+                {[
+                  { label: "Medical School", value: "Meharry Medical College" },
+                  { label: "Residency", value: "Rush University, Chicago" },
+                  { label: "Fellowship", value: "UCLA" },
+                  { label: "Designation", value: "MD, FAAFP Fellow" },
+                  { label: "Licensed", value: "Illinois Since 1997" },
+                  { label: "Experience", value: "28+ Years" },
+                ].map(({ label, value }) => (
+                  <div key={label} className="flex flex-col items-center">
+                    <div className="w-6 h-px mb-4" style={{ backgroundColor: GOLD }} />
+                    <p className="text-xs tracking-widest uppercase mb-2" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>{label}</p>
+                    <p className="text-sm leading-snug" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>{value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </section>
+
         {/* Team Section */}
         <section style={{ backgroundColor: CREAM }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
