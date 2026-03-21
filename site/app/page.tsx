@@ -736,45 +736,98 @@ export default function Home() {
         {/* Testimonials */}
         <section style={{ backgroundColor: CHARCOAL }} className="ih-dots-dark py-24">
           <div className="max-w-6xl mx-auto px-6">
+
+            {/* Rating Summary Header */}
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                   Patient Reviews
                 </p>
-                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                <h2 className="text-4xl md:text-5xl mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                   What Patients Say
                 </h2>
-                <div className="w-12 h-px mx-auto mb-4" style={{ backgroundColor: GOLD }} />
-                <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  4.78 out of 5 on Tebra, 23 verified reviews
-                </p>
+                <div className="w-12 h-px mx-auto mb-8" style={{ backgroundColor: GOLD }} />
+                {/* Aggregate rating display */}
+                <div className="inline-flex flex-col items-center gap-3">
+                  <div className="flex gap-2">
+                    {[1,2,3,4,5].map((s) => (
+                      <svg key={s} width="22" height="22" viewBox="0 0 24 24" fill={GOLD}>
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p style={{ fontFamily: "'Abril Fatface', serif", color: GOLD }} className="text-3xl">4.78 <span className="text-xl" style={{ color: "#9a8a72" }}>/ 5</span></p>
+                  <p className="text-xs tracking-widest uppercase" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                    23 Verified Reviews &middot; Tebra
+                  </p>
+                </div>
               </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            {/* Featured Pull Quote */}
+            <AnimateOnScroll>
+              <div className="relative mb-16 mx-auto max-w-3xl text-center px-8 py-12" style={{ border: `1px solid rgba(222,203,164,0.18)`, backgroundColor: "#1a1a1a", borderRadius: "16px" }}>
+                {/* Decorative large quote mark */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    fontFamily: "'Abril Fatface', serif",
+                    fontSize: "10rem",
+                    lineHeight: 1,
+                    color: GOLD,
+                    opacity: 0.07,
+                    position: "absolute",
+                    top: "-1rem",
+                    left: "1.5rem",
+                    pointerEvents: "none",
+                    userSelect: "none",
+                  }}
+                >
+                  &ldquo;
+                </div>
+                <div className="flex justify-center gap-1 mb-6">
+                  {[1,2,3,4,5].map((s) => (
+                    <svg key={s} width="15" height="15" viewBox="0 0 24 24" fill={GOLD}>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-xl md:text-2xl italic leading-relaxed mb-8 relative z-10" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                  &ldquo;Dr. Chavez has my highest recommendation. He is knowledgeable, intelligent, empathic, consistent, thorough and soft-spoken. Basically, he delivers what most people want and deserve from their MD.&rdquo;
+                </p>
+                <div className="w-10 h-px mx-auto mb-5" style={{ backgroundColor: "rgba(222,203,164,0.3)" }} />
+                <p className="text-sm tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>Chad M.</p>
+                <p className="text-xs mt-1" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>Verified Patient</p>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Supporting Quotes */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { name: "Albert T.", quote: "My visit with Dr. Chavez is always pleasant. I love that the Doctors take your appointment on time, very attentive and professional and knowledgeable of my medical history.", delay: 0 },
-                { name: "Chad M.", quote: "Dr. Chavez has my highest recommendation. He is knowledgeable, intelligent, empathic, consistent, thorough and soft-spoken. Basically, he delivers what most people want and deserve from their MD.", delay: 100 },
-                { name: "Janneth H.", quote: "My initial visit was very great. The receptionist was very helpful and cordial. Beautiful, clean waiting area and offices. My overall experience was wonderful.", delay: 0 },
-                { name: "David H.", quote: "My experience was relaxing and thorough.", delay: 100 },
+                { name: "Janneth H.", quote: "My initial visit was very great. The receptionist was very helpful and cordial. Beautiful, clean waiting area and offices. My overall experience was wonderful.", delay: 80 },
+                { name: "David H.", quote: "My experience was relaxing and thorough.", delay: 160 },
               ].map(({ name, quote, delay }) => (
                 <AnimateOnScroll key={name} delay={delay}>
-                  <div className="ih-card-dark p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                  <div className="ih-card-dark p-7" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
                     <div className="flex gap-1 mb-4">
                       {[1,2,3,4,5].map((s) => (
-                        <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}>
+                        <svg key={s} width="12" height="12" viewBox="0 0 24 24" fill={GOLD}>
                           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                       ))}
                     </div>
-                    <p className="text-base italic leading-relaxed mb-4" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                    <p className="text-sm italic leading-relaxed mb-5" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                       &ldquo;{quote}&rdquo;
                     </p>
+                    <div className="w-6 h-px mb-4" style={{ backgroundColor: "rgba(222,203,164,0.25)" }} />
                     <p className="text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>{name}</p>
-                    <p className="text-xs" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>Verified Patient</p>
+                    <p className="text-xs mt-0.5" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>Verified Patient</p>
                   </div>
                 </AnimateOnScroll>
               ))}
             </div>
+
           </div>
         </section>
 
