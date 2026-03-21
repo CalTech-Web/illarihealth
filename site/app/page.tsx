@@ -1003,6 +1003,79 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Instagram Section */}
+        <section style={{ backgroundColor: CREAM, borderTop: `1px solid ${BORDER_GOLD}` }} className="py-20">
+          <div className="max-w-6xl mx-auto px-6">
+            <AnimateOnScroll>
+              <div className="text-center mb-12">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  On Instagram
+                </p>
+                <h2 className="text-3xl md:text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                  @illarihealth
+                </h2>
+                <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
+                <p className="text-base max-w-xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                  Health tips, practice updates, and a look inside the Wicker Park office.
+                </p>
+              </div>
+            </AnimateOnScroll>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+              {[
+                { src: "/assets/gallery/instagram-post-1.jpg", alt: "Illari Health Instagram post" },
+                { src: "/assets/gallery/instagram-post-2.jpg", alt: "Illari Health Instagram post" },
+                { src: "/assets/gallery/instagram-post-4.jpg", alt: "Illari Health Instagram post" },
+              ].map(({ src, alt }, i) => (
+                <AnimateOnScroll key={src} delay={i * 80}>
+                  <a
+                    href="https://www.instagram.com/illarihealth"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative overflow-hidden ih-img"
+                    style={{ border: `1px solid ${BORDER_GOLD}`, aspectRatio: "1 / 1" }}
+                  >
+                    <Image
+                      src={src}
+                      alt={alt}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                    <div
+                      className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                      style={{ backgroundColor: "rgba(22,22,22,0.42)" }}
+                    >
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill={GOLD} stroke="none"/>
+                      </svg>
+                    </div>
+                  </a>
+                </AnimateOnScroll>
+              ))}
+            </div>
+            <AnimateOnScroll delay={100}>
+              <div className="text-center">
+                <a
+                  href="https://www.instagram.com/illarihealth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ih-btn ih-btn-outline inline-flex items-center gap-3 px-8 py-4 text-sm font-medium tracking-wider uppercase"
+                  style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                  </svg>
+                  Follow on Instagram
+                </a>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
         {/* Contact / CTA Section */}
         <section id="contact" style={{ backgroundColor: CREAM, borderTop: `1px solid ${BORDER_GOLD}` }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
