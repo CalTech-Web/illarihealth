@@ -192,6 +192,7 @@ const CHARCOAL = "#161616";
 const OFF_WHITE = "#FAF7F2";
 const CREAM = "#F1E8D8";
 const BORDER_GOLD = "#DECBA3";
+const BOOKING_URL = "https://web2.myaestheticspro.com/BN/index.cfm?52A4C5D4699E6C16FB67ACA46E1487324CFC2165279C2B6FC9B29ADF9D0A6FBB";
 
 export default function Home() {
   return (
@@ -231,11 +232,13 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:7732273303"
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
-                  Call for Priority Booking
+                  Book Now
                 </a>
                 <a
                   href="#membership"
@@ -390,11 +393,13 @@ export default function Home() {
                     ))}
                   </ul>
                   <a
-                    href="tel:7732273303"
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="ih-btn ih-btn-gold block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                     style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
-                    Call for Priority Booking
+                    Book Now
                   </a>
                 </div>
               </div>
@@ -430,11 +435,13 @@ export default function Home() {
                     ))}
                   </ul>
                   <a
-                    href="tel:7732273303"
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="ih-btn ih-btn-outline block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                     style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
-                    Call for Priority Booking
+                    Book Now
                   </a>
                 </div>
               </div>
