@@ -52,10 +52,6 @@ const faqs = [
     a: "Yes. Your membership covers primary care, labs, and in-office services. For hospitalizations, specialist care, and emergency services, you will still need health insurance. DPC is a better way to access primary care, not a substitute for it.",
   },
   {
-    q: "Is there an option for a one-time visit without joining?",
-    a: "Yes. A single visit is $175, no membership required. Come once, no strings. If you like what you find, plans start at $150 a month.",
-  },
-  {
     q: "What medical conditions do you treat?",
     a: "Illari Health offers general primary care for adults and children, sports medicine, clinical and surgical dermatology, and non-operative orthopedics and biologics. Dr. Chavez trained in family medicine, orthopedics, dermatology, and surgery. Most of what other primary care offices refer out, he handles in-house.",
   },
@@ -145,7 +141,7 @@ export default function FAQPage() {
             </h2>
             <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
             <p className="text-base leading-relaxed mb-8" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-              Call us directly and we will walk you through your options. DPC and Concierge members receive priority scheduling. One-time visits are available for $175 with no commitment.
+              Call us directly and we will walk you through your options. DPC and Concierge members receive priority scheduling.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

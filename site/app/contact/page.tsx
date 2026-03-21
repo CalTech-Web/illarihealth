@@ -158,7 +158,7 @@ export default function ContactPage() {
               </h1>
               <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
               <p className="text-xl leading-relaxed max-w-2xl" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
-                Ready to get started? Call to book a one-time visit or ask about membership. We answer our own phones.
+                Ready to get started? Call to ask about membership or book your first appointment. We answer our own phones.
               </p>
             </AnimateOnScroll>
           </div>
@@ -265,17 +265,10 @@ export default function ContactPage() {
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                       New Patients
                     </p>
-                    <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>One-Time Visit Available</h3>
+                    <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>New Patients Welcome</h3>
                     <p className="text-sm leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                      Not sure if Illari Health is right for you? A $175 one-time visit lets you meet Dr. Chavez and experience the practice before committing to a membership plan.
+                      Not sure which plan is right for you? Call us and we will walk you through your options. No pressure, just honest guidance.
                     </p>
-                    <a
-                      href="/one-time-visit"
-                      className="text-xs tracking-widest uppercase hover:opacity-80 transition-opacity"
-                      style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}
-                    >
-                      Learn About One-Time Visits &rarr;
-                    </a>
                   </div>
                 </div>
               </AnimateOnScroll>

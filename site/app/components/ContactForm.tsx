@@ -134,7 +134,6 @@ export default function ContactForm() {
         >
           <option value="concierge">Concierge Medicine ($300/mo)</option>
           <option value="dpc">Direct Primary Care ($150/mo)</option>
-          <option value="onetime">One-Time Visit ($175)</option>
           <option value="general">General Inquiry</option>
         </select>
       </div>

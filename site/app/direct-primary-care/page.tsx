@@ -396,7 +396,7 @@ export default function DirectPrimaryCarePage() {
               </h2>
               <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
               <p className="text-base leading-relaxed mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                Call us to get started. Not ready to commit? A $175 one-time visit lets you meet Dr. Chavez and experience the practice before joining a plan.
+                Call us to get started. We will walk you through your options and find the right plan for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

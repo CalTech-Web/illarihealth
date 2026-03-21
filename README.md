@@ -1,3 +1,20 @@
+## Run Agents
+
+```
+WORK=/Users/brandonhopkins/Projects/illarihealth/agents/design-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
+```
+```
+WORK=/Users/brandonhopkins/Projects/illarihealth/agents/content-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
+```
+```
+WORK=/Users/brandonhopkins/Projects/illarihealth/agents/seo-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
+```
+```
+WORK=/Users/brandonhopkins/Projects/illarihealth/agents/pagespeed-agent MODEL="sonnet" MAX_LOOPS=2 bash ~/Projects/claude-lab/ENGINE/run.sh
+```
+
+---
+
 # New Client Website - Orchestration Spec
 
 Follow every step in order. Spawn each agent using the Agent tool with `model="sonnet"`. Do not proceed to the next step until the current agent returns its required success signal. Never skip a step. Never start building before Step 1 is complete.

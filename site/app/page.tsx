@@ -144,15 +144,6 @@ const localBusinessJsonLd = {
         },
         url: "https://illarihealth.com#membership",
       },
-      {
-        "@type": "Offer",
-        name: "One-Time Visit",
-        description:
-          "Single visit with no membership required. Adult and pediatric primary care, sports medicine, clinical and surgical dermatology, and non-operative orthopedics.",
-        price: "175",
-        priceCurrency: "USD",
-        url: "https://illarihealth.com",
-      },
     ],
   },
   aggregateRating: {
@@ -356,9 +347,9 @@ export default function Home() {
               </div>
             </AnimateOnScroll>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
               {/* Concierge - Featured */}
-              <div className="ih-card-dark ih-gold-glow lg:col-span-1 relative" style={{ backgroundColor: CHARCOAL, border: `2px solid ${GOLD}` }}>
+              <div className="ih-card-dark ih-gold-glow relative" style={{ backgroundColor: CHARCOAL, border: `2px solid ${GOLD}` }}>
                 <div className="ih-pill absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-xs tracking-widest uppercase" style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>
                   Premier Plan
                 </div>
@@ -405,7 +396,7 @@ export default function Home() {
               </div>
 
               {/* DPC */}
-              <div className="ih-card lg:col-span-1" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+              <div className="ih-card" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
                 <div className="p-8">
                   <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                     <Link href="/direct-primary-care" prefetch={false} className="hover:opacity-80 transition-opacity">Direct Primary Care</Link>
@@ -446,43 +437,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* One-Time Visit */}
-              <div className="ih-card lg:col-span-1" style={{ backgroundColor: CREAM, border: `1px solid ${BORDER_GOLD}` }}>
-                <div className="p-8">
-                  <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                    <Link href="/one-time-visit" prefetch={false} className="hover:opacity-80 transition-opacity">One-Time Visit</Link>
-                  </h3>
-                  <p className="text-xs uppercase tracking-wider mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                    No Membership Required
-                  </p>
-                  <div className="mb-6">
-                    <p className="text-5xl" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>$175</p>
-                    <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>per visit</p>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {[
-                      "Adult and pediatric primary care",
-                      "Sports medicine",
-                      "Clinical and surgical dermatology",
-                      "Non-operative orthopedics",
-                      "No commitment required",
-                      "Try the practice before committing",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span style={{ color: "#C9A96E", marginTop: "2px" }}>&#10003;</span>
-                        <span className="text-sm" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="tel:7732273303"
-                    className="ih-btn ih-btn-outline block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
-                    style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
-                  >
-                    Call 773.227.3303
-                  </a>
-                </div>
-              </div>
             </div>
 
           {/* Comparison Table */}
@@ -835,7 +789,7 @@ export default function Home() {
             <AnimateOnScroll delay={100}>
               <div className="mt-12 text-center">
                 <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  Questions about a specific condition? A one-time visit is available for $175 with no membership required.
+                  Questions about a specific condition? Call us and we will walk you through your options.
                 </p>
                 <a
                   href="tel:7732273303"
@@ -1141,7 +1095,7 @@ export default function Home() {
                 </h2>
                 <div className="w-12 h-px mb-8" style={{ backgroundColor: GOLD }} />
                 <p className="text-base leading-relaxed mb-8" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Call us or fill out the form. Members get same-day or next-day scheduling most of the time. Not ready to commit? The $175 one-time visit gets you a full appointment with Dr. Chavez, no strings.
+                  Call us or fill out the form. Members get same-day or next-day scheduling most of the time.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center gap-4">

@@ -12,7 +12,6 @@ export async function POST(req: NextRequest) {
     const planLabels: Record<string, string> = {
       concierge: "Concierge Medicine ($300/mo)",
       dpc: "Direct Primary Care ($150/mo)",
-      onetime: "One-Time Visit ($175)",
       general: "General Inquiry",
     };
 
