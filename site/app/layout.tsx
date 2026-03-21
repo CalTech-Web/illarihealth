@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     description: "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP.",
     images: ["/assets/logos/illari-health-logo-full.png"],
   },
+  verification: {
+    google: "OHevw2oUrYRMPhlsNSoPHNRg-P0I-CjtMzuyAWPwlbc",
+  },
 };
 
 export default function RootLayout({
