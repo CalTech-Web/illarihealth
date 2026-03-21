@@ -102,9 +102,9 @@ export default function Footer() {
           <p className="text-xs" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>
             &copy; 2026 Illari Health. All Rights Reserved.
           </p>
-          <p className="text-xs" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>
+          <p className="text-xs" style={{ color: "#7a6a5a", fontFamily: "'Lora', Georgia, serif" }}>
             Powered by{" "}
-            <a href="https://caltechweb.com" className="hover:opacity-80 transition-colors" style={{ color: "#9a8a72" }}>
+            <a href="https://caltechweb.com" className="hover:opacity-80 transition-colors underline" style={{ color: "#b0a080" }}>
               Caltechweb
             </a>
           </p>

@@ -247,7 +247,7 @@ export default function AboutPage() {
                     width={480}
                     height={580}
                     className="w-full object-cover"
-                    style={{ border: `1px solid #2a2a2a` }}
+                    style={{ border: `2px solid rgba(222,203,164,0.4)`, display: "block" }}
                   />
                   <div className="mt-4 p-6" style={{ backgroundColor: "#1a1a1a", border: `1px solid #2a2a2a` }}>
                     <p className="text-sm italic leading-relaxed mb-3" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>

@@ -16,6 +16,9 @@ export default function AnimateOnScroll({
     const el = ref.current;
     if (!el) return;
 
+    // Mark as JS-enhanced so the hidden state activates
+    el.classList.add("js-animate");
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

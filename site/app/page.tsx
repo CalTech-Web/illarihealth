@@ -248,24 +248,24 @@ export default function Home() {
               <div className="mt-8 flex items-center gap-6">
                 <div>
                   <p className="text-2xl font-semibold" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>4.78</p>
-                  <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Tebra Rating</p>
+                  <p className="text-sm" style={{ color: "#c4b49a", fontFamily: "'Lora', Georgia, serif" }}>Tebra Rating</p>
                 </div>
                 <div className="w-px h-10" style={{ backgroundColor: "#333" }} />
                 <div>
                   <p className="text-2xl font-semibold" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>28+</p>
-                  <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Years Experience</p>
+                  <p className="text-sm" style={{ color: "#c4b49a", fontFamily: "'Lora', Georgia, serif" }}>Years Experience</p>
                 </div>
                 <div className="w-px h-10" style={{ backgroundColor: "#333" }} />
                 <div>
                   <p className="text-2xl font-semibold" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>200+</p>
-                  <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Specialists via RubiconMD</p>
+                  <p className="text-sm" style={{ color: "#c4b49a", fontFamily: "'Lora', Georgia, serif" }}>Specialists via RubiconMD</p>
                 </div>
               </div>
             </div>
 
             {/* Hero Right Column - Physician Credential Card */}
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="p-8 w-full max-w-sm" style={{
+            <div className="hidden lg:flex items-center justify-center overflow-hidden">
+              <div className="p-8 w-full max-w-sm min-w-0" style={{
                 backgroundColor: "rgba(22,22,22,0.78)",
                 border: `1px solid rgba(222,203,164,0.35)`,
                 backdropFilter: "blur(14px)",
@@ -303,12 +303,12 @@ export default function Home() {
                 </div>
                 <div className="w-full h-px mb-5" style={{ backgroundColor: "rgba(222,203,164,0.2)" }} />
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>Membership Plans</p>
-                <div className="flex gap-4">
-                  <div className="flex-1 text-center py-3" style={{ border: `1px solid rgba(222,203,164,0.2)` }}>
+                <div className="flex gap-3 overflow-hidden">
+                  <div className="flex-1 min-w-0 text-center py-3" style={{ border: `1px solid rgba(222,203,164,0.2)` }}>
                     <p className="text-xl" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>$150</p>
                     <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>DPC / mo</p>
                   </div>
-                  <div className="flex-1 text-center py-3" style={{ border: `1px solid ${GOLD}`, backgroundColor: "rgba(222,203,164,0.08)" }}>
+                  <div className="flex-1 min-w-0 text-center py-3" style={{ border: `1px solid ${GOLD}`, backgroundColor: "rgba(222,203,164,0.08)" }}>
                     <p className="text-xl" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif" }}>$300</p>
                     <p className="text-xs" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Concierge / mo</p>
                   </div>
@@ -494,7 +494,7 @@ export default function Home() {
                     <th className="py-4 px-6 text-center text-xs tracking-wider uppercase" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid ${BORDER_GOLD}`, width: "22%" }}>
                       DPC<br /><span style={{ color: GOLD }}>$150/mo</span>
                     </th>
-                    <th className="py-4 px-6 text-center text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", borderBottom: `2px solid ${GOLD}`, backgroundColor: "rgba(222,203,164,0.07)", width: "22%" }}>
+                    <th className="py-4 px-6 text-center text-xs tracking-wider uppercase" style={{ color: "#161616", fontFamily: "'Lora', Georgia, serif", borderBottom: `2px solid ${GOLD}`, backgroundColor: "rgba(222,203,164,0.85)", width: "22%" }}>
                       Concierge<br /><span style={{ fontSize: "1.1em" }}>$300/mo</span>
                     </th>
                   </tr>

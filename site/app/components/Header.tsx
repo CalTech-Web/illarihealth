@@ -62,6 +62,14 @@ export default function Header() {
           >
             About
           </Link>
+          <Link
+            href="/contact"
+            prefetch={false}
+            className="text-sm tracking-widest uppercase transition-colors"
+            style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
+          >
+            Contact
+          </Link>
           <a
             href="tel:7732273303"
             className="px-6 py-2.5 text-sm font-medium tracking-wider uppercase border transition-colors"
@@ -147,6 +155,15 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           >
             About
+          </Link>
+          <Link
+            href="/contact"
+            prefetch={false}
+            className="text-sm tracking-widest uppercase py-2"
+            style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif" }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
           </Link>
           <a
             href="tel:7732273303"

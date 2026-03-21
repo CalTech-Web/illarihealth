@@ -211,8 +211,8 @@ export default function ContactPage() {
                         href="https://www.instagram.com/illarihealth/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-base hover:opacity-80 transition-opacity"
-                        style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}
+                        className="text-base hover:opacity-80 transition-opacity underline"
+                        style={{ color: "#C9A96E", fontFamily: "'Lora', Georgia, serif" }}
                       >
                         @illarihealth
                       </a>
@@ -221,7 +221,7 @@ export default function ContactPage() {
                   <div className="mt-10 flex flex-col sm:flex-row gap-4">
                     <a
                       href="tel:7732273303"
-                      className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                      className="px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90 whitespace-nowrap"
                       style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                     >
                       Call for Priority Booking

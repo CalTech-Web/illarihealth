@@ -187,7 +187,7 @@ export default function FAQPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {["Psychiatry", "Dermatology", "Cardiology", "Orthopedics", "Neurology", "Endocrinology"].map((specialty) => (
-                  <div key={specialty} className="p-4 text-center" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                  <div key={specialty} className="p-4 text-center" style={{ border: `1px solid #4a4030`, backgroundColor: "#252218" }}>
                     <p className="text-sm" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>{specialty}</p>
                   </div>
                 ))}

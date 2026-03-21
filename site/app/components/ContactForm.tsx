@@ -134,11 +134,11 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="w-full py-4 text-sm font-medium tracking-widest uppercase transition-opacity disabled:opacity-60"
         style={{
-          backgroundColor: "#161616",
-          color: "#DECBA4",
+          backgroundColor: "#DECBA4",
+          color: "#161616",
           fontFamily: "'Lora', Georgia, serif",
           letterSpacing: "0.15em",
-          border: "1px solid #161616",
+          border: "1px solid #DECBA4",
         }}
       >
         {status === "sending" ? "Sending..." : "Request a Callback"}

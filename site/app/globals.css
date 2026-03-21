@@ -63,7 +63,7 @@ h1, h2, h3 {
 
 @keyframes revealFadeUp {
   from {
-    opacity: 0;
+    opacity: 0.01;
     transform: translateY(28px);
   }
   to {
@@ -73,7 +73,11 @@ h1, h2, h3 {
 }
 
 .reveal-hidden {
-  opacity: 0;
+  opacity: 1;
+}
+
+.reveal-hidden.js-animate {
+  opacity: 0.01;
 }
 
 .reveal-visible {
