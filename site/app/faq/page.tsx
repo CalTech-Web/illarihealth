@@ -258,54 +258,79 @@ export default function FAQPage() {
         </section>
 
         {/* Still Have Questions CTA */}
-        <section style={{ backgroundColor: CREAM, borderTop: `1px solid ${BORDER_GOLD}` }} className="py-20">
-          <div className="max-w-6xl mx-auto px-6 text-center">
+        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
-              <div className="flex items-center justify-center gap-4 mb-4">
-                {/* Phone Icon */}
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <h2 className="text-4xl" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                  Still Have Questions?
-                </h2>
+              <div className="ih-card-dark p-10 md:p-16" style={{ border: `1px solid rgba(222,203,164,0.15)`, backgroundColor: "rgba(26,26,26,0.6)" }}>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                  {/* Left: heading + description */}
+                  <div>
+                    <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                      We Answer Our Own Phones
+                    </p>
+                    <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                      Still Have Questions?
+                    </h2>
+                    <div className="w-16 h-px mb-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                    <p className="text-base leading-relaxed mb-6" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                      Call us directly and we will walk you through your options. No automated phone tree, no callbacks in 48 hours. DPC and Concierge members receive priority scheduling.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      {["No Commitment Needed", "No Phone Tree", "Priority for Members"].map((pill) => (
+                        <span key={pill} className="ih-pill px-4 py-1.5 text-xs tracking-wider" style={{ backgroundColor: "rgba(222,203,164,0.08)", border: `1px solid rgba(222,203,164,0.2)`, color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>
+                          {pill}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-3 text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      1509 N Western Ave, Wicker Park, Chicago
+                    </div>
+                  </div>
+
+                  {/* Right: contact cards + CTAs */}
+                  <div className="space-y-4">
+                    {/* Phone card */}
+                    <a href="tel:7732273303" className="block p-6 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: "rgba(222,203,164,0.06)", border: `1px solid rgba(222,203,164,0.15)`, borderRadius: "16px" }}>
+                      <div className="flex items-center gap-5">
+                        <div className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: GOLD }}>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={CHARCOAL} strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                          <p className="text-xs tracking-widest uppercase mb-1" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Call Us</p>
+                          <p className="text-2xl" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>773.227.3303</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    {/* Email card */}
+                    <a href="mailto:info@illarihealth.com" className="block p-6 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: "rgba(222,203,164,0.06)", border: `1px solid rgba(222,203,164,0.15)`, borderRadius: "16px" }}>
+                      <div className="flex items-center gap-5">
+                        <div className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: "rgba(222,203,164,0.12)", border: `1px solid rgba(222,203,164,0.25)` }}>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                        </div>
+                        <div>
+                          <p className="text-xs tracking-widest uppercase mb-1" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Email Us</p>
+                          <p className="text-lg" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>info@illarihealth.com</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    {/* Request callback card */}
+                    <a href="/#contact" className="block p-6 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: "rgba(222,203,164,0.06)", border: `1px solid rgba(222,203,164,0.15)`, borderRadius: "16px" }}>
+                      <div className="flex items-center gap-5">
+                        <div className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: "rgba(222,203,164,0.12)", border: `1px solid rgba(222,203,164,0.25)` }}>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        </div>
+                        <div>
+                          <p className="text-xs tracking-widest uppercase mb-1" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Prefer We Call You?</p>
+                          <p className="text-lg" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>Request a Callback</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
-              <p className="text-base leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                Call us directly and we will walk you through your options. DPC and Concierge members receive priority scheduling.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center mb-8">
-                <span className="ih-pill px-4 py-1.5 text-xs tracking-wider" style={{ backgroundColor: "transparent", border: `1px solid ${BORDER_GOLD}`, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  No Commitment Needed
-                </span>
-                <span className="ih-pill px-4 py-1.5 text-xs tracking-wider" style={{ backgroundColor: "transparent", border: `1px solid ${BORDER_GOLD}`, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  Priority Scheduling for Members
-                </span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a
-                  href="tel:7732273303"
-                  className="ih-btn ih-btn-dark px-10 py-5 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: CHARCOAL, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
-                >
-                  Call 773.227.3303
-                </a>
-                <a
-                  href="mailto:info@illarihealth.com"
-                  className="ih-btn ih-btn-outline px-10 py-5 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
-                  style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
-                >
-                  Email Us
-                </a>
-              </div>
-              <p className="flex items-center justify-center gap-2 text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                {/* Map Pin Icon */}
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9a8a72" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                1509 N Western Ave, Wicker Park, Chicago
-              </p>
             </AnimateOnScroll>
           </div>
         </section>
