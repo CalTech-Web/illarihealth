@@ -270,7 +270,7 @@ export default function ConciergeMedicinePage() {
               sizes="100vw"
               aria-hidden="true"
             />
-            <div className="absolute inset-0" style={{ backgroundColor: "rgba(241,232,216,0.92)" }} />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(241,232,216,0.78)" }} />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
