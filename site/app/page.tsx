@@ -627,71 +627,121 @@ export default function Home() {
                 <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                   Your Physicians
                 </h2>
-                <div className="w-12 h-px mx-auto mb-4" style={{ backgroundColor: GOLD }} />
-                <Link href="/about" prefetch={false} className="text-xs tracking-widest uppercase hover:opacity-80 transition-opacity" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  Meet the Full Team &rarr;
+                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+              </div>
+            </AnimateOnScroll>
+
+            {/* Dr. Chavez - Horizontal Card */}
+            <AnimateOnScroll>
+              <div className="ih-card mb-10 overflow-hidden" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                  <div className="relative" style={{ aspectRatio: "3 / 4", minHeight: "360px" }}>
+                    <Image
+                      src="/assets/team/dr-milton-chavez.jpg"
+                      alt="Dr. Milton Chavez MD, FAAFP"
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-center">
+                    <p className="text-xs tracking-widest uppercase mb-2" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
+                      Founder and Medical Director
+                    </p>
+                    <h3 className="text-3xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Dr. Milton Chavez</h3>
+                    <p className="text-sm mb-5" style={{ color: "#C9A96E", fontFamily: "'Lora', Georgia, serif" }}>MD, FAAFP</p>
+                    <p className="text-base leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                      Trained at Meharry Medical College, residency at Rush University in Chicago, fellowship at UCLA. 28+ years in medicine. Most practices refer out dermatology, orthopedics, and minor surgery. Dr. Chavez handles all of it, in the same office, at the same flat rate.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {[
+                        "Meharry Medical College",
+                        "Rush University",
+                        "UCLA Fellowship",
+                        "Licensed Since 1997",
+                        "28+ Years",
+                      ].map((tag) => (
+                        <span key={tag} className="ih-tag px-3 py-1 text-xs" style={{ backgroundColor: CREAM, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", border: `1px solid ${BORDER_GOLD}` }}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <a
+                        href={BOOKING_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ih-btn ih-btn-gold inline-block px-6 py-3 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                        style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                      >
+                        Book with Dr. Chavez
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Karen Corona - Horizontal Card (reversed) */}
+            <AnimateOnScroll delay={150}>
+              <div className="ih-card overflow-hidden" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                  <div className="relative md:order-2" style={{ aspectRatio: "3 / 4", minHeight: "360px" }}>
+                    <Image
+                      src="/assets/team/karen-corona.jpg"
+                      alt="Karen Corona MSN, APRN, FNP-C"
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="md:col-span-2 md:order-1 p-8 md:p-10 flex flex-col justify-center">
+                    <p className="text-xs tracking-widest uppercase mb-2" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
+                      Family Nurse Practitioner
+                    </p>
+                    <h3 className="text-3xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Karen Corona</h3>
+                    <p className="text-sm mb-5" style={{ color: "#C9A96E", fontFamily: "'Lora', Georgia, serif" }}>MSN, APRN, FNP-C</p>
+                    <p className="text-base leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                      Five-plus years of clinical experience across inpatient care, women&apos;s health, and medical weight loss. Board-certified family nurse practitioner. The same unhurried, relationship-driven approach as every provider at Illari Health.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {[
+                        "Board-Certified FNP",
+                        "Women's Health",
+                        "Medical Weight Loss",
+                        "5+ Years Clinical",
+                      ].map((tag) => (
+                        <span key={tag} className="ih-tag px-3 py-1 text-xs" style={{ backgroundColor: CREAM, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", border: `1px solid ${BORDER_GOLD}` }}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <a
+                        href={BOOKING_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ih-btn ih-btn-gold inline-block px-6 py-3 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
+                        style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                      >
+                        Book with Karen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={200}>
+              <div className="mt-12 text-center">
+                <Link
+                  href="/about"
+                  prefetch={false}
+                  className="ih-btn ih-btn-outline inline-block px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
+                  style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                >
+                  Meet the Full Team
                 </Link>
               </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-              {/* Dr. Chavez */}
-              <AnimateOnScroll>
-              <div className="text-center">
-                <div className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full" style={{ border: `3px solid ${BORDER_GOLD}` }}>
-                  <Image
-                    src="/assets/team/dr-milton-chavez.jpg"
-                    alt="Dr. Milton Chavez MD, FAAFP"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Dr. Milton Chavez</h3>
-                <p className="text-sm mb-2" style={{ color: "#C9A96E", fontFamily: "'Lora', Georgia, serif" }}>MD, FAAFP</p>
-                <p className="text-xs tracking-wider uppercase mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  Founder and Medical Director
-                </p>
-                <div style={{ borderTop: `1px solid ${BORDER_GOLD}` }} className="pt-4 text-sm space-y-1">
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Meharry Medical College</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Residency: Rush University, Chicago</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Fellowship: UCLA</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Illinois Licensed Since 1997</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>28+ Years in Medicine</p>
-                </div>
-                <p className="mt-4 text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Trained at Meharry Medical College, residency at Rush, fellowship at UCLA. Most practices refer out dermatology, orthopedics, and minor surgery. Dr. Chavez handles all of it.
-                </p>
-              </div>
-              </AnimateOnScroll>
-
-              {/* Karen Corona */}
-              <AnimateOnScroll delay={150}>
-              <div className="text-center">
-                <div className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full" style={{ border: `3px solid ${BORDER_GOLD}` }}>
-                  <Image
-                    src="/assets/team/karen-corona.jpg"
-                    alt="Karen Corona MSN, APRN, FNP-C"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <h3 className="text-2xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Karen Corona</h3>
-                <p className="text-sm mb-2" style={{ color: "#C9A96E", fontFamily: "'Lora', Georgia, serif" }}>MSN, APRN, FNP-C</p>
-                <p className="text-xs tracking-wider uppercase mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  Family Nurse Practitioner
-                </p>
-                <div style={{ borderTop: `1px solid ${BORDER_GOLD}` }} className="pt-4 text-sm space-y-1">
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Board-Certified Family NP</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>5+ Years Clinical Experience</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Women&apos;s Health Specialist</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Medical Weight Loss</p>
-                  <p style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>Inpatient and Family Medicine</p>
-                </div>
-                <p className="mt-4 text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Five-plus years of clinical experience across inpatient care, women&apos;s health, and medical weight loss. Board-certified. The same unhurried approach.
-                </p>
-              </div>
-              </AnimateOnScroll>
-            </div>
           </div>
         </section>
 
