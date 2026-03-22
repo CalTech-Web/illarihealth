@@ -6,10 +6,10 @@ import MobileCtaBar from "./components/MobileCtaBar";
 export const metadata: Metadata = {
   metadataBase: new URL("https://illarihealth.com"),
   title: {
-    default: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
+    default: "Illari Health | Concierge Medicine & Direct Primary Care in Chicago",
     template: "%s | Illari Health",
   },
-  description: "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP. Flat-rate pricing, unlimited visits, no insurance friction.",
+  description: "Chicago's premier Concierge Medicine and Direct Primary Care practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP. Flat-rate pricing, unlimited visits, no insurance friction.",
   keywords: [
     "direct primary care Chicago",
     "concierge medicine Wicker Park",
@@ -48,22 +48,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://illarihealth.com",
     siteName: "Illari Health",
-    title: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
-    description: "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP. Flat-rate pricing, unlimited visits, no insurance friction.",
+    title: "Illari Health | Concierge Medicine & Direct Primary Care in Chicago",
+    description: "Chicago's premier Concierge Medicine and Direct Primary Care practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP. Flat-rate pricing, unlimited visits, no insurance friction.",
     images: [
       {
-        url: "/assets/logos/illari-health-logo-full.png",
+        url: "/assets/gallery/hero-background.jpg",
         width: 1200,
         height: 630,
-        alt: "Illari Health - Direct Primary Care & Concierge Medicine in Chicago",
+        alt: "Illari Health - Concierge Medicine & Direct Primary Care in Chicago",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
-    description: "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP.",
-    images: ["/assets/logos/illari-health-logo-full.png"],
+    title: "Illari Health | Concierge Medicine & Direct Primary Care in Chicago",
+    description: "Chicago's premier Concierge Medicine and Direct Primary Care practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP.",
+    images: ["/assets/gallery/hero-background.jpg"],
   },
   verification: {
     google: "OHevw2oUrYRMPhlsNSoPHNRg-P0I-CjtMzuyAWPwlbc",

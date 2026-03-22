@@ -215,7 +215,7 @@ export default function Home() {
                 Wicker Park, Chicago
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
-                Care That Feels Personal Again
+                Concierge Medicine in Wicker Park
               </h1>
               <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
               <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
@@ -462,7 +462,7 @@ export default function Home() {
                 </thead>
                 <tbody>
                   {[
-                    { label: "Appointment Length", traditional: "7 minutes", dpc: "25–30 min", concierge: "30–60 min" },
+                    { label: "Appointment Length", traditional: "7 minutes", dpc: "25-30 min", concierge: "30-60 min" },
                     { label: "Wait to Book", traditional: "Days to weeks", dpc: "Same / next day", concierge: "Priority, same day" },
                     { label: "Labs Included", traditional: "Extra cost", dpc: "✓ Included", concierge: "✓ Included" },
                     { label: "Direct Doctor Access", traditional: "✕ No", dpc: "✓ Yes", concierge: "✓ Yes" },

@@ -197,9 +197,16 @@ export default function FAQPage() {
                 Common Questions
               </h1>
               <div className="w-16 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
-              <p className="text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+              <p className="text-xl leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                 Straight answers about how this practice works, what it costs, and what you can expect.
               </p>
+              <a
+                href="tel:7732273303"
+                className="ih-btn ih-btn-gold px-10 py-4 text-sm font-medium tracking-wider uppercase text-center inline-block"
+                style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+              >
+                Call for Priority Booking
+              </a>
             </AnimateOnScroll>
           </div>
         </section>
