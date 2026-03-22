@@ -285,12 +285,17 @@ export default function ConciergeMedicinePage() {
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll delay={80}>
-              <div className="ih-table-wrap" style={{ border: `1px solid ${BORDER_GOLD}` }}>
+              <div className="ih-table-wrap overflow-hidden" style={{ border: `1px solid ${BORDER_GOLD}`, borderRadius: "12px" }}>
                 <table className="w-full" style={{ fontFamily: "'Lora', Georgia, serif" }}>
                   <thead>
                     <tr style={{ backgroundColor: CHARCOAL }}>
                       <th className="text-left px-6 py-4 text-xs tracking-widest uppercase" style={{ color: "#9a8a72", letterSpacing: "0.1em" }}>Experience</th>
-                      <th className="text-center px-6 py-4 text-xs tracking-widest uppercase" style={{ color: GOLD, letterSpacing: "0.1em" }}>Illari Concierge</th>
+                      <th className="text-center px-6 py-4 text-xs tracking-widest uppercase" style={{ color: GOLD, letterSpacing: "0.1em", borderTop: `3px solid ${GOLD}`, position: "relative" }}>
+                        <span className="flex items-center justify-center gap-2">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill={GOLD}><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                          Illari Concierge
+                        </span>
+                      </th>
                       <th className="text-center px-6 py-4 text-xs tracking-widest uppercase" style={{ color: "#666", letterSpacing: "0.1em" }}>Traditional</th>
                     </tr>
                   </thead>
@@ -306,8 +311,18 @@ export default function ConciergeMedicinePage() {
                     ].map(({ feature, concierge, traditional }, i) => (
                       <tr key={feature} style={{ backgroundColor: i % 2 === 0 ? "#fff" : OFF_WHITE, borderBottom: `1px solid ${BORDER_GOLD}` }}>
                         <td className="px-6 py-4 text-sm font-medium" style={{ color: CHARCOAL }}>{feature}</td>
-                        <td className="px-6 py-4 text-sm text-center font-medium" style={{ color: "#8a7a5a" }}>{concierge}</td>
-                        <td className="px-6 py-4 text-sm text-center" style={{ color: "#999" }}>{traditional}</td>
+                        <td className="px-6 py-4 text-sm text-center font-semibold" style={{ color: "#7a6a3a", backgroundColor: i % 2 === 0 ? "rgba(222,203,164,0.08)" : "rgba(222,203,164,0.14)" }}>
+                          <span className="flex items-center justify-center gap-2">
+                            <span style={{ color: GOLD, fontSize: "16px", fontWeight: 700 }}>&#10003;</span>
+                            {concierge}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 text-sm text-center" style={{ color: "#999" }}>
+                          <span className="flex items-center justify-center gap-2">
+                            <span style={{ color: "#b0a0a0", fontSize: "16px" }}>&#10007;</span>
+                            {traditional}
+                          </span>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -436,19 +451,8 @@ export default function ConciergeMedicinePage() {
         </section>
 
         {/* Who It Is For */}
-        <section className="relative overflow-hidden py-24" style={{ backgroundColor: OFF_WHITE }}>
-          <div className="absolute inset-0">
-            <Image
-              src="/assets/gallery/concierge-bg-2.jpg"
-              alt=""
-              fill
-              className="object-cover object-center"
-              sizes="100vw"
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0" style={{ backgroundColor: "rgba(250,247,242,0.92)" }} />
-          </div>
-          <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <section className="py-24" style={{ backgroundColor: OFF_WHITE }}>
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -492,13 +496,14 @@ export default function ConciergeMedicinePage() {
                 },
               ].map(({ num, label, body, delay, icon }) => (
                 <AnimateOnScroll key={label} delay={delay} className="flex">
-                  <div className="ih-card p-8 flex-1 flex flex-col" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                  <div className="ih-card p-8 flex-1 flex flex-col" style={{ borderLeft: `3px solid ${GOLD}`, borderTop: `1px solid ${BORDER_GOLD}`, borderRight: `1px solid ${BORDER_GOLD}`, borderBottom: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <div className="flex items-start justify-between mb-5">
                       <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: CREAM, border: `1px solid ${BORDER_GOLD}` }}>
                         {icon}
                       </div>
-                      <span className="text-3xl" style={{ color: BORDER_GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.4 }}>{num}</span>
+                      <span className="text-5xl font-bold" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.35 }}>{num}</span>
                     </div>
+                    <div className="w-10 h-px mb-4" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
                     <h3 className="text-base font-medium tracking-wide uppercase mb-3" style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.05em" }}>{label}</h3>
                     <p className="text-sm leading-relaxed flex-1" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
                   </div>
@@ -595,22 +600,28 @@ export default function ConciergeMedicinePage() {
                 <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                   What Patients Say
                 </h2>
-                <div className="flex items-center justify-center gap-1 mb-3">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <svg key={s} width="18" height="18" viewBox="0 0 24 24" fill={GOLD}>
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <span className="text-7xl md:text-8xl font-bold" style={{ fontFamily: "'Abril Fatface', serif", background: `linear-gradient(135deg, ${GOLD} 0%, #f5e6c8 50%, ${GOLD} 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1 }}>4.78</span>
+                  <div className="text-left">
+                    <p className="text-sm" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>out of 5</p>
+                    <div className="flex gap-1 mt-1">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill={GOLD}>
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <p className="text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                  4.78 out of 5 on Tebra, 23 verified reviews
-                </p>
+                <span className="inline-block px-4 py-1.5 text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", backgroundColor: "rgba(222,203,164,0.1)", border: `1px solid rgba(222,203,164,0.2)`, borderRadius: "9999px" }}>
+                  23 verified reviews on Tebra
+                </span>
               </div>
             </AnimateOnScroll>
 
             {/* Featured Pull Quote */}
             <AnimateOnScroll>
-              <div className="mb-10 p-10 md:p-14 text-center" style={{ backgroundColor: "rgba(222,203,164,0.06)", border: `1px solid rgba(222,203,164,0.15)`, borderRadius: "16px" }}>
+              <div className="mb-10 p-10 md:p-14 text-center" style={{ backgroundColor: "rgba(222,203,164,0.06)", border: `1px solid rgba(222,203,164,0.15)`, borderLeft: "4px solid transparent", borderImage: `linear-gradient(to bottom, ${GOLD}, rgba(222,203,164,0.2)) 1`, borderRadius: "0", borderRight: `1px solid rgba(222,203,164,0.15)`, borderTop: `1px solid rgba(222,203,164,0.15)`, borderBottom: `1px solid rgba(222,203,164,0.15)` }}>
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" className="mx-auto mb-6" style={{ opacity: 0.4 }}>
                   <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill={GOLD}/>
                   <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill={GOLD}/>
@@ -630,7 +641,9 @@ export default function ConciergeMedicinePage() {
                 { name: "Sandra W.", quote: "Dr. Chavez is the best doctor I have ever had. He really listens, takes his time, and genuinely cares about his patients. I would recommend him to anyone looking for a physician who actually puts patients first.", delay: 100 },
               ].map(({ name, quote, delay }) => (
                 <AnimateOnScroll key={name} delay={delay} className="flex">
-                  <div className="ih-card-dark p-8 flex-1 flex flex-col" style={{ border: `1px solid rgba(222,203,164,0.12)`, backgroundColor: "rgba(26,26,26,0.8)" }}>
+                  <div className="ih-card-dark p-8 flex-1 flex flex-col relative overflow-hidden" style={{ border: `1px solid rgba(222,203,164,0.12)`, backgroundColor: "rgba(26,26,26,0.8)" }}>
+                    {/* Decorative quote mark */}
+                    <span className="absolute top-4 right-6 text-7xl leading-none pointer-events-none" style={{ color: GOLD, opacity: 0.07, fontFamily: "Georgia, serif" }} aria-hidden="true">&ldquo;</span>
                     <div className="flex gap-1 mb-4">
                       {[1, 2, 3, 4, 5].map((s) => (
                         <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}>
@@ -641,8 +654,9 @@ export default function ConciergeMedicinePage() {
                     <p className="text-base italic leading-relaxed mb-4 flex-1" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                       &ldquo;{quote}&rdquo;
                     </p>
-                    <div>
+                    <div className="flex items-center gap-2">
                       <p className="text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>{name}</p>
+                      <span style={{ color: GOLD, opacity: 0.5 }}>&#x2022;</span>
                       <p className="text-xs" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>Verified Patient</p>
                     </div>
                   </div>
@@ -670,14 +684,26 @@ export default function ConciergeMedicinePage() {
               <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 Get Started
               </p>
-              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+              <h2 className="text-5xl md:text-6xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your Concierge Membership
               </h2>
-              <div className="w-12 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
-              <p className="text-lg leading-relaxed mb-10 max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="w-24 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+              <p className="text-2xl md:text-3xl mb-4 max-w-2xl mx-auto" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                Your Health Deserves More Than 7 Minutes
+              </p>
+              <p className="text-lg leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                 Call us to get started. We will walk you through your options and find the right plan for you.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+              {/* Trust Indicator Pills */}
+              <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+                {["Unlimited Visits", "$300/mo Flat Rate", "No Co-pays"].map((item) => (
+                  <span key={item} className="inline-flex items-center gap-2 px-5 py-2 text-xs tracking-wider uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", backgroundColor: "rgba(222,203,164,0.1)", border: `1px solid rgba(222,203,164,0.25)`, borderRadius: "9999px", letterSpacing: "0.08em" }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <a
                   href="tel:7732273303"
                   className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase"
@@ -693,13 +719,17 @@ export default function ConciergeMedicinePage() {
                   Request a Callback
                 </a>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+              <p className="text-sm mb-10" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                Join 23+ patients who chose better care
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                 <span className="flex items-center gap-2">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                   1509 N. Western Ave, Chicago, IL 60622
                 </span>
+                <span style={{ color: "rgba(222,203,164,0.3)" }}>|</span>
                 <span className="flex items-center gap-2">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
                   Free Private Parking
                 </span>
               </div>

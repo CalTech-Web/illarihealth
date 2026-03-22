@@ -168,43 +168,68 @@ export default function DirectPrimaryCarePage() {
         {/* What Is DPC */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <AnimateOnScroll>
-              <div className="text-center mb-16">
-                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                  What It Is
-                </p>
-                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                  What Is Direct Primary Care?
-                </h2>
-                <div className="w-12 h-px mx-auto mb-8" style={{ backgroundColor: GOLD }} />
-                <p className="text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Direct Primary Care (DPC) is a straightforward membership model: you pay a flat monthly fee directly to your physician, and insurance never enters the room. At Illari Health, $150 a month gives you real access to Dr. Milton Chavez MD, FAAFP, a board-certified family physician with 28+ years of experience.
-                </p>
-              </div>
-            </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+              <AnimateOnScroll>
+                <div>
+                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                    What It Is
+                  </p>
+                  <h2 className="text-4xl md:text-5xl mb-6" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                    What Is Direct Primary Care?
+                  </h2>
+                  <div className="w-12 h-px mb-8" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                  <p className="text-lg leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                    Direct Primary Care (DPC) is a straightforward membership model: you pay a flat monthly fee directly to your physician, and insurance never enters the room. At Illari Health, $150 a month gives you real access to Dr. Milton Chavez MD, FAAFP, a board-certified family physician with 28+ years of experience.
+                  </p>
+                </div>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={100}>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { stat: "$150", label: "Monthly rate", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> },
+                    { stat: "3", label: "Visits per month", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> },
+                    { stat: "25-30", label: "Minutes per visit", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> },
+                    { stat: "$0", label: "Co-pays", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> },
+                  ].map(({ stat, label, icon }) => (
+                    <div key={label} className="ih-card text-center p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+                      <div className="flex justify-center mb-3">{icon}</div>
+                      <p className="text-3xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{stat}</p>
+                      <p className="text-xs tracking-wider uppercase" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{label}</p>
+                    </div>
+                  ))}
+                </div>
+              </AnimateOnScroll>
+            </div>
+
+            {/* Feature Cards with Icons */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
               {[
                 {
                   heading: "No Insurance Involvement",
                   body: "DPC removes the middleman. No co-pays, no deductibles, no surprise bills after your visit. You know exactly what you are paying before you walk in.",
                   delay: 0,
+                  icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
                 },
                 {
                   heading: "Up to Three Visits Per Month",
                   body: "Your membership includes up to three medical visits per month. Appointments run 25 to 30 minutes, starting on time, every time.",
                   delay: 80,
+                  icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="12" cy="15" r="2"/></svg>,
                 },
                 {
                   heading: "Labs and Physical Included",
                   body: "All recommended labs and a comprehensive 45-minute physical are covered by your membership. No add-on charges for standard in-office testing.",
                   delay: 160,
+                  icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>,
                 },
-              ].map(({ heading, body, delay }) => (
-                <AnimateOnScroll key={heading} delay={delay}>
-                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                    <div className="w-8 h-px mb-4" style={{ backgroundColor: GOLD }} />
+              ].map(({ heading, body, delay, icon }) => (
+                <AnimateOnScroll key={heading} delay={delay} className="flex">
+                  <div className="ih-card p-8 flex-1 flex flex-col" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                    <div className="mb-4 w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: CREAM, border: `1px solid ${BORDER_GOLD}` }}>
+                      {icon}
+                    </div>
                     <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{heading}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
+                    <p className="text-sm leading-relaxed flex-1" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -319,36 +344,50 @@ export default function DirectPrimaryCarePage() {
                 <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                   Who Chooses DPC
                 </h2>
-                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+                <div className="w-12 h-px mx-auto" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
               </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
               {[
                 {
+                  num: "01",
                   label: "Uninsured Individuals",
                   body: "No insurance does not mean no primary care. $150 a month covers visits, labs, and a direct physician relationship. And through RubiconMD, you have access to cash-price specialist options when you need them.",
                   delay: 0,
+                  icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
                 },
                 {
+                  num: "02",
                   label: "Families",
                   body: "When your whole family joins the same plan, everyone saves 10% per month. One physician who knows your children, your parents, and your complete family health history.",
                   delay: 80,
+                  icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>,
                 },
                 {
+                  num: "03",
                   label: "Patients Who Want Predictable Costs",
                   body: "The DPC model is built on price transparency. You know the monthly fee before you join. No surprise bills arrive in the mail weeks after your visit.",
                   delay: 0,
+                  icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>,
                 },
                 {
+                  num: "04",
                   label: "Those Seeking a Consistent Physician",
                   body: "You see Dr. Chavez every visit, not a rotating roster of practitioners. He knows your history, your goals, and your baseline, because he has been treating you.",
                   delay: 80,
+                  icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7 7-7z"/></svg>,
                 },
-              ].map(({ label, body, delay }) => (
-                <AnimateOnScroll key={label} delay={delay}>
-                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                    <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>{label}</p>
-                    <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
+              ].map(({ num, label, body, delay, icon }) => (
+                <AnimateOnScroll key={label} delay={delay} className="flex">
+                  <div className="ih-card p-8 flex-1 flex flex-col" style={{ border: `1px solid ${BORDER_GOLD}`, borderLeft: `3px solid ${GOLD}`, backgroundColor: "#fff" }}>
+                    <div className="flex items-start justify-between mb-5">
+                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: CREAM, border: `1px solid ${BORDER_GOLD}` }}>
+                        {icon}
+                      </div>
+                      <span className="text-3xl" style={{ color: BORDER_GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.4 }}>{num}</span>
+                    </div>
+                    <h3 className="text-base font-medium tracking-wide uppercase mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif", letterSpacing: "0.05em" }}>{label}</h3>
+                    <p className="text-sm leading-relaxed flex-1" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -367,31 +406,48 @@ export default function DirectPrimaryCarePage() {
                 <h2 className="text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                   DPC Questions Answered
                 </h2>
-                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+                <div className="w-12 h-px mx-auto" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
               </div>
             </AnimateOnScroll>
             <div className="space-y-6 max-w-2xl mx-auto">
               {[
                 {
+                  num: 1,
                   q: "Will I still need health insurance?",
                   a: "Yes. DPC covers primary care, labs, and in-office services. You will still need health insurance for hospitalizations, emergency services, and specialist care. DPC is a better way to access primary care, not a substitute for insurance.",
                   delay: 0,
                 },
                 {
+                  num: 2,
                   q: "Can I cancel anytime?",
                   a: "Yes, after the initial 3-month commitment. Membership continues month-to-month after that. Cancel in writing and any positive balance will be applied to an extension, transferred to another plan, or refunded.",
                   delay: 80,
                 },
                 {
+                  num: 3,
                   q: "Is there a discount for paying annually?",
                   a: "Yes. All plans receive a 10% discount when paid annually instead of monthly. An additional 10% discount applies when your entire family joins the same plan.",
                   delay: 0,
                 },
-              ].map(({ q, a, delay }) => (
+              ].map(({ num, q, a, delay }) => (
                 <AnimateOnScroll key={q} delay={delay}>
-                  <div className="ih-card p-6" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                    <h3 className="text-base mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{q}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{a}</p>
+                  <div className="ih-card p-6 relative overflow-hidden" style={{ border: `1px solid ${BORDER_GOLD}`, borderLeft: `3px solid ${GOLD}`, backgroundColor: "#fff" }}>
+                    {/* Decorative quote mark */}
+                    <div className="absolute top-3 right-4" style={{ opacity: 0.08 }}>
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill={CHARCOAL}>
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+                      </svg>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: GOLD }}>
+                        <span className="text-xs font-bold" style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>{num}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{q}</h3>
+                        <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{a}</p>
+                      </div>
+                    </div>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -400,10 +456,10 @@ export default function DirectPrimaryCarePage() {
               <div className="text-center mt-10">
                 <a
                   href="/faq"
-                  className="text-sm tracking-wider uppercase transition-opacity hover:opacity-80"
-                  style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", borderBottom: `1px solid ${BORDER_GOLD}`, paddingBottom: "2px" }}
+                  className="ih-btn ih-btn-outline inline-block px-8 py-3.5 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
+                  style={{ border: `1px solid ${GOLD}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
-                  See All FAQ
+                  View All FAQ &rarr;
                 </a>
               </div>
             </AnimateOnScroll>
@@ -411,7 +467,7 @@ export default function DirectPrimaryCarePage() {
         </section>
 
         {/* Final CTA */}
-        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: CHARCOAL }}>
           <div className="absolute inset-0">
             <Image
               src="/assets/gallery/horiz-clinic-modern.jpg"
@@ -425,14 +481,30 @@ export default function DirectPrimaryCarePage() {
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
-              <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+              <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                Get Started
+              </p>
+              <p className="text-xl md:text-2xl italic mb-4 max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                Primary Care Without the Insurance Maze
+              </p>
+              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your DPC Membership
               </h2>
-              <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
-              <p className="text-base leading-relaxed mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="w-24 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+
+              {/* Trust indicator pills */}
+              <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+                {["$150/month", "No Co-pays", "No Deductibles"].map((pill) => (
+                  <span key={pill} className="ih-pill px-4 py-1.5 text-xs tracking-wider uppercase" style={{ backgroundColor: "rgba(222,203,164,0.12)", color: GOLD, border: `1px solid rgba(222,203,164,0.3)`, fontFamily: "'Lora', Georgia, serif" }}>
+                    {pill}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-base leading-relaxed mb-10 max-w-2xl mx-auto" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                 Call us to get started. We will walk you through your options and find the right plan for you.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                 <a
                   href="tel:7732273303"
                   className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
@@ -448,8 +520,27 @@ export default function DirectPrimaryCarePage() {
                   Request a Callback
                 </a>
               </div>
-              <p className="mt-8 text-sm" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>
-                1509 North Western Avenue, Chicago, IL 60622. Free private parking at Western and LeMoyne.
+
+              {/* Social proof */}
+              <p className="text-sm italic mb-8" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                Join families across Wicker Park who chose better primary care
+              </p>
+
+              {/* Address and parking with icons */}
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                <span className="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  1509 North Western Avenue, Chicago, IL 60622
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  Free Private Parking at Western and LeMoyne
+                </span>
+              </div>
+
+              {/* Reassurance line */}
+              <p className="text-xs tracking-wider" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>
+                Questions? Call us first, no commitment
               </p>
             </AnimateOnScroll>
           </div>

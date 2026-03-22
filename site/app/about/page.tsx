@@ -202,11 +202,11 @@ export default function AboutPage() {
                   <h2 className="text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                     Relationship-Based Primary Care Since 2010
                   </h2>
-                  <div className="w-12 h-px mb-6" style={{ backgroundColor: GOLD }} />
-                  <p className="text-base leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                    Dr. Milton Chavez opened his private practice in the heart of Wicker Park in 2010 with one mission: to give patients the kind of care that the insurance-driven system had made nearly impossible. Long appointments. A doctor who remembered your history. Direct access when you needed it.
+                  <div className="w-12 h-px mb-8" style={{ backgroundColor: GOLD }} />
+                  <p className="text-base leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                    <span className="text-3xl font-semibold float-left mr-2 leading-none" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif", marginTop: "4px" }}>D</span>r. Milton Chavez opened his private practice in the heart of Wicker Park in 2010 with one mission: to give patients the kind of care that the insurance-driven system had made nearly impossible. Long appointments. A doctor who remembered your history. Direct access when you needed it.
                   </p>
-                  <p className="text-base leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                  <p className="text-base leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                     Illari Health is the realization of that mission, offering Direct Primary Care and Concierge Medicine to patients across Chicago's northwest neighborhoods. No insurance friction. Flat, transparent pricing. And a physician with 28 years of training who still takes his own calls.
                   </p>
                   <p className="text-base leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
@@ -215,22 +215,33 @@ export default function AboutPage() {
                 </div>
               </AnimateOnScroll>
               <AnimateOnScroll delay={150}>
-                <div className="space-y-4">
-                  {[
-                    { label: "Founded", value: "2010" },
-                    { label: "Location", value: "1509 N Western Avenue, Wicker Park, Chicago" },
-                    { label: "Physician", value: "Dr. Milton Chavez MD, FAAFP" },
-                    { label: "Years in Medicine", value: "28+" },
-                    { label: "Patient Rating", value: "4.78 / 5 on Tebra (23 verified reviews)" },
-                    { label: "Specialist Network", value: "200+ via RubiconMD" },
-                    { label: "Annual Discount", value: "10% off for annual payment" },
-                    { label: "Family Discount", value: "10% off when entire family enrolls" },
-                  ].map(({ label, value }) => (
-                    <div key={label} style={{ borderBottom: `1px solid ${BORDER_GOLD}` }} className="pb-3">
-                      <p className="text-xs tracking-wider uppercase mb-0.5" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{label}</p>
-                      <p className="text-sm" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{value}</p>
+                <div className="relative">
+                  {/* Decorative "Since 2010" accent */}
+                  <div className="absolute -top-8 -right-2 select-none pointer-events-none" aria-hidden="true">
+                    <span className="text-8xl font-bold" style={{ color: GOLD, opacity: 0.1, fontFamily: "'Abril Fatface', serif" }}>2010</span>
+                  </div>
+                  <div className="ih-card p-6" style={{ backgroundColor: "#ffffff", border: `1px solid ${BORDER_GOLD}` }}>
+                    <div className="space-y-0">
+                      {[
+                        { label: "Founded", value: "2010" },
+                        { label: "Location", value: "1509 N Western Avenue, Wicker Park, Chicago" },
+                        { label: "Physician", value: "Dr. Milton Chavez MD, FAAFP" },
+                        { label: "Years in Medicine", value: "28+" },
+                        { label: "Patient Rating", value: "4.78 / 5 on Tebra (23 verified reviews)" },
+                        { label: "Specialist Network", value: "200+ via RubiconMD" },
+                        { label: "Annual Discount", value: "10% off for annual payment" },
+                        { label: "Family Discount", value: "10% off when entire family enrolls" },
+                      ].map(({ label, value }, idx) => (
+                        <div key={label} className="flex items-start gap-3 py-3.5" style={{ borderBottom: idx < 7 ? `1px solid rgba(222,203,164,0.3)` : "none" }}>
+                          <div className="w-2 h-2 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: GOLD }} />
+                          <div>
+                            <p className="text-xs tracking-wider uppercase mb-0.5" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{label}</p>
+                            <p className="text-sm" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{value}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
               </AnimateOnScroll>
             </div>
@@ -265,15 +276,20 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
               <AnimateOnScroll>
                 <div className="relative">
+                  {/* Gold border glow around photo */}
                   <Image
                     src="/assets/team/dr-milton-chavez.jpg"
                     alt="Dr. Milton Chavez MD, FAAFP, Founder and Medical Director, Illari Health Chicago"
                     width={480}
                     height={580}
                     className="w-full object-cover ih-img"
-                    style={{ border: `2px solid rgba(222,203,164,0.4)`, display: "block" }}
+                    style={{ border: `2px solid rgba(222,203,164,0.5)`, display: "block", boxShadow: `0 0 30px rgba(222,203,164,0.15), 0 8px 32px rgba(0,0,0,0.3)` }}
                   />
-                  <div className="mt-4 p-6 ih-card-dark" style={{ backgroundColor: "#1a1a1a", border: `1px solid #2a2a2a` }}>
+                  {/* Quote card with gold left border */}
+                  <div className="mt-4 p-6 ih-card-dark" style={{ backgroundColor: "#1a1a1a", border: `1px solid #2a2a2a`, borderLeft: `3px solid ${GOLD}` }}>
+                    <svg width="24" height="20" viewBox="0 0 24 20" className="mb-3" aria-hidden="true" style={{ opacity: 0.4 }}>
+                      <path d="M0 20V12.4C0 5.07 4.2 1.07 10.5 0l1.3 2.6C6.5 4.2 5.3 7.5 5 10h4.5v10H0zm13 0V12.4C13 5.07 17.2 1.07 23.5 0l1.3 2.6c-5.3 1.6-6.5 4.9-6.8 7.4H22.5v10H13z" fill={GOLD} />
+                    </svg>
                     <p className="text-sm italic leading-relaxed mb-3" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                       &ldquo;We strive to inspire and aid those seeking their optimal health, wellness and healing through efficient service, quality consultations and our core values: integrity and respect.&rdquo;
                     </p>
@@ -284,7 +300,11 @@ export default function AboutPage() {
                 </div>
               </AnimateOnScroll>
               <AnimateOnScroll delay={120}>
-                <div className="space-y-6">
+                <div className="space-y-6 relative">
+                  {/* Decorative "28+" accent */}
+                  <div className="absolute -top-4 -right-2 select-none pointer-events-none hidden md:block" aria-hidden="true">
+                    <span className="text-8xl font-bold" style={{ color: GOLD, opacity: 0.07, fontFamily: "'Abril Fatface', serif" }}>28+</span>
+                  </div>
                   <p className="text-base leading-relaxed" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                     Dr. Chavez trained at <strong style={{ color: "#d4c4a8" }}>Meharry Medical College</strong> in Nashville, one of the nation's oldest historically Black medical schools and a globally respected institution. He completed his family medicine residency at <strong style={{ color: "#d4c4a8" }}>Rush University Medical Center</strong> in Chicago, followed by a surgical residency and pediatric surgical fellowship at <strong style={{ color: "#d4c4a8" }}>UCLA</strong>, and a mini-epilepsy fellowship at Bowman Grey School of Medicine.
                   </p>
@@ -296,7 +316,7 @@ export default function AboutPage() {
                   </p>
                   <div className="mt-8">
                     <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Credentials</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2.5">
                       {[
                         "MD, Meharry Medical College, Nashville, TN",
                         "Family Medicine Residency, Rush University, Chicago",
@@ -308,7 +328,7 @@ export default function AboutPage() {
                         "28+ Years in Medicine",
                       ].map((item) => (
                         <li key={item} className="flex items-start gap-3 text-sm" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                          <span style={{ color: GOLD, marginTop: "2px", flexShrink: 0 }}>&#10003;</span>
+                          <div className="w-2 h-2 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: GOLD }} />
                           {item}
                         </li>
                       ))}
@@ -316,7 +336,7 @@ export default function AboutPage() {
                   </div>
                   <div className="mt-4">
                     <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Areas of Expertise</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2.5">
                       {[
                         "Family Medicine",
                         "Concierge Medicine",
@@ -329,7 +349,7 @@ export default function AboutPage() {
                         "Pediatric Care",
                         "Minor Outpatient Surgery",
                       ].map((tag) => (
-                        <span key={tag} className="px-3 py-1 text-xs tracking-wider ih-tag" style={{ border: `1px solid #2a2a2a`, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                        <span key={tag} className="px-4 py-1.5 text-xs tracking-wider ih-tag" style={{ border: `1px solid rgba(222,203,164,0.25)`, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                           {tag}
                         </span>
                       ))}
@@ -357,7 +377,14 @@ export default function AboutPage() {
             </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <AnimateOnScroll delay={120}>
-                <div className="space-y-4">
+                <div className="space-y-4 relative">
+                  {/* Decorative accent */}
+                  <div className="absolute -top-6 -left-4 select-none pointer-events-none hidden md:block" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 40 40" style={{ opacity: 0.12 }}>
+                      <circle cx="20" cy="20" r="18" stroke={GOLD} strokeWidth="2" fill="none" />
+                      <circle cx="20" cy="20" r="6" fill={GOLD} />
+                    </svg>
+                  </div>
                   <p className="text-base leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                     Karen Corona is a Board-Certified Family Nurse Practitioner with more than five years of diverse clinical experience. She holds a Master of Science in Nursing (MSN) and is certified as both an Advanced Practice Registered Nurse (APRN) and a Family Nurse Practitioner (FNP-C).
                   </p>
@@ -366,7 +393,7 @@ export default function AboutPage() {
                   </p>
                   <div className="mt-6">
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Credentials</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2.5">
                       {[
                         "MSN, Master of Science in Nursing",
                         "APRN, Advanced Practice Registered Nurse",
@@ -374,7 +401,7 @@ export default function AboutPage() {
                         "5+ Years Diverse Clinical Experience",
                       ].map((item) => (
                         <li key={item} className="flex items-start gap-3 text-sm" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                          <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: GOLD }} />
+                          <div className="w-2 h-2 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: GOLD }} />
                           {item}
                         </li>
                       ))}
@@ -382,9 +409,9 @@ export default function AboutPage() {
                   </div>
                   <div className="mt-4">
                     <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Specialties</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2.5">
                       {["Women's Health", "Family Medicine", "Inpatient Care", "Medical Weight Loss"].map((tag) => (
-                        <span key={tag} className="px-3 py-1 text-xs tracking-wider ih-tag" style={{ border: `1px solid ${BORDER_GOLD}`, color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                        <span key={tag} className="px-4 py-1.5 text-xs tracking-wider ih-tag" style={{ border: `1px solid ${BORDER_GOLD}`, color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                           {tag}
                         </span>
                       ))}
@@ -399,7 +426,7 @@ export default function AboutPage() {
                   width={480}
                   height={560}
                   className="w-full object-cover ih-img"
-                  style={{ border: `1px solid ${BORDER_GOLD}` }}
+                  style={{ border: `2px solid rgba(222,203,164,0.5)`, boxShadow: `0 0 30px rgba(222,203,164,0.12), 0 8px 32px rgba(0,0,0,0.08)` }}
                 />
               </AnimateOnScroll>
             </div>
@@ -407,31 +434,56 @@ export default function AboutPage() {
         </section>
 
         {/* Philosophy */}
-        <section style={{ backgroundColor: OFF_WHITE }} className="py-24 ih-dots-light">
-          <div className="max-w-6xl mx-auto px-6 text-center">
+        <section style={{ backgroundColor: OFF_WHITE }} className="py-24 ih-dots-light relative overflow-hidden">
+          {/* Gold gradient top border */}
+          <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, transparent 10%, ${GOLD} 50%, transparent 90%)` }} aria-hidden="true" />
+          {/* Decorative SVG accents on sides */}
+          <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden lg:block select-none pointer-events-none" aria-hidden="true">
+            <svg width="32" height="120" viewBox="0 0 32 120" style={{ opacity: 0.1 }}>
+              <line x1="16" y1="0" x2="16" y2="40" stroke={GOLD} strokeWidth="1" />
+              <circle cx="16" cy="50" r="4" fill={GOLD} />
+              <circle cx="16" cy="70" r="2" fill={GOLD} />
+              <line x1="16" y1="80" x2="16" y2="120" stroke={GOLD} strokeWidth="1" />
+            </svg>
+          </div>
+          <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden lg:block select-none pointer-events-none" aria-hidden="true">
+            <svg width="32" height="120" viewBox="0 0 32 120" style={{ opacity: 0.1 }}>
+              <line x1="16" y1="0" x2="16" y2="40" stroke={GOLD} strokeWidth="1" />
+              <circle cx="16" cy="50" r="4" fill={GOLD} />
+              <circle cx="16" cy="70" r="2" fill={GOLD} />
+              <line x1="16" y1="80" x2="16" y2="120" stroke={GOLD} strokeWidth="1" />
+            </svg>
+          </div>
+          <div className="max-w-4xl mx-auto px-6 text-center relative">
+            {/* Large decorative quotation mark */}
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 select-none pointer-events-none" aria-hidden="true">
+              <span className="text-[12rem] leading-none" style={{ color: GOLD, opacity: 0.06, fontFamily: "Georgia, serif" }}>&ldquo;</span>
+            </div>
             <AnimateOnScroll>
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+              <p className="text-xs tracking-widest uppercase mb-3 relative z-10" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 Our Philosophy
               </p>
-              <h2 className="text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+              <h2 className="text-4xl mb-4 relative z-10" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                 Medicine Practiced With Integrity
               </h2>
-              <div className="w-12 h-px mx-auto mb-8" style={{ backgroundColor: GOLD }} />
-              <p className="text-lg leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="w-12 h-px mx-auto mb-8 relative z-10" style={{ backgroundColor: GOLD }} />
+              <p className="text-lg leading-relaxed mb-6 relative z-10" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                 Illari Health exists because the standard model of primary care fails most people. Rushed appointments. Billing friction. A different doctor every visit. Insurance constraints that override clinical judgment.
               </p>
-              <p className="text-lg leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+              <p className="text-lg leading-relaxed mb-6 relative z-10" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                 The concierge and direct primary care models return the relationship between patient and physician to the center of healthcare. At Illari Health, that means you see the same doctor, every visit. You get time. You get answers. And you get a physician whose only agenda is your health.
               </p>
-              <p className="text-lg leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                Every member of the Illari Health team shares this commitment. Integrity and respect are not aspirational values. They are the standard.
+              <p className="text-lg leading-relaxed relative z-10" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                Every member of the Illari Health team shares this commitment. <span style={{ backgroundColor: "rgba(222,203,164,0.15)", padding: "2px 6px", borderRadius: "4px" }}>Integrity and respect</span> are not aspirational values. They are the standard.
               </p>
             </AnimateOnScroll>
           </div>
+          {/* Gold gradient bottom border */}
+          <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, transparent 10%, ${GOLD} 50%, transparent 90%)` }} aria-hidden="true" />
         </section>
 
         {/* CTA */}
-        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: CHARCOAL }}>
           <div className="absolute inset-0">
             <Image
               src="/assets/gallery/horiz-doctor-patient.jpg"
@@ -445,14 +497,25 @@ export default function AboutPage() {
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
-              <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+              <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                Experience Medicine as It Should Be
+              </p>
+              <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your Care at Illari Health
               </h2>
-              <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
+              <div className="w-24 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+              {/* Trust indicator pills */}
+              <div className="flex flex-wrap gap-3 justify-center mb-6">
+                {["28+ Years Experience", "Board-Certified", "4.78\u2605 Rating"].map((pill) => (
+                  <span key={pill} className="ih-pill" style={{ border: `1px solid rgba(222,203,164,0.3)`, color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                    {pill}
+                  </span>
+                ))}
+              </div>
               <p className="text-base leading-relaxed mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                 Call to book a one-time visit and meet Dr. Chavez before committing to a membership. 773.227.3303.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="tel:7732273303"
                   className="px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90 ih-btn ih-btn-gold"
@@ -468,6 +531,17 @@ export default function AboutPage() {
                   Request a Callback
                 </a>
               </div>
+              {/* Social proof and address */}
+              <p className="text-xs tracking-wider uppercase mb-2" style={{ color: "rgba(222,203,164,0.6)", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}>
+                Serving Wicker Park since 2010
+              </p>
+              <p className="text-xs flex items-center justify-center gap-1.5" style={{ color: "rgba(154,138,114,0.7)", fontFamily: "'Lora', Georgia, serif" }}>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                1509 N Western Avenue, Chicago, IL 60622
+              </p>
             </AnimateOnScroll>
           </div>
         </section>

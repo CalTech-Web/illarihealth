@@ -188,21 +188,34 @@ export default function ContactPage() {
                     Get in Touch
                   </p>
                   <div className="space-y-8">
-                    <div>
-                      <p className="text-xs tracking-widest uppercase mb-2" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Phone</p>
+                    {/* Phone */}
+                    <div className="pl-5" style={{ borderLeft: `3px solid ${GOLD}` }}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <p className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Phone</p>
+                      </div>
                       <a
                         href="tel:7732273303"
-                        className="text-3xl hover:opacity-80 transition-opacity"
+                        className="text-4xl md:text-5xl hover:opacity-80 transition-opacity block"
                         style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}
                       >
                         773.227.3303
                       </a>
-                      <p className="text-sm mt-1" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                      <p className="text-sm mt-2" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                         Call for priority booking and general inquiries
                       </p>
                     </div>
-                    <div>
-                      <p className="text-xs tracking-widest uppercase mb-2" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Email</p>
+                    {/* Email */}
+                    <div className="pl-5" style={{ borderLeft: `3px solid ${GOLD}` }}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="2" y="4" width="20" height="16" rx="2" stroke={GOLD} strokeWidth="2"/>
+                          <path d="M22 7l-10 7L2 7" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <p className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Email</p>
+                      </div>
                       <a
                         href="mailto:info@illarihealth.com"
                         className="text-lg hover:opacity-80 transition-opacity"
@@ -211,16 +224,31 @@ export default function ContactPage() {
                         info@illarihealth.com
                       </a>
                     </div>
-                    <div>
-                      <p className="text-xs tracking-widest uppercase mb-2" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Address</p>
+                    {/* Address */}
+                    <div className="pl-5" style={{ borderLeft: `3px solid ${GOLD}` }}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          <circle cx="12" cy="10" r="3" stroke={GOLD} strokeWidth="2"/>
+                        </svg>
+                        <p className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Address</p>
+                      </div>
                       <address className="not-italic" style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>
                         <p className="text-base font-medium">1509 North Western Avenue</p>
                         <p className="text-base">Chicago, IL 60622</p>
                         <p className="text-sm mt-1" style={{ color: "#9a8a72" }}>Wicker Park</p>
                       </address>
                     </div>
-                    <div>
-                      <p className="text-xs tracking-widest uppercase mb-2" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Instagram</p>
+                    {/* Instagram */}
+                    <div className="pl-5" style={{ borderLeft: `3px solid ${GOLD}` }}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="2" y="2" width="20" height="20" rx="5" stroke={GOLD} strokeWidth="2"/>
+                          <circle cx="12" cy="12" r="5" stroke={GOLD} strokeWidth="2"/>
+                          <circle cx="17.5" cy="6.5" r="1.5" fill={GOLD}/>
+                        </svg>
+                        <p className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Instagram</p>
+                      </div>
                       <a
                         href="https://www.instagram.com/illarihealth/"
                         target="_blank"
@@ -256,32 +284,70 @@ export default function ContactPage() {
               {/* Location Details */}
               <AnimateOnScroll delay={150}>
                 <div className="space-y-8">
-                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                    <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                      Location
-                    </p>
-                    <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Wicker Park, Chicago</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                      Our office is located at 1509 North Western Avenue in the heart of Wicker Park. We serve patients from Wicker Park, Bucktown, Logan Square, Ukrainian Village, Lincoln Park, and surrounding Chicago neighborhoods.
-                    </p>
+                  {/* Location Card */}
+                  <div className="ih-card p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                    <div className="absolute top-0 left-0 right-0 h-1" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${GOLD}18`, border: `1px solid ${BORDER_GOLD}` }}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          <circle cx="12" cy="10" r="3" stroke={GOLD} strokeWidth="2"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                          Location
+                        </p>
+                        <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Wicker Park, Chicago</h3>
+                        <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                          Our office is located at 1509 North Western Avenue in the heart of Wicker Park. We serve patients from Wicker Park, Bucktown, Logan Square, Ukrainian Village, Lincoln Park, and surrounding Chicago neighborhoods.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                    <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                      Parking
-                    </p>
-                    <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Free Private Parking</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                      Free private parking is available immediately south of the building at Western and LeMoyne. No meters, no garages, no stress.
-                    </p>
+                  {/* Parking Card */}
+                  <div className="ih-card p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                    <div className="absolute top-0 left-0 right-0 h-1" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${GOLD}18`, border: `1px solid ${BORDER_GOLD}` }}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="3" width="22" height="18" rx="2" stroke={GOLD} strokeWidth="2"/>
+                          <path d="M9 17V7h4a3 3 0 010 6H9" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                          Parking
+                        </p>
+                        <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>Free Private Parking</h3>
+                        <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                          Free private parking is available immediately south of the building at Western and LeMoyne. No meters, no garages, no stress.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                    <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                      New Patients
-                    </p>
-                    <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>New Patients Welcome</h3>
-                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                      Not sure which plan is right for you? Call us and we will walk you through your options. No pressure, just honest guidance.
-                    </p>
+                  {/* New Patients Card */}
+                  <div className="ih-card p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                    <div className="absolute top-0 left-0 right-0 h-1" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${GOLD}18`, border: `1px solid ${BORDER_GOLD}` }}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          <circle cx="9" cy="7" r="4" stroke={GOLD} strokeWidth="2"/>
+                          <line x1="19" y1="8" x2="19" y2="14" stroke={GOLD} strokeWidth="2" strokeLinecap="round"/>
+                          <line x1="22" y1="11" x2="16" y2="11" stroke={GOLD} strokeWidth="2" strokeLinecap="round"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                          New Patients
+                        </p>
+                        <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>New Patients Welcome</h3>
+                        <p className="text-sm leading-relaxed mb-4" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                          Not sure which plan is right for you? Call us and we will walk you through your options. No pressure, just honest guidance.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -293,20 +359,23 @@ export default function ContactPage() {
         <section style={{ backgroundColor: CREAM }} className="py-20">
           <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
-              <div className="text-center mb-12">
+              <div className="text-center mb-14">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                   Service Area
                 </p>
                 <h2 className="text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                   Serving Chicago's Northwest Side
                 </h2>
-                <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
+                <div className="w-12 h-px mx-auto mb-5" style={{ backgroundColor: GOLD }} />
                 <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
                   Illari Health is located in Wicker Park and serves patients from across Chicago's northwest neighborhoods and beyond.
                 </p>
+                <p className="text-xs tracking-widest uppercase mt-3" style={{ color: "#b8a88a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
+                  In the heart of Chicago's northwest side
+                </p>
               </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
               {[
                 "Wicker Park",
                 "Bucktown",
@@ -316,8 +385,17 @@ export default function ContactPage() {
                 "West Town",
               ].map((neighborhood, i) => (
                 <AnimateOnScroll key={neighborhood} delay={i * 50}>
-                  <div className="ih-card p-6 text-center" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
-                    <p className="text-sm tracking-wider" style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>{neighborhood}</p>
+                  <div
+                    className="ih-card px-8 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-[#DECBA4]"
+                    style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}
+                  >
+                    <div className="flex items-center justify-center gap-2 mb-1">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <circle cx="12" cy="10" r="3" stroke={GOLD} strokeWidth="2.5"/>
+                      </svg>
+                      <p className="text-sm tracking-wider font-medium" style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>{neighborhood}</p>
+                    </div>
                     <p className="text-xs mt-1" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>Chicago, IL</p>
                   </div>
                 </AnimateOnScroll>
@@ -341,14 +419,22 @@ export default function ContactPage() {
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
-              <div className="text-center mb-12">
+              <div className="text-center mb-14">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                   Same Building
                 </p>
                 <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                   Sister Practices at 1509 N Western
                 </h2>
-                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+                <div className="w-12 h-px mx-auto mb-5" style={{ backgroundColor: GOLD }} />
+                {/* Connecting location indicator */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ backgroundColor: "rgba(222,203,164,0.1)", border: `1px solid rgba(222,203,164,0.2)` }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="12" cy="10" r="3" stroke={GOLD} strokeWidth="2"/>
+                  </svg>
+                  <span className="text-xs tracking-wider" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>All located at the same address</span>
+                </div>
               </div>
             </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -359,6 +445,15 @@ export default function ContactPage() {
                   description: "Dr. Chavez's parent family medicine practice. Accepts PPO, HMO, Medicare, Medicaid. Walk-ins welcome.",
                   url: "https://mchavezmd.com",
                   delay: 0,
+                  badge: "Same Address",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15 8H9L12 2Z" stroke={GOLD} strokeWidth="2" strokeLinejoin="round"/>
+                      <rect x="4" y="8" width="16" height="14" rx="1" stroke={GOLD} strokeWidth="2"/>
+                      <line x1="12" y1="12" x2="12" y2="18" stroke={GOLD} strokeWidth="2" strokeLinecap="round"/>
+                      <line x1="9" y1="15" x2="15" y2="15" stroke={GOLD} strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  ),
                 },
                 {
                   name: "Illari Aesthetics",
@@ -366,21 +461,45 @@ export default function ContactPage() {
                   description: "Med spa offering injectables, IV therapy, skincare, and medical weight loss. 773.219.0326.",
                   url: "https://illariaesthetics.com",
                   delay: 80,
+                  badge: "Same Building",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke={GOLD} strokeWidth="2" strokeLinejoin="round"/>
+                    </svg>
+                  ),
                 },
-              ].map(({ name, unit, description, url, delay }) => (
+              ].map(({ name, unit, description, url, delay, badge, icon }) => (
                 <AnimateOnScroll key={name} delay={delay}>
-                  <div className="ih-card-dark p-8" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
-                    <p className="text-xs tracking-widest uppercase mb-1" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>{unit}</p>
-                    <h3 className="text-lg mb-2" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{name}</h3>
-                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{description}</p>
+                  <div
+                    className="ih-card-dark p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(222,203,164,0.08),0_0_0_1px_rgba(222,203,164,0.15)]"
+                    style={{ border: `1px solid #2a2a2a`, borderTopWidth: "3px", borderTopColor: GOLD, backgroundColor: "#1a1a1a" }}
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(222,203,164,0.1)", border: `1px solid rgba(222,203,164,0.2)` }}>
+                          {icon}
+                        </div>
+                        <div>
+                          <p className="text-xs tracking-widest uppercase" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>{unit}</p>
+                          <h3 className="text-lg" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{name}</h3>
+                        </div>
+                      </div>
+                      <span className="ih-pill text-xs tracking-wider px-3 py-1 rounded-full flex-shrink-0" style={{ backgroundColor: "rgba(222,203,164,0.12)", color: GOLD, fontFamily: "'Lora', Georgia, serif", border: `1px solid rgba(222,203,164,0.25)` }}>
+                        {badge}
+                      </span>
+                    </div>
+                    <p className="text-sm leading-relaxed mb-5" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{description}</p>
                     <a
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs tracking-widest uppercase hover:opacity-80 transition-opacity"
-                      style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}
+                      className="inline-flex items-center gap-2 text-xs tracking-widest uppercase px-5 py-2.5 rounded transition-all duration-200 hover:opacity-90"
+                      style={{ color: CHARCOAL, backgroundColor: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
                     >
-                      Visit Website &rarr;
+                      Visit Website
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke={CHARCOAL} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </a>
                   </div>
                 </AnimateOnScroll>
