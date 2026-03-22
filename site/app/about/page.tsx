@@ -434,52 +434,70 @@ export default function AboutPage() {
         </section>
 
         {/* Philosophy */}
-        <section style={{ backgroundColor: OFF_WHITE }} className="py-24 ih-dots-light relative overflow-hidden">
-          {/* Gold gradient top border */}
-          <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, transparent 10%, ${GOLD} 50%, transparent 90%)` }} aria-hidden="true" />
-          {/* Decorative SVG accents on sides */}
-          <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden lg:block select-none pointer-events-none" aria-hidden="true">
-            <svg width="32" height="120" viewBox="0 0 32 120" style={{ opacity: 0.1 }}>
-              <line x1="16" y1="0" x2="16" y2="40" stroke={GOLD} strokeWidth="1" />
-              <circle cx="16" cy="50" r="4" fill={GOLD} />
-              <circle cx="16" cy="70" r="2" fill={GOLD} />
-              <line x1="16" y1="80" x2="16" y2="120" stroke={GOLD} strokeWidth="1" />
-            </svg>
-          </div>
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden lg:block select-none pointer-events-none" aria-hidden="true">
-            <svg width="32" height="120" viewBox="0 0 32 120" style={{ opacity: 0.1 }}>
-              <line x1="16" y1="0" x2="16" y2="40" stroke={GOLD} strokeWidth="1" />
-              <circle cx="16" cy="50" r="4" fill={GOLD} />
-              <circle cx="16" cy="70" r="2" fill={GOLD} />
-              <line x1="16" y1="80" x2="16" y2="120" stroke={GOLD} strokeWidth="1" />
-            </svg>
-          </div>
-          <div className="max-w-4xl mx-auto px-6 text-center relative">
-            {/* Large decorative quotation mark */}
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 select-none pointer-events-none" aria-hidden="true">
-              <span className="text-[12rem] leading-none" style={{ color: GOLD, opacity: 0.06, fontFamily: "Georgia, serif" }}>&ldquo;</span>
-            </div>
+        <section style={{ backgroundColor: CHARCOAL }} className="py-24 relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
-              <p className="text-xs tracking-widest uppercase mb-3 relative z-10" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                Our Philosophy
-              </p>
-              <h2 className="text-4xl mb-4 relative z-10" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                Medicine Practiced With Integrity
-              </h2>
-              <div className="w-12 h-px mx-auto mb-8 relative z-10" style={{ backgroundColor: GOLD }} />
-              <p className="text-lg leading-relaxed mb-6 relative z-10" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                Illari Health exists because the standard model of primary care fails most people. Rushed appointments. Billing friction. A different doctor every visit. Insurance constraints that override clinical judgment.
-              </p>
-              <p className="text-lg leading-relaxed mb-6 relative z-10" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                The concierge and direct primary care models return the relationship between patient and physician to the center of healthcare. At Illari Health, that means you see the same doctor, every visit. You get time. You get answers. And you get a physician whose only agenda is your health.
-              </p>
-              <p className="text-lg leading-relaxed relative z-10" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                Every member of the Illari Health team shares this commitment. <span style={{ backgroundColor: "rgba(222,203,164,0.15)", padding: "2px 6px", borderRadius: "4px" }}>Integrity and respect</span> are not aspirational values. They are the standard.
-              </p>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Our Philosophy
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                  Medicine Practiced With Integrity
+                </h2>
+                <div className="w-16 h-px mx-auto" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+              </div>
+            </AnimateOnScroll>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>,
+                  heading: "Rushed Appointments End Here",
+                  body: "Illari Health exists because the standard model of primary care fails most people. Rushed appointments. Billing friction. A different doctor every visit. Insurance constraints that override clinical judgment.",
+                  delay: 0,
+                },
+                {
+                  icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v-2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>,
+                  heading: "The Relationship Comes First",
+                  body: "The concierge and direct primary care models return the relationship between patient and physician to the center of healthcare. At Illari Health, that means you see the same doctor, every visit. You get time. You get answers.",
+                  delay: 100,
+                },
+                {
+                  icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+                  heading: "Integrity Is the Standard",
+                  body: "Every member of the Illari Health team shares this commitment. Integrity and respect are not aspirational values. They are the standard. Your physician's only agenda is your health.",
+                  delay: 200,
+                },
+              ].map(({ icon, heading, body, delay }) => (
+                <AnimateOnScroll key={heading} delay={delay} className="flex">
+                  <div className="ih-card-dark p-8 flex-1 flex flex-col" style={{ backgroundColor: "rgba(26,26,26,0.6)", border: `1px solid rgba(222,203,164,0.12)` }}>
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style={{ backgroundColor: "rgba(222,203,164,0.08)", border: `1px solid rgba(222,203,164,0.15)` }}>
+                      {icon}
+                    </div>
+                    <h3 className="text-lg mb-3" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{heading}</h3>
+                    <div className="w-10 h-px mb-4" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                    <p className="text-sm leading-relaxed flex-1" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+
+            {/* Featured quote */}
+            <AnimateOnScroll delay={100}>
+              <div className="max-w-3xl mx-auto text-center p-10 md:p-14" style={{ backgroundColor: "rgba(222,203,164,0.06)", border: `1px solid rgba(222,203,164,0.12)`, borderRadius: "16px" }}>
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" className="mx-auto mb-6" style={{ opacity: 0.3 }}>
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill={GOLD}/>
+                  <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill={GOLD}/>
+                </svg>
+                <p className="text-xl md:text-2xl italic leading-relaxed mb-6" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                  We strive to inspire and aid those seeking their optimal health, wellness and healing through efficient service, quality consultations and our core values: integrity and respect.
+                </p>
+                <div className="w-8 h-px mx-auto mb-4" style={{ backgroundColor: GOLD }} />
+                <p className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>Dr. Milton Chavez MD, FAAFP</p>
+                <p className="text-xs mt-1" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>Founder and Medical Director</p>
+              </div>
             </AnimateOnScroll>
           </div>
-          {/* Gold gradient bottom border */}
-          <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, transparent 10%, ${GOLD} 50%, transparent 90%)` }} aria-hidden="true" />
         </section>
 
         {/* CTA */}
