@@ -111,7 +111,7 @@ export default function DirectPrimaryCarePage() {
       <main>
         {/* Hero */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
                 <a href="/" style={{ color: "#9a8a72" }}>Home</a>
@@ -155,7 +155,7 @@ export default function DirectPrimaryCarePage() {
 
         {/* What Is DPC */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -202,7 +202,7 @@ export default function DirectPrimaryCarePage() {
 
         {/* DPC Plan Details */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -287,7 +287,7 @@ export default function DirectPrimaryCarePage() {
 
         {/* Who It Is For */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -335,7 +335,7 @@ export default function DirectPrimaryCarePage() {
 
         {/* FAQ Excerpt */}
         <section style={{ backgroundColor: CREAM }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-12">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -389,7 +389,7 @@ export default function DirectPrimaryCarePage() {
 
         {/* Final CTA */}
         <section style={{ backgroundColor: CHARCOAL, borderTop: `1px solid #2a2a2a` }} className="py-20">
-          <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
               <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your DPC Membership

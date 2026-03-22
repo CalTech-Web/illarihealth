@@ -961,7 +961,7 @@ export default function Home() {
         {/* The Promise Section */}
         <section style={{ backgroundColor: CHARCOAL }} className="relative overflow-hidden py-28">
           <div className="ih-gold-line absolute top-0 left-0 right-0" />
-          <div className="max-w-5xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>

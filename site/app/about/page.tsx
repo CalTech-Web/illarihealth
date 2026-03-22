@@ -156,7 +156,7 @@ export default function AboutPage() {
       <main>
         {/* Hero */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
                 <a href="/" style={{ color: "#9a8a72" }}>Home</a>
@@ -179,7 +179,7 @@ export default function AboutPage() {
 
         {/* Practice Story */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <AnimateOnScroll>
                 <div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
 
         {/* Dr. Chavez */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -319,7 +319,7 @@ export default function AboutPage() {
 
         {/* Karen Corona */}
         <section style={{ backgroundColor: CREAM }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -384,7 +384,7 @@ export default function AboutPage() {
 
         {/* Philosophy */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24 ih-dots-light">
-          <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
               <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 Our Philosophy
@@ -408,7 +408,7 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section style={{ backgroundColor: CHARCOAL, borderTop: `1px solid #2a2a2a` }} className="py-20">
-          <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
               <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your Care at Illari Health

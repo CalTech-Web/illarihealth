@@ -123,7 +123,7 @@ export default function ConciergeMedicinePage() {
             />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.78) 0%, rgba(22,22,22,0.65) 100%)" }} />
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center">
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 text-center">
             <AnimateOnScroll>
               <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
                 <a href="/" className="hover:opacity-80 transition-opacity" style={{ color: "#9a8a72" }}>Home</a>
@@ -167,7 +167,7 @@ export default function ConciergeMedicinePage() {
 
         {/* What Is Concierge Medicine */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-5xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
               <AnimateOnScroll>
                 <div>
@@ -245,7 +245,7 @@ export default function ConciergeMedicinePage() {
             />
             <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto px-6">
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -343,7 +343,7 @@ export default function ConciergeMedicinePage() {
             />
             <div className="absolute inset-0" style={{ backgroundColor: "rgba(250,247,242,0.92)" }} />
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto px-6">
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -391,7 +391,7 @@ export default function ConciergeMedicinePage() {
 
         {/* Physician */}
         <section style={{ backgroundColor: CREAM }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <AnimateOnScroll>
                 <div>
@@ -444,7 +444,7 @@ export default function ConciergeMedicinePage() {
 
         {/* Patient Reviews */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-20">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-12">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -486,7 +486,7 @@ export default function ConciergeMedicinePage() {
 
         {/* Final CTA */}
         <section style={{ backgroundColor: CREAM, borderTop: `1px solid ${BORDER_GOLD}` }} className="py-20">
-          <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
               <h2 className="text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your Concierge Membership

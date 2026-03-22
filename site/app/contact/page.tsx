@@ -143,7 +143,7 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
                 <a href="/" style={{ color: "#9a8a72" }}>Home</a>
@@ -166,7 +166,7 @@ export default function ContactPage() {
 
         {/* Contact Details */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Primary Contact */}
               <AnimateOnScroll>
@@ -278,7 +278,7 @@ export default function ContactPage() {
 
         {/* Neighborhoods Served */}
         <section style={{ backgroundColor: CREAM }} className="py-20">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-12">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -315,7 +315,7 @@ export default function ContactPage() {
 
         {/* Sister Practices */}
         <section style={{ backgroundColor: CHARCOAL, borderTop: `1px solid #2a2a2a` }} className="py-20">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-12">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>

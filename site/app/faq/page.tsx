@@ -112,7 +112,7 @@ export default function FAQPage() {
       <main>
         {/* Hero */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-20">
-          <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="max-w-6xl mx-auto px-6 text-center">
             <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
               Frequently Asked Questions
             </p>
@@ -128,14 +128,14 @@ export default function FAQPage() {
 
         {/* FAQ List */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-3xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <FaqAccordion faqs={faqs} />
           </div>
         </section>
 
         {/* Still Have Questions CTA */}
         <section style={{ backgroundColor: CREAM, borderTop: `1px solid ${BORDER_GOLD}` }} className="py-20">
-          <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
               Still Have Questions?
             </h2>
@@ -164,7 +164,7 @@ export default function FAQPage() {
 
         {/* Specialist Access Section */}
         <section style={{ backgroundColor: CHARCOAL }} className="py-20">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
