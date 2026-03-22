@@ -233,8 +233,19 @@ export default function ConciergeMedicinePage() {
         </section>
 
         {/* Concierge Plan Details */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/concierge-bg-1.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -320,8 +331,19 @@ export default function ConciergeMedicinePage() {
         </section>
 
         {/* Who It Is For */}
-        <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: OFF_WHITE }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/concierge-bg-2.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(250,247,242,0.92)" }} />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
