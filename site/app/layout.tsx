@@ -77,7 +77,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <head>
+      <body className="min-h-full flex flex-col pb-16 md:pb-0" style={{ fontFamily: "'Lora', Georgia, 'Times New Roman', serif" }}>
+        {children}
+        <MobileCtaBar />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ILLARIHEALTH"
           strategy="afterInteractive"
@@ -90,10 +92,6 @@ export default function RootLayout({
             gtag('config', 'G-ILLARIHEALTH');
           `}
         </Script>
-      </head>
-<body className="min-h-full flex flex-col pb-16 md:pb-0" style={{ fontFamily: "'Lora', Georgia, 'Times New Roman', serif" }}>
-        {children}
-        <MobileCtaBar />
       </body>
     </html>
   );

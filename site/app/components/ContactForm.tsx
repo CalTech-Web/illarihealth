@@ -178,15 +178,10 @@ export default function ContactForm() {
       )}
 
       <p className="text-xs text-center" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-        This site is protected by Google{" "}
+        By submitting this form you agree to our{" "}
         <a href="https://policies.google.com/privacy" className="underline" target="_blank" rel="noopener noreferrer">
           Privacy Policy
-        </a>{" "}
-        and{" "}
-        <a href="https://policies.google.com/terms" className="underline" target="_blank" rel="noopener noreferrer">
-          Terms of Service
-        </a>{" "}
-        apply.
+        </a>.
       </p>
     </form>
   );
