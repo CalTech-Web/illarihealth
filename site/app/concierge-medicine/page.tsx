@@ -181,8 +181,8 @@ export default function ConciergeMedicinePage() {
           </div>
         </div>
 
-        {/* Gradient transition */}
-        <div style={{ height: "60px", background: `linear-gradient(to bottom, ${CHARCOAL}, ${OFF_WHITE})` }} aria-hidden="true" />
+        {/* Gold divider */}
+        <div aria-hidden="true" style={{ height: "4px", background: `linear-gradient(90deg, transparent 5%, ${GOLD} 50%, transparent 95%)` }} />
 
         {/* What Is Concierge Medicine */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">

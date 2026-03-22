@@ -162,8 +162,8 @@ export default function DirectPrimaryCarePage() {
           </div>
         </section>
 
-        {/* Gradient transition from dark hero to light content */}
-        <div style={{ height: "60px", background: "linear-gradient(to bottom, #161616, #FAF7F2)" }} aria-hidden="true" />
+        {/* Gold divider */}
+        <div aria-hidden="true" style={{ height: "4px", background: `linear-gradient(90deg, transparent 5%, ${GOLD} 50%, transparent 95%)` }} />
 
         {/* What Is DPC */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">

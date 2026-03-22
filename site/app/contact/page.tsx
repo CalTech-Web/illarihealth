@@ -175,7 +175,7 @@ export default function ContactPage() {
             </AnimateOnScroll>
           </div>
         </section>
-        <div style={{ height: "60px", background: `linear-gradient(to bottom, ${CHARCOAL}, ${OFF_WHITE})` }} aria-hidden="true" />
+        <div aria-hidden="true" style={{ height: "4px", background: `linear-gradient(90deg, transparent 5%, ${GOLD} 50%, transparent 95%)` }} />
 
         {/* Contact Details */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
