@@ -227,7 +227,7 @@ export default function ContactPage() {
                       className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90 whitespace-nowrap"
                       style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                     >
-                      Book Now
+                      Call for Priority Booking
                     </a>
                     <a
                       href="/#contact"

@@ -78,7 +78,9 @@ export default function Header() {
             Contact
           </Link>
           <a
-            href="tel:7732273303"
+            href="https://web2.myaestheticspro.com/BN/index.cfm?52A4C5D4699E6C16FB67ACA46E1487324CFC2165279C2B6FC9B29ADF9D0A6FBB"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ih-btn ih-btn-gold px-6 py-2.5 text-sm font-medium tracking-wider uppercase border transition-colors"
             style={{
               backgroundColor: "#DECBA4",
@@ -87,7 +89,7 @@ export default function Header() {
               fontFamily: "'Lora', Georgia, serif",
             }}
           >
-            773.227.3303
+            Book Now
           </a>
         </nav>
 
@@ -176,11 +178,13 @@ export default function Header() {
             Contact
           </Link>
           <a
-            href="tel:7732273303"
+            href="https://web2.myaestheticspro.com/BN/index.cfm?52A4C5D4699E6C16FB67ACA46E1487324CFC2165279C2B6FC9B29ADF9D0A6FBB"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ih-btn ih-btn-gold px-6 py-3 text-sm font-medium tracking-wider uppercase text-center"
             style={{ backgroundColor: "#DECBA4", color: "#161616", fontFamily: "'Lora', Georgia, serif" }}
           >
-            Call 773.227.3303
+            Book Now
           </a>
         </div>
       </div>

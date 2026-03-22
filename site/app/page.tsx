@@ -229,7 +229,7 @@ export default function Home() {
                   className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
-                  Book Now
+                  Call for Priority Booking
                 </a>
                 <a
                   href="#membership"
@@ -390,7 +390,7 @@ export default function Home() {
                     className="ih-btn ih-btn-gold block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
                     style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
-                    Book Now
+                    Call for Priority Booking
                   </a>
                 </div>
               </div>
@@ -432,7 +432,7 @@ export default function Home() {
                     className="ih-btn ih-btn-outline block w-full py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
                     style={{ border: `1px solid ${CHARCOAL}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
-                    Book Now
+                    Call for Priority Booking
                   </a>
                 </div>
               </div>
