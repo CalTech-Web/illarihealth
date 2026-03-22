@@ -495,8 +495,19 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section style={{ backgroundColor: CHARCOAL }} className="ih-dots-dark py-24">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-healthcare.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.9)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -855,8 +866,19 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section style={{ backgroundColor: CHARCOAL }} className="ih-dots-dark py-24">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-lab-work.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.9)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
 
             {/* Rating Summary Header */}
             <AnimateOnScroll>
@@ -1009,9 +1031,20 @@ export default function Home() {
         </section>
 
         {/* The Promise Section */}
-        <section style={{ backgroundColor: CHARCOAL }} className="relative overflow-hidden py-28">
-          <div className="ih-gold-line absolute top-0 left-0 right-0" />
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-28" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/card-bg-medical.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.92)" }} />
+          </div>
+          <div className="ih-gold-line absolute top-0 left-0 right-0 z-10" />
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>

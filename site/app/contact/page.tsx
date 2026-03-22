@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AnimateOnScroll from "../components/AnimateOnScroll";
@@ -142,27 +143,39 @@ export default function ContactPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-doctor-office.jpg"
+              alt="Contact Illari Health"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.78) 0%, rgba(22,22,22,0.65) 100%)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 text-center">
             <AnimateOnScroll>
-              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
-                <a href="/" style={{ color: "#9a8a72" }}>Home</a>
+              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
+                <a href="/" className="hover:opacity-80 transition-opacity" style={{ color: "#9a8a72" }}>Home</a>
                 <span className="mx-2" style={{ color: "#5a4a3a" }}>/</span>
                 <span style={{ color: GOLD }}>Contact</span>
               </nav>
               <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 1509 N Western Avenue, Chicago, IL 60622
               </p>
-              <h1 className="text-5xl md:text-6xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Contact Illari Health
               </h1>
-              <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
-              <p className="text-xl leading-relaxed max-w-2xl" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="w-16 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+              <p className="text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                 Ready to get started? Call to ask about membership or book your first appointment. We answer our own phones.
               </p>
             </AnimateOnScroll>
           </div>
         </section>
+        <div style={{ height: "60px", background: `linear-gradient(to bottom, ${CHARCOAL}, ${OFF_WHITE})` }} aria-hidden="true" />
 
         {/* Contact Details */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
@@ -314,8 +327,19 @@ export default function ContactPage() {
         </section>
 
         {/* Sister Practices */}
-        <section style={{ backgroundColor: CHARCOAL, borderTop: `1px solid #2a2a2a` }} className="py-20">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-clinic-interior.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-12">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>

@@ -155,27 +155,40 @@ export default function AboutPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-consultation.jpg"
+              alt="About Illari Health"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.78) 0%, rgba(22,22,22,0.65) 100%)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 text-center">
             <AnimateOnScroll>
-              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
-                <a href="/" style={{ color: "#9a8a72" }}>Home</a>
+              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
+                <a href="/" className="hover:opacity-80 transition-opacity" style={{ color: "#9a8a72" }}>Home</a>
                 <span className="mx-2" style={{ color: "#5a4a3a" }}>/</span>
                 <span style={{ color: GOLD }}>About</span>
               </nav>
               <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 Wicker Park, Chicago, Since 2010
               </p>
-              <h1 className="text-5xl md:text-6xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 About Illari Health
               </h1>
-              <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
-              <p className="text-xl leading-relaxed max-w-2xl" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="w-16 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+              <p className="text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                 Illari Health was built to restore what medicine lost. Relationship-based primary care with time, attention, and a physician who knows your name, not just your chart number.
               </p>
             </AnimateOnScroll>
           </div>
         </section>
+
+        <div style={{ height: "60px", background: `linear-gradient(to bottom, ${CHARCOAL}, ${OFF_WHITE})` }} aria-hidden="true" />
 
         {/* Practice Story */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
@@ -225,8 +238,19 @@ export default function AboutPage() {
         </section>
 
         {/* Dr. Chavez */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-medical-team.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -407,8 +431,19 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section style={{ backgroundColor: CHARCOAL, borderTop: `1px solid #2a2a2a` }} className="py-20">
-          <div className="max-w-6xl mx-auto px-6 text-center">
+        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-doctor-patient.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.85) 0%, rgba(22,22,22,0.92) 100%)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
               <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your Care at Illari Health

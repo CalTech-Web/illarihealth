@@ -260,8 +260,19 @@ export default function ConciergeMedicinePage() {
         </section>
 
         {/* Concierge vs Traditional */}
-        <section style={{ backgroundColor: CREAM }} className="py-20">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CREAM }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/card-bg-stethoscope.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(241,232,216,0.92)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-14">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>

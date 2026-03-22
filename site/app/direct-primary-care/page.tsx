@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AnimateOnScroll from "../components/AnimateOnScroll";
@@ -110,37 +111,48 @@ export default function DirectPrimaryCarePage() {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-wellness.jpg"
+              alt="Direct primary care consultation"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.78) 0%, rgba(22,22,22,0.65) 100%)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 text-center">
             <AnimateOnScroll>
-              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
-                <a href="/" style={{ color: "#9a8a72" }}>Home</a>
+              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
+                <a href="/" className="hover:opacity-80 transition-opacity" style={{ color: "#9a8a72" }}>Home</a>
                 <span className="mx-2" style={{ color: "#5a4a3a" }}>/</span>
                 <span style={{ color: GOLD }}>Direct Primary Care</span>
               </nav>
               <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 Wicker Park, Chicago
               </p>
-              <h1 className="text-5xl md:text-6xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
-                Direct Primary Care in Chicago
+              <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                Direct Primary Care
               </h1>
-              <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
-              <p className="text-xl leading-relaxed mb-8 max-w-2xl" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="w-16 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+              <p className="text-xl leading-relaxed mb-10 max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                 A flat $150 per month covers up to three visits, all recommended labs, and direct access to Dr. Milton Chavez MD, FAAFP. No co-pays. No deductibles. No surprise bills.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-90"
+                  className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase text-center"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Call for Priority Booking
                 </a>
                 <a
                   href="/#contact"
-                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase text-center transition-opacity hover:opacity-80"
+                  className="ih-btn ih-btn-outline px-8 py-4 text-sm font-medium tracking-wider uppercase text-center"
                   style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
                   Request a Callback
@@ -151,7 +163,7 @@ export default function DirectPrimaryCarePage() {
         </section>
 
         {/* Gradient transition from dark hero to light content */}
-        <div style={{ height: "40px", background: "linear-gradient(to bottom, #161616, #FAF7F2)" }} aria-hidden="true" />
+        <div style={{ height: "60px", background: "linear-gradient(to bottom, #161616, #FAF7F2)" }} aria-hidden="true" />
 
         {/* What Is DPC */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
@@ -201,8 +213,19 @@ export default function DirectPrimaryCarePage() {
         </section>
 
         {/* DPC Plan Details */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-24" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-patient-care.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <AnimateOnScroll>
               <div className="text-center mb-16">
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
@@ -388,8 +411,19 @@ export default function DirectPrimaryCarePage() {
         </section>
 
         {/* Final CTA */}
-        <section style={{ backgroundColor: CHARCOAL, borderTop: `1px solid #2a2a2a` }} className="py-20">
-          <div className="max-w-6xl mx-auto px-6 text-center">
+        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-clinic-modern.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.85) 0%, rgba(22,22,22,0.92) 100%)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
             <AnimateOnScroll>
               <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Begin Your DPC Membership

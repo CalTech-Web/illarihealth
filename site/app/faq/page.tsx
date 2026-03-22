@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
@@ -111,20 +112,32 @@ export default function FAQPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-20">
-          <div className="max-w-6xl mx-auto px-6 text-center">
+        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-reception.jpg"
+              alt="Frequently asked questions"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.78) 0%, rgba(22,22,22,0.65) 100%)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 text-center">
             <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
               Frequently Asked Questions
             </p>
             <h1 className="text-5xl md:text-6xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
               Common Questions
             </h1>
-            <div className="w-12 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
-            <p className="text-lg" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+            <div className="w-12 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+            <p className="text-lg" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
               Straight answers about how this practice works, what it costs, and what you can expect.
             </p>
           </div>
         </section>
+        <div style={{ height: "60px", background: `linear-gradient(to bottom, ${CHARCOAL}, ${OFF_WHITE})` }} aria-hidden="true" />
 
         {/* FAQ List */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
@@ -163,8 +176,19 @@ export default function FAQPage() {
         </section>
 
         {/* Specialist Access Section */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-20">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-checkup.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
