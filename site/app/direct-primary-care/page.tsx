@@ -398,71 +398,84 @@ export default function DirectPrimaryCarePage() {
         {/* FAQ Excerpt */}
         <section style={{ backgroundColor: CREAM }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <AnimateOnScroll>
-              <div className="text-center mb-12">
-                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                  Common Questions
-                </p>
-                <h2 className="text-4xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                  DPC Questions Answered
-                </h2>
-                <div className="w-12 h-px mx-auto" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
-              </div>
-            </AnimateOnScroll>
-            <div className="space-y-6 max-w-2xl mx-auto">
-              {[
-                {
-                  num: 1,
-                  q: "Will I still need health insurance?",
-                  a: "Yes. DPC covers primary care, labs, and in-office services. You will still need health insurance for hospitalizations, emergency services, and specialist care. DPC is a better way to access primary care, not a substitute for insurance.",
-                  delay: 0,
-                },
-                {
-                  num: 2,
-                  q: "Can I cancel anytime?",
-                  a: "Yes, after the initial 3-month commitment. Membership continues month-to-month after that. Cancel in writing and any positive balance will be applied to an extension, transferred to another plan, or refunded.",
-                  delay: 80,
-                },
-                {
-                  num: 3,
-                  q: "Is there a discount for paying annually?",
-                  a: "Yes. All plans receive a 10% discount when paid annually instead of monthly. An additional 10% discount applies when your entire family joins the same plan.",
-                  delay: 0,
-                },
-              ].map(({ num, q, a, delay }) => (
-                <AnimateOnScroll key={q} delay={delay}>
-                  <div className="ih-card p-6 relative overflow-hidden" style={{ border: `1px solid ${BORDER_GOLD}`, borderLeft: `3px solid ${GOLD}`, backgroundColor: "#fff" }}>
-                    {/* Decorative quote mark */}
-                    <div className="absolute top-3 right-4" style={{ opacity: 0.08 }}>
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill={CHARCOAL}>
-                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
-                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
-                      </svg>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: GOLD }}>
-                        <span className="text-xs font-bold" style={{ color: CHARCOAL, fontFamily: "'Lora', Georgia, serif" }}>{num}</span>
-                      </div>
-                      <div>
-                        <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{q}</h3>
-                        <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{a}</p>
-                      </div>
-                    </div>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              {/* Left column: heading + CTA */}
+              <div className="lg:col-span-2 lg:sticky lg:top-32">
+                <AnimateOnScroll>
+                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                    Common Questions
+                  </p>
+                  <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                    DPC Questions Answered
+                  </h2>
+                  <div className="w-16 h-px mb-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                  <p className="text-base leading-relaxed mb-8" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                    The most common questions from patients considering Direct Primary Care. Need more detail? Visit our full FAQ or call us directly.
+                  </p>
+                  <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
+                    <a
+                      href="/faq"
+                      className="ih-btn ih-btn-gold inline-block px-8 py-3.5 text-sm font-medium tracking-wider uppercase text-center"
+                      style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                    >
+                      View All FAQ
+                    </a>
+                    <a
+                      href="tel:7732273303"
+                      className="ih-btn ih-btn-outline inline-block px-8 py-3.5 text-sm font-medium tracking-wider uppercase text-center"
+                      style={{ border: `1px solid ${BORDER_GOLD}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                    >
+                      Call 773.227.3303
+                    </a>
                   </div>
                 </AnimateOnScroll>
-              ))}
-            </div>
-            <AnimateOnScroll delay={100}>
-              <div className="text-center mt-10">
-                <a
-                  href="/faq"
-                  className="ih-btn ih-btn-outline inline-block px-8 py-3.5 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-80"
-                  style={{ border: `1px solid ${GOLD}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
-                >
-                  View All FAQ &rarr;
-                </a>
               </div>
-            </AnimateOnScroll>
+
+              {/* Right column: FAQ cards */}
+              <div className="lg:col-span-3 space-y-5">
+                {[
+                  {
+                    num: "01",
+                    q: "Will I still need health insurance?",
+                    a: "Yes. DPC covers primary care, labs, and in-office services. You will still need health insurance for hospitalizations, emergency services, and specialist care. DPC is a better way to access primary care, not a substitute for insurance.",
+                    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+                    delay: 0,
+                  },
+                  {
+                    num: "02",
+                    q: "Can I cancel anytime?",
+                    a: "Yes, after the initial 3-month commitment. Membership continues month-to-month after that. Cancel in writing and any positive balance will be applied to an extension, transferred to another plan, or refunded.",
+                    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>,
+                    delay: 80,
+                  },
+                  {
+                    num: "03",
+                    q: "Is there a discount for paying annually?",
+                    a: "Yes. All plans receive a 10% discount when paid annually instead of monthly. An additional 10% discount applies when your entire family joins the same plan.",
+                    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>,
+                    delay: 160,
+                  },
+                ].map(({ num, q, a, icon, delay }) => (
+                  <AnimateOnScroll key={q} delay={delay}>
+                    <div className="ih-card p-7" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                      <div className="flex items-start gap-5">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-2" style={{ backgroundColor: "rgba(222,203,164,0.12)", border: `1px solid ${BORDER_GOLD}` }}>
+                            {icon}
+                          </div>
+                          <span className="block text-center text-xs font-bold" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.5 }}>{num}</span>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{q}</h3>
+                          <div className="w-10 h-px mb-3" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                          <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{a}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </AnimateOnScroll>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

@@ -208,25 +208,52 @@ export default function FAQPage() {
         {/* FAQ List */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
           <div className="max-w-6xl mx-auto px-6">
-            <AnimateOnScroll>
-              <div className="text-center mb-16">
-                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                  Common Questions
-                </p>
-                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                  Everything You Need to Know
-                </h2>
-                <div className="w-16 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
-                <p className="text-base leading-relaxed max-w-3xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Straight answers about how Illari Health works, what it costs, and what you can expect as a member.
-                </p>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              {/* Left column: heading + quick stats */}
+              <div className="lg:col-span-2 lg:sticky lg:top-32">
+                <AnimateOnScroll>
+                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                    Common Questions
+                  </p>
+                  <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                    Everything You Need to Know
+                  </h2>
+                  <div className="w-16 h-px mb-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+                  <p className="text-base leading-relaxed mb-8" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                    Straight answers about how Illari Health works, what it costs, and what you can expect as a member.
+                  </p>
+
+                  {/* Quick reference cards */}
+                  <div className="space-y-3 mb-8">
+                    {[
+                      { label: "DPC Membership", value: "$150/mo" },
+                      { label: "Concierge Membership", value: "$300/mo" },
+                      { label: "Enrollment Fee", value: "$200" },
+                    ].map(({ label, value }) => (
+                      <div key={label} className="flex items-center justify-between py-3 px-4" style={{ backgroundColor: "#fff", borderRadius: "12px", border: `1px solid ${BORDER_GOLD}` }}>
+                        <span className="text-xs tracking-wider uppercase" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{label}</span>
+                        <span className="text-base font-medium" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{value}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href="tel:7732273303"
+                    className="ih-btn ih-btn-gold block w-full py-4 text-sm font-medium tracking-wider uppercase text-center"
+                    style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                  >
+                    Call 773.227.3303
+                  </a>
+                </AnimateOnScroll>
               </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={150}>
-              <div className="max-w-3xl mx-auto">
-                <FaqAccordion faqs={faqs} />
+
+              {/* Right column: accordion */}
+              <div className="lg:col-span-3">
+                <AnimateOnScroll delay={150}>
+                  <FaqAccordion faqs={faqs} />
+                </AnimateOnScroll>
               </div>
-            </AnimateOnScroll>
+            </div>
           </div>
         </section>
 
