@@ -7,15 +7,15 @@ import ContactForm from "./components/ContactForm";
 import AnimateOnScroll from "./components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
-  description: "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park. Dr. Milton Chavez MD, FAAFP offers flat-rate memberships from $150/mo with no co-pays, no surprise bills, and direct physician access.",
+  title: "Illari Health | Concierge Medicine & Direct Primary Care in Chicago",
+  description: "Chicago's premier Concierge Medicine and Direct Primary Care practice in Wicker Park. Dr. Milton Chavez MD, FAAFP offers flat-rate memberships from $300/mo with no co-pays, no surprise bills, and direct physician access.",
   alternates: {
     canonical: "https://illarihealth.com",
   },
   openGraph: {
     url: "https://illarihealth.com",
-    title: "Illari Health | Direct Primary Care & Concierge Medicine in Chicago",
-    description: "Dr. Milton Chavez MD, FAAFP offers Direct Primary Care at $150/mo and Concierge Medicine at $300/mo in Wicker Park. No co-pays, no insurance friction, 30-60 minute appointments.",
+    title: "Illari Health | Concierge Medicine & Direct Primary Care in Chicago",
+    description: "Dr. Milton Chavez MD, FAAFP offers Concierge Medicine at $300/mo and Direct Primary Care at $150/mo in Wicker Park. No co-pays, no insurance friction, 30-60 minute appointments.",
     images: [
       {
         url: "/assets/gallery/hero-background.jpg",
@@ -32,7 +32,7 @@ const localBusinessJsonLd = {
   "@type": ["MedicalClinic", "LocalBusiness"],
   name: "Illari Health",
   description:
-    "Chicago's premier Direct Primary Care and Concierge Medicine practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP. Flat-rate pricing, unlimited visits, no insurance friction.",
+    "Chicago's premier Concierge Medicine and Direct Primary Care practice in Wicker Park, led by Dr. Milton Chavez MD, FAAFP. Flat-rate pricing, unlimited visits, no insurance friction.",
   url: "https://illarihealth.com",
   telephone: "+17732273303",
   email: "info@illarihealth.com",
@@ -65,8 +65,8 @@ const localBusinessJsonLd = {
   ],
   medicalSpecialty: [
     "Family Medicine",
-    "Direct Primary Care",
     "Concierge Medicine",
+    "Direct Primary Care",
     "Sports Medicine",
     "Dermatology",
     "Orthopedics",
@@ -523,7 +523,7 @@ export default function Home() {
               {[
                 { step: "01", title: "Choose Your Plan", desc: "Concierge at $300 a month is the full tier. DPC at $150 covers the essentials. Both cut out co-pays and insurance back-and-forth.", delay: 0 },
                 { step: "02", title: "Enroll", desc: "A $200 enrollment fee starts your membership. The first three months are committed. After that, it goes month-to-month.", delay: 80 },
-                { step: "03", title: "First Visit", desc: "Your first appointment is a comprehensive physical with Dr. Chavez. Ninety minutes for Concierge members, 45 for DPC. Not a rushed intake.", delay: 160 },
+                { step: "03", title: "First Visit", desc: "Your first appointment is a comprehensive physical with Dr. Chavez. 90 minutes for Concierge members, 45 for DPC. Not a rushed intake.", delay: 160 },
                 { step: "04", title: "Ongoing Care", desc: "Call or text Dr. Chavez directly. No hold music, no co-pay at the door. Appointments start on time, every time.", delay: 0 },
                 { step: "05", title: "Specialist Referrals", desc: "When you need one, Dr. Chavez connects you to 200+ specialists through RubiconMD at no extra cost. PPO patients get referrals to vetted in-network doctors.", delay: 80 },
                 { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, your membership continues month-to-month. Cancel in writing, anytime.", delay: 160 },
@@ -684,7 +684,7 @@ export default function Home() {
                         className="ih-btn ih-btn-gold inline-block px-6 py-3 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                         style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                       >
-                        Book with Dr. Chavez
+                        Call for Priority Booking
                       </a>
                     </div>
                   </div>
@@ -733,7 +733,7 @@ export default function Home() {
                         className="ih-btn ih-btn-gold inline-block px-6 py-3 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                         style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                       >
-                        Book with Karen
+                        Call for Priority Booking
                       </a>
                     </div>
                   </div>
@@ -858,7 +858,7 @@ export default function Home() {
                   className="ih-btn ih-btn-gold inline-block mt-5 px-8 py-4 text-sm font-medium tracking-wider uppercase"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
-                  Call 773.227.3303
+                  Call for Priority Booking
                 </a>
               </div>
             </AnimateOnScroll>

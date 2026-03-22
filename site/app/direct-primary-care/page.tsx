@@ -425,7 +425,7 @@ export default function DirectPrimaryCarePage() {
                       className="ih-btn ih-btn-outline inline-block px-8 py-3.5 text-sm font-medium tracking-wider uppercase text-center"
                       style={{ border: `1px solid ${BORDER_GOLD}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                     >
-                      Call 773.227.3303
+                      Call for Priority Booking
                     </a>
                   </div>
                 </AnimateOnScroll>
@@ -523,7 +523,7 @@ export default function DirectPrimaryCarePage() {
                   className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
-                  Call 773.227.3303
+                  Call for Priority Booking
                 </a>
                 <a
                   href="/#contact"

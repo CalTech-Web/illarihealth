@@ -169,9 +169,25 @@ export default function ContactPage() {
                 Contact Illari Health
               </h1>
               <div className="w-16 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
-              <p className="text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+              <p className="text-xl leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                 Ready to get started? Call to ask about membership or book your first appointment. We answer our own phones.
               </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="tel:7732273303"
+                  className="ih-btn ih-btn-gold px-10 py-4 text-sm font-medium tracking-wider uppercase text-center"
+                  style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                >
+                  Call for Priority Booking
+                </a>
+                <a
+                  href="mailto:info@illarihealth.com"
+                  className="ih-btn ih-btn-outline px-10 py-4 text-sm font-medium tracking-wider uppercase text-center"
+                  style={{ border: `1px solid rgba(222,203,164,0.5)`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                >
+                  Email Us
+                </a>
+              </div>
             </AnimateOnScroll>
           </div>
         </section>
@@ -505,6 +521,55 @@ export default function ContactPage() {
                 </AnimateOnScroll>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
+          <div className="max-w-4xl mx-auto px-6">
+            <AnimateOnScroll>
+              <div className="ih-card p-10 md:p-16 text-center relative overflow-hidden" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                <div className="absolute top-0 left-0 right-0 h-1" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+                <p className="text-xs tracking-widest uppercase mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Ready to Get Started?
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                  Your First Visit Starts with a Call
+                </h2>
+                <div className="w-16 h-px mx-auto mb-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+                <p className="text-base leading-relaxed max-w-xl mx-auto mb-8" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                  No phone tree. No long hold times. Call us directly and we will walk you through membership options, answer your questions, and schedule your first appointment.
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+                  {["No Insurance Needed", "Same-Day Appointments", "Priority Booking"].map((pill) => (
+                    <span key={pill} className="ih-pill px-5 py-2 text-xs tracking-wider" style={{ backgroundColor: `${GOLD}10`, border: `1px solid ${BORDER_GOLD}`, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                      {pill}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <a
+                    href="tel:7732273303"
+                    className="ih-btn ih-btn-gold px-10 py-4 text-sm font-medium tracking-wider uppercase text-center"
+                    style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                  >
+                    Call for Priority Booking
+                  </a>
+                  <a
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ih-btn ih-btn-outline px-10 py-4 text-sm font-medium tracking-wider uppercase text-center"
+                    style={{ border: `1px solid ${BORDER_GOLD}`, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
+                  >
+                    Book Online
+                  </a>
+                </div>
+                <p className="text-xs mt-6" style={{ color: "#b8a88a", fontFamily: "'Lora', Georgia, serif" }}>
+                  DPC and Concierge members receive priority scheduling
+                </p>
+              </div>
+            </AnimateOnScroll>
           </div>
         </section>
       </main>

@@ -579,7 +579,7 @@ export default function ConciergeMedicinePage() {
                         className="ih-btn ih-btn-gold inline-block px-8 py-3.5 text-sm font-medium tracking-wider uppercase"
                         style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                       >
-                        Book with Dr. Chavez
+                        Call for Priority Booking
                       </a>
                     </div>
                   </div>
@@ -709,7 +709,7 @@ export default function ConciergeMedicinePage() {
                   className="ih-btn ih-btn-gold px-8 py-4 text-sm font-medium tracking-wider uppercase"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
-                  Call 773.227.3303
+                  Call for Priority Booking
                 </a>
                 <a
                   href="/#contact"

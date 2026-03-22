@@ -242,7 +242,7 @@ export default function FAQPage() {
                     className="ih-btn ih-btn-gold block w-full py-4 text-sm font-medium tracking-wider uppercase text-center"
                     style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                   >
-                    Call 773.227.3303
+                    Call for Priority Booking
                   </a>
                 </AnimateOnScroll>
               </div>
@@ -253,6 +253,58 @@ export default function FAQPage() {
                   <FaqAccordion faqs={faqs} />
                 </AnimateOnScroll>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Specialist Access Section */}
+        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/horiz-checkup.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <AnimateOnScroll>
+                <div>
+                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                    Specialist Access
+                  </p>
+                  <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                    200+ Specialists via RubiconMD
+                  </h2>
+                  <div className="w-12 h-px mb-6" style={{ backgroundColor: GOLD }} />
+                  <p className="text-base leading-relaxed mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                    Members connect to 200+ specialists through RubiconMD at no added cost. Psychiatry, cardiology, dermatology, neurology. When something goes beyond primary care, members reach a specialist same day.
+                  </p>
+                  <p className="text-base leading-relaxed mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                    PPO patients are referred to vetted in-network specialists. Uninsured patients receive a curated list of cash-price options.
+                  </p>
+                  <span className="ih-pill inline-block px-4 py-1.5 text-xs tracking-wider uppercase" style={{ backgroundColor: "rgba(222,203,164,0.1)", border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}>
+                    Included with all membership plans
+                  </span>
+                </div>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={200}>
+                <div className="grid grid-cols-2 gap-4">
+                  {(["Psychiatry", "Dermatology", "Cardiology", "Orthopedics", "Neurology", "Endocrinology"] as const).map((specialty) => (
+                    <div key={specialty} className="ih-card-dark p-5 text-center flex flex-col items-center gap-3" style={{ border: `1px solid #4a4030`, backgroundColor: "#252218" }}>
+                      {specialtyIcons[specialty]}
+                      <p className="text-sm" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>{specialty}</p>
+                    </div>
+                  ))}
+                  <div className="ih-card-dark ih-gold-glow col-span-2 p-5 text-center" style={{ border: `2px solid ${GOLD}`, backgroundColor: "#1a1a1a" }}>
+                    <p className="text-sm font-medium" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>200+ Specialties Available</p>
+                  </div>
+                </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>
@@ -332,58 +384,6 @@ export default function FAQPage() {
                 </div>
               </div>
             </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* Specialist Access Section */}
-        <section className="relative overflow-hidden py-20" style={{ backgroundColor: CHARCOAL }}>
-          <div className="absolute inset-0">
-            <Image
-              src="/assets/gallery/horiz-checkup.jpg"
-              alt=""
-              fill
-              className="object-cover object-center"
-              sizes="100vw"
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0" style={{ backgroundColor: "rgba(22,22,22,0.88)" }} />
-          </div>
-          <div className="relative z-10 max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <AnimateOnScroll>
-                <div>
-                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                    Specialist Access
-                  </p>
-                  <h2 className="text-4xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
-                    200+ Specialists via RubiconMD
-                  </h2>
-                  <div className="w-12 h-px mb-6" style={{ backgroundColor: GOLD }} />
-                  <p className="text-base leading-relaxed mb-4" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                    Members connect to 200+ specialists through RubiconMD at no added cost. Psychiatry, cardiology, dermatology, neurology. When something goes beyond primary care, members reach a specialist same day.
-                  </p>
-                  <p className="text-base leading-relaxed mb-6" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
-                    PPO patients are referred to vetted in-network specialists. Uninsured patients receive a curated list of cash-price options.
-                  </p>
-                  <span className="ih-pill inline-block px-4 py-1.5 text-xs tracking-wider uppercase" style={{ backgroundColor: "rgba(222,203,164,0.1)", border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}>
-                    Included with all membership plans
-                  </span>
-                </div>
-              </AnimateOnScroll>
-              <AnimateOnScroll delay={200}>
-                <div className="grid grid-cols-2 gap-4">
-                  {(["Psychiatry", "Dermatology", "Cardiology", "Orthopedics", "Neurology", "Endocrinology"] as const).map((specialty) => (
-                    <div key={specialty} className="ih-card-dark p-5 text-center flex flex-col items-center gap-3" style={{ border: `1px solid #4a4030`, backgroundColor: "#252218" }}>
-                      {specialtyIcons[specialty]}
-                      <p className="text-sm" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>{specialty}</p>
-                    </div>
-                  ))}
-                  <div className="ih-card-dark ih-gold-glow col-span-2 p-5 text-center" style={{ border: `2px solid ${GOLD}`, backgroundColor: "#1a1a1a" }}>
-                    <p className="text-sm font-medium" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif" }}>200+ Specialties Available</p>
-                  </div>
-                </div>
-              </AnimateOnScroll>
-            </div>
           </div>
         </section>
       </main>

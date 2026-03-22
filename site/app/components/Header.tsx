@@ -89,7 +89,7 @@ export default function Header() {
               fontFamily: "'Lora', Georgia, serif",
             }}
           >
-            Book Now
+            Call for Priority Booking
           </a>
         </nav>
 
@@ -184,7 +184,7 @@ export default function Header() {
             className="ih-btn ih-btn-gold px-6 py-3 text-sm font-medium tracking-wider uppercase text-center"
             style={{ backgroundColor: "#DECBA4", color: "#161616", fontFamily: "'Lora', Georgia, serif" }}
           >
-            Book Now
+            Call for Priority Booking
           </a>
         </div>
       </div>
