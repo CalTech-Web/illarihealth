@@ -94,13 +94,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid #2a2a2a" }} className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif" }}>
+        <div style={{ borderTop: "1px solid rgba(222,203,164,0.15)" }} className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs tracking-wide" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
             &copy; 2026 Illari Health. All Rights Reserved.
           </p>
-          <p className="text-xs" style={{ color: "#7a6a5a", fontFamily: "'Lora', Georgia, serif" }}>
+          <p className="text-xs tracking-wide" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
             Built by{" "}
-            <a href="https://caltechweb.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-colors underline" style={{ color: "#b0a080" }}>
+            <a href="https://caltechweb.com" target="_blank" rel="noopener noreferrer" className="transition-colors duration-200 hover:opacity-90" style={{ color: "#DECBA4" }}>
               CalTech Web
             </a>
           </p>
