@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AnimateOnScroll from "../components/AnimateOnScroll";
@@ -110,25 +111,36 @@ export default function ConciergeMedicinePage() {
       <Header />
       <main>
         {/* Hero */}
-        <section style={{ backgroundColor: CHARCOAL }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
+        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/gallery/concierge-hero.jpg"
+              alt="Concierge medicine consultation"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(22,22,22,0.78) 0%, rgba(22,22,22,0.65) 100%)" }} />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center">
             <AnimateOnScroll>
-              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
-                <a href="/" style={{ color: "#9a8a72" }}>Home</a>
+              <nav className="text-xs tracking-widest uppercase mb-8" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.15em" }}>
+                <a href="/" className="hover:opacity-80 transition-opacity" style={{ color: "#9a8a72" }}>Home</a>
                 <span className="mx-2" style={{ color: "#5a4a3a" }}>/</span>
                 <span style={{ color: GOLD }}>Concierge Medicine</span>
               </nav>
               <p className="text-xs tracking-widest uppercase mb-4" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
                 Wicker Park, Chicago
               </p>
-              <h1 className="text-5xl md:text-6xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight mb-6" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
                 Concierge Medicine in Chicago
               </h1>
-              <div className="w-16 h-px mb-6" style={{ backgroundColor: GOLD }} />
-              <p className="text-xl leading-relaxed mb-8 max-w-2xl" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+              <div className="w-16 h-px mx-auto mb-6" style={{ backgroundColor: GOLD }} />
+              <p className="text-xl leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                 Your physician. Available to you. Unlimited visits, 90-minute appointments, and a direct line to Dr. Milton Chavez MD, FAAFP for $300 per month.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={BOOKING_URL}
                   target="_blank"
@@ -150,27 +162,47 @@ export default function ConciergeMedicinePage() {
           </div>
         </section>
 
-        {/* Gradient transition from dark hero to light content */}
-        <div style={{ height: "40px", background: "linear-gradient(to bottom, #161616, #FAF7F2)" }} aria-hidden="true" />
+        {/* Gradient transition */}
+        <div style={{ height: "60px", background: "linear-gradient(to bottom, #161616, #FAF7F2)" }} aria-hidden="true" />
 
         {/* What Is Concierge Medicine */}
         <section style={{ backgroundColor: OFF_WHITE }} className="py-24">
-          <div className="max-w-4xl mx-auto px-6">
-            <AnimateOnScroll>
-              <div className="text-center mb-16">
-                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                  What It Is
-                </p>
-                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
-                  What Is Concierge Medicine?
-                </h2>
-                <div className="w-12 h-px mx-auto mb-8" style={{ backgroundColor: GOLD }} />
-                <p className="text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
-                  Concierge medicine is a membership-based model that replaces insurance-driven care with a direct relationship between you and your physician. At Illari Health, that means Dr. Milton Chavez MD, FAAFP dedicates his full attention to you, not to billing codes or 7-minute appointment slots.
-                </p>
-              </div>
-            </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+              <AnimateOnScroll>
+                <div>
+                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                    What It Is
+                  </p>
+                  <h2 className="text-4xl md:text-5xl mb-6" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>
+                    What Is Concierge Medicine?
+                  </h2>
+                  <div className="w-12 h-px mb-8" style={{ backgroundColor: GOLD }} />
+                  <p className="text-lg leading-relaxed mb-6" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                    Concierge medicine replaces insurance-driven care with a direct relationship between you and your physician. No middlemen, no billing codes, no 7-minute slots.
+                  </p>
+                  <p className="text-base leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>
+                    At Illari Health, that means Dr. Milton Chavez MD, FAAFP dedicates his full attention to a smaller panel of patients. Fewer patients, longer appointments, better outcomes.
+                  </p>
+                </div>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={100}>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { stat: "Unlimited", label: "Visits per month" },
+                    { stat: "30-60", label: "Minutes per visit" },
+                    { stat: "Direct", label: "Physician access" },
+                    { stat: "$300", label: "Flat monthly rate" },
+                  ].map(({ stat, label }) => (
+                    <div key={label} className="text-center p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}`, borderRadius: "12px" }}>
+                      <p className="text-3xl mb-1" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{stat}</p>
+                      <p className="text-xs tracking-wider uppercase" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{label}</p>
+                    </div>
+                  ))}
+                </div>
+              </AnimateOnScroll>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
               {[
                 {
                   heading: "Unlimited Visits",
@@ -188,11 +220,11 @@ export default function ConciergeMedicinePage() {
                   delay: 160,
                 },
               ].map(({ heading, body, delay }) => (
-                <AnimateOnScroll key={heading} delay={delay}>
-                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                <AnimateOnScroll key={heading} delay={delay} className="flex">
+                  <div className="ih-card p-8 flex-1 flex flex-col" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <div className="w-8 h-px mb-4" style={{ backgroundColor: GOLD }} />
                     <h3 className="text-lg mb-3" style={{ color: CHARCOAL, fontFamily: "'Abril Fatface', serif" }}>{heading}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
+                    <p className="text-sm leading-relaxed flex-1" style={{ color: "#4a4a4a", fontFamily: "'Lora', Georgia, serif" }}>{body}</p>
                   </div>
                 </AnimateOnScroll>
               ))}

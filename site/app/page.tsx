@@ -508,7 +508,7 @@ export default function Home() {
                 <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
               </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {[
                 { step: "01", title: "Choose Your Plan", desc: "Concierge at $300 a month is the full tier. DPC at $150 covers the essentials. Both cut out co-pays and insurance back-and-forth.", delay: 0 },
                 { step: "02", title: "Enroll", desc: "A $200 enrollment fee starts your membership. The first three months are committed. After that, it goes month-to-month.", delay: 80 },
@@ -517,11 +517,11 @@ export default function Home() {
                 { step: "05", title: "Specialist Referrals", desc: "When you need one, Dr. Chavez connects you to 200+ specialists through RubiconMD at no extra cost. PPO patients get referrals to vetted in-network doctors.", delay: 80 },
                 { step: "06", title: "Month-to-Month", desc: "After the initial 3 months, your membership continues month-to-month. Cancel in writing, anytime.", delay: 160 },
               ].map(({ step, title, desc, delay }) => (
-                <AnimateOnScroll key={step} delay={delay}>
-                  <div style={{ borderTop: `2px solid ${GOLD}` }} className="ih-card-dark pt-6">
+                <AnimateOnScroll key={step} delay={delay} className="flex">
+                  <div style={{ borderTop: `2px solid ${GOLD}` }} className="ih-card-dark pt-6 flex-1 flex flex-col">
                     <p className="text-4xl mb-3" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.35 }}>{step}</p>
                     <h3 className="text-xl mb-3" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>{title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{desc}</p>
+                    <p className="text-sm leading-relaxed flex-1" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>{desc}</p>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -563,16 +563,17 @@ export default function Home() {
               </div>
               </AnimateOnScroll>
               <AnimateOnScroll delay={150}>
-              <div className="relative">
-                <Image
-                  src="/assets/team/dr-milton-chavez.jpg"
-                  alt="Dr. Milton Chavez MD, FAAFP"
-                  width={500}
-                  height={600}
-                  className="ih-img w-full object-cover"
-                  style={{ border: `4px solid ${BORDER_GOLD}` }}
-                />
-                <div className="ih-card-dark absolute -bottom-6 -left-6 p-6 max-w-xs" style={{ backgroundColor: CHARCOAL, border: `1px solid ${GOLD}` }}>
+              <div className="relative pb-16">
+                <div className="ih-img overflow-hidden" style={{ border: `4px solid ${BORDER_GOLD}`, aspectRatio: "3 / 4" }}>
+                  <Image
+                    src="/assets/team/dr-milton-chavez.jpg"
+                    alt="Dr. Milton Chavez MD, FAAFP"
+                    width={500}
+                    height={667}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="ih-card-dark absolute -bottom-2 -left-6 p-6 max-w-xs" style={{ backgroundColor: CHARCOAL, border: `1px solid ${GOLD}` }}>
                   <p className="text-sm italic mb-2" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                     &ldquo;We strive to inspire and aid those seeking their optimal health, wellness and healing through efficient service, quality consultations and our core values: integrity and respect.&rdquo;
                   </p>
@@ -711,7 +712,7 @@ export default function Home() {
                 </p>
               </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {[
                 {
                   title: "Family Medicine",
@@ -774,8 +775,8 @@ export default function Home() {
                   delay: 160,
                 },
               ].map(({ title, desc, icon, delay }) => (
-                <AnimateOnScroll key={title} delay={delay}>
-                  <div className="ih-card p-8 h-full flex flex-col" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
+                <AnimateOnScroll key={title} delay={delay} className="flex">
+                  <div className="ih-card p-8 flex-1 flex flex-col" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER_GOLD}` }}>
                     <div className="w-12 h-12 flex items-center justify-center mb-5 flex-shrink-0" style={{ backgroundColor: CREAM, borderRadius: "10px" }}>
                       {icon}
                     </div>
@@ -872,14 +873,14 @@ export default function Home() {
             </AnimateOnScroll>
 
             {/* Supporting Quotes */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
               {[
                 { name: "Albert T.", quote: "My visit with Dr. Chavez is always pleasant. I love that the Doctors take your appointment on time, very attentive and professional and knowledgeable of my medical history.", delay: 0 },
                 { name: "Janneth H.", quote: "My initial visit was very great. The receptionist was very helpful and cordial. Beautiful, clean waiting area and offices. My overall experience was wonderful.", delay: 80 },
                 { name: "David H.", quote: "My experience was relaxing and thorough.", delay: 160 },
               ].map(({ name, quote, delay }) => (
-                <AnimateOnScroll key={name} delay={delay}>
-                  <div className="ih-card-dark p-7" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
+                <AnimateOnScroll key={name} delay={delay} className="flex">
+                  <div className="ih-card-dark p-7 flex-1 flex flex-col" style={{ border: `1px solid #2a2a2a`, backgroundColor: "#1a1a1a" }}>
                     <div className="flex gap-1 mb-4">
                       {[1,2,3,4,5].map((s) => (
                         <svg key={s} width="12" height="12" viewBox="0 0 24 24" fill={GOLD}>
@@ -887,7 +888,7 @@ export default function Home() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-sm italic leading-relaxed mb-5" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
+                    <p className="text-sm italic leading-relaxed mb-5 flex-1" style={{ color: "#d4c4a8", fontFamily: "'Lora', Georgia, serif" }}>
                       &ldquo;{quote}&rdquo;
                     </p>
                     <div className="w-6 h-px mb-4" style={{ backgroundColor: "rgba(222,203,164,0.25)" }} />
@@ -915,7 +916,7 @@ export default function Home() {
                 <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
               </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
               {[
                 {
                   audience: "Uninsured Individual",
@@ -939,8 +940,8 @@ export default function Home() {
                   delay: 200,
                 },
               ].map(({ audience, challenge, result, note, delay }) => (
-                <AnimateOnScroll key={audience} delay={delay}>
-                  <div className="ih-card p-8" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
+                <AnimateOnScroll key={audience} delay={delay} className="flex">
+                  <div className="ih-card p-8 flex-1 flex flex-col" style={{ border: `1px solid ${BORDER_GOLD}`, backgroundColor: "#fff" }}>
                     <div className="inline-block px-3 py-1 text-xs tracking-wider uppercase mb-4" style={{ backgroundColor: CREAM, color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
                       {audience}
                     </div>
@@ -960,38 +961,42 @@ export default function Home() {
         {/* The Promise Section */}
         <section style={{ backgroundColor: CHARCOAL }} className="relative overflow-hidden py-28">
           <div className="ih-gold-line absolute top-0 left-0 right-0" />
-          <div className="max-w-5xl mx-auto px-6 text-center">
+          <div className="max-w-5xl mx-auto px-6">
             <AnimateOnScroll>
-              <p className="text-xs tracking-widest uppercase mb-10" style={{ color: "#5a4a3a", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
-                Our Commitment to Every Patient
-              </p>
+              <div className="text-center mb-16">
+                <p className="text-xs tracking-widest uppercase mb-3" style={{ color: GOLD, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.2em" }}>
+                  Our Commitment to Every Patient
+                </p>
+                <h2 className="text-4xl md:text-5xl mb-4" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                  The Illari Health Standard
+                </h2>
+                <div className="w-12 h-px mx-auto" style={{ backgroundColor: GOLD }} />
+              </div>
             </AnimateOnScroll>
-            <div className="space-y-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
               {[
-                { text: "Appointments start on time. Every time.", delay: 0 },
-                { text: "Thirty to sixty minutes. Not seven.", delay: 80 },
-                { text: "One flat rate. No surprise bills.", delay: 160 },
-                { text: "Your physician. Direct. Always.", delay: 240 },
-              ].map(({ text, delay }, i) => (
-                <AnimateOnScroll key={text} delay={delay}>
-                  <div
-                    className="relative py-8"
-                    style={{
-                      borderBottom: i < 3 ? `1px solid rgba(222,203,164,0.1)` : "none",
-                    }}
-                  >
-                    <p
-                      className="text-3xl md:text-4xl lg:text-5xl leading-snug"
-                      style={{ color: i % 2 === 0 ? "#FAF7F2" : GOLD, fontFamily: "'Abril Fatface', serif" }}
-                    >
-                      {text}
-                    </p>
+                { number: "01", promise: "Appointments start on time. Every time.", detail: "No 45-minute waiting rooms. Your scheduled time is your actual time.", delay: 0 },
+                { number: "02", promise: "Thirty to sixty minutes. Not seven.", detail: "Real conversations, thorough exams, and answers to every question you bring.", delay: 80 },
+                { number: "03", promise: "One flat rate. No surprise bills.", detail: "You know the cost before you walk in. No co-pays, no deductibles, no billing surprises.", delay: 160 },
+                { number: "04", promise: "Your physician. Direct. Always.", detail: "Call or text Dr. Chavez directly. No phone tree, no relay, no waiting days for a callback.", delay: 240 },
+              ].map(({ number, promise, detail, delay }) => (
+                <AnimateOnScroll key={number} delay={delay} className="flex">
+                  <div className="flex-1 p-8 flex gap-6 items-start" style={{ border: `1px solid rgba(222,203,164,0.15)`, backgroundColor: "rgba(255,255,255,0.02)", borderRadius: "16px" }}>
+                    <p className="text-4xl flex-shrink-0" style={{ color: GOLD, fontFamily: "'Abril Fatface', serif", opacity: 0.3 }}>{number}</p>
+                    <div>
+                      <p className="text-xl md:text-2xl leading-snug mb-2" style={{ color: "#FAF7F2", fontFamily: "'Abril Fatface', serif" }}>
+                        {promise}
+                      </p>
+                      <p className="text-sm leading-relaxed" style={{ color: "#9a8a72", fontFamily: "'Lora', Georgia, serif" }}>
+                        {detail}
+                      </p>
+                    </div>
                   </div>
                 </AnimateOnScroll>
               ))}
             </div>
             <AnimateOnScroll delay={300}>
-              <div className="mt-14">
+              <div className="mt-14 text-center">
                 <a
                   href={BOOKING_URL}
                   target="_blank"
@@ -999,7 +1004,7 @@ export default function Home() {
                   className="ih-btn ih-btn-gold inline-block px-10 py-5 text-sm font-medium tracking-wider uppercase transition-opacity hover:opacity-90"
                   style={{ backgroundColor: GOLD, color: CHARCOAL, fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.12em" }}
                 >
-                  Book Now
+                  Call for Priority Booking
                 </a>
               </div>
             </AnimateOnScroll>
