@@ -15,7 +15,7 @@ export default function Header() {
         WebkitBackdropFilter: "blur(12px)",
       }}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" prefetch={false} className="flex items-center gap-3">
           <Image
             src="/assets/logos/illari-health-logo.png"
@@ -28,11 +28,11 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-5">
           <Link
             href="/"
             prefetch={false}
-            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Home
@@ -40,7 +40,7 @@ export default function Header() {
           <Link
             href="/concierge-medicine"
             prefetch={false}
-            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Concierge Medicine
@@ -48,7 +48,7 @@ export default function Header() {
           <Link
             href="/direct-primary-care"
             prefetch={false}
-            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Direct Primary Care
@@ -56,7 +56,7 @@ export default function Header() {
           <Link
             href="/faq"
             prefetch={false}
-            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             FAQ
@@ -64,7 +64,7 @@ export default function Header() {
           <Link
             href="/about"
             prefetch={false}
-            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             About
@@ -72,7 +72,7 @@ export default function Header() {
           <Link
             href="/contact"
             prefetch={false}
-            className="ih-nav-link text-sm tracking-widest uppercase transition-colors"
+            className="ih-nav-link text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             style={{ color: "#DECBA4", fontFamily: "'Lora', Georgia, serif", letterSpacing: "0.1em" }}
           >
             Contact
@@ -81,7 +81,7 @@ export default function Header() {
             href="https://web2.myaestheticspro.com/BN/index.cfm?52A4C5D4699E6C16FB67ACA46E1487324CFC2165279C2B6FC9B29ADF9D0A6FBB"
             target="_blank"
             rel="noopener noreferrer"
-            className="ih-btn ih-btn-gold px-6 py-2.5 text-sm font-medium tracking-wider uppercase border transition-colors"
+            className="ih-btn ih-btn-gold px-6 py-2.5 text-sm font-medium tracking-wider uppercase border transition-colors whitespace-nowrap"
             style={{
               backgroundColor: "#DECBA4",
               color: "#161616",
@@ -95,7 +95,7 @@ export default function Header() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2"
+          className="lg:hidden p-2"
           style={{ color: "#DECBA4" }}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
@@ -119,7 +119,7 @@ export default function Header() {
 
       {/* Mobile menu with smooth transition */}
       <div
-        className={`ih-mobile-menu md:hidden ${menuOpen ? "open" : ""}`}
+        className={`ih-mobile-menu lg:hidden ${menuOpen ? "open" : ""}`}
         style={{ backgroundColor: "#1a1a1a", borderTop: "1px solid #DECBA3" }}
       >
         <div className="px-6 py-4 flex flex-col gap-4">
